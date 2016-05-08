@@ -1,0 +1,175 @@
+body {
+  &.home {
+    @include breakpoint($mobile-breakpoint) {
+
+    }
+
+    @include breakpoint($tablet-breakpoint) {
+      
+    }
+
+    @include breakpoint($desktop-breakpoint) {
+      section {
+        &.about, &.latest-work, &.site-introduction, &.skills {
+          @include span(12 of 12 last);
+        }
+
+        &.about, &.latest-work, &.skills {
+          .section-footer {
+            @include span(6 of 12 last);
+            clear: both;
+
+            a {
+              display: block;
+              padding: 75px 30px;
+              text-align: right;
+
+              // styling
+              @include transition(all 0.2s ease-in-out);
+              border-right: 5px solid transparent;
+              color: #4a4e56;
+              text-decoration: none;
+
+              span {
+                position: relative;
+
+                &:after {
+                  // layout
+                  content: "";
+                  height: 1px;
+                  position: absolute;
+                  bottom: -10px;
+                  left: 0;
+                  right: 0;
+
+                  // styling
+                  @include transition(all 0.2s ease-in-out);
+                  border-bottom: 1px dotted #4a4e56;
+                  opacity: 1;
+                }
+              }
+
+              &:hover {
+                padding-right: 20px;
+
+                // styling
+                background-color: #f27475;
+                border-right: 7px solid #ff9898;
+                color: $white;
+
+                span {
+                  &:after {
+                    opacity: 0;
+                  }
+                }
+              }
+            }
+          }
+
+          .section-header {
+            @include span(6 of 12);
+          }
+        }
+
+        &.latest-work {
+          article {
+            &.featured {
+              @include span(6 of 12);
+
+              img {
+                margin-bottom: 20px;
+              }
+
+              .column-one, .column-two {
+                @include span(6 of 6 last);
+              }
+            }
+
+            &.regular {
+              // layout
+              @include span(5 of 12 last);
+              @include pre(1 of 12 last);
+              margin-bottom: 40px;
+              padding-bottom: 20px;
+
+              // styling
+              border-bottom: 1px dashed $abbey;
+
+              &:last-child {
+                // layout
+                margin-bottom: 0;
+                padding-bottom: 0;
+
+                // styling
+                border-bottom: 0 none;
+              }
+
+              .column-one {
+                @include span(2 of 5);
+              }
+
+              .column-two {
+                @include span(3 of 5 last);
+              }
+            }
+          }
+        }
+
+        &.site-introduction {
+          p {
+            @include span(8 of 12 last);
+            @include prefix(2 of 12);
+            @include suffix(2 of 12);
+          }
+        }
+
+        &.skills {
+          article {
+            flex-basis: 25%; /* spans 1/4 */
+            flex-grow: 0;
+            flex-shrink: 0;
+            min-height: 300px;
+
+            &.open {
+              position: absolute;
+              left: 0;
+              right: 0;
+              z-index: 2;
+
+              &:hover {
+                @include transform(scale(1));
+              }
+            }
+
+            .collapsible-content-toggle {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              left: 0;
+              z-index: 1;
+            }
+
+            .column-one {
+              @include span(6 of 12);
+            }
+
+            .column-two {
+              @include span(3 of 12);
+              
+            }
+
+            .column-three {
+              @include span(3 of 12 last);
+            }
+          }
+
+          .flexbox-container {
+            @include span(12 of 12 last);
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+}

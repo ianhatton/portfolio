@@ -1,0 +1,60 @@
+header {
+  &[role=banner] {
+    // layout
+    margin-bottom: 20px;
+    padding: 20px;
+
+    // styling
+    // background-color: darken(#f1f2f4, 5%);
+    // background-color: #94b0da; // with #ffffff text
+    background-color: #f27475; // with #ffb1b1 text
+    border-bottom: 7px solid #ff9898;
+
+    h1 {
+      float: left;
+      margin-bottom: 0;
+
+      &:before {
+        // layout
+        content: "";
+        display: block;
+        float: left;
+        height: 48px;
+        margin-right: 10px;
+        width: 48px;
+
+        // styling
+        background: url("../images/hat.png") 0 0 no-repeat;
+      }
+
+      a {
+        // layout
+        float: left;
+
+        // styling
+        color: $white;
+        text-decoration: none;
+      }
+
+      span {
+        display: block;
+      }
+    }
+
+    nav {
+      &.primary-navigation {
+        float: right;
+
+        a {
+          color: $white;
+          text-decoration: none;
+        }
+
+        li {
+          float: left;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

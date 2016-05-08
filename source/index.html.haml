@@ -1,0 +1,152 @@
+---
+body_class: "home"
+title: Ian Hatton
+---
+
+%section.site-introduction.panel
+  %h1.bold-weight
+    Ian Hatton
+    %span is a Front-end Developer based in sunny Hitchin.
+  %p.delta
+    Take a look at his
+    = succeed "," do
+      = link_to "skills", "#"
+    view some of his
+    = succeed "," do
+      = link_to "latest work", "#"
+    or just read a bit more
+    = link_to "about", "#"
+    the person behind this amazing introduction.
+
+%section.skills.panel
+  %header.section-header
+    .padding
+      %h1.beta.extra-bold-weight Skills
+      %p.epsilon Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores soluta voluptas placeat vero hic, nulla, officia totam nam iusto ab fugiat ea voluptatem ipsum beatae ad fugit iste rerum tempore.
+  .collapsible-content.flexbox-container.clearfix
+    %article.css.collapsible-content-item
+      .collapsible-content-toggle
+      .padding
+        %h1.gamma.extra-bold-weight CSS
+        .collapsible-content-body
+          .column-one
+            %p.epsilon Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloribus reprehenderit.
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit amet reiciendis, excepturi impedit nihil id. Delectus esse quod quo facilis corporis blanditiis mollitia, quidem laboriosam odio consequuntur quae vero.
+          .column-two
+            %h2.epsilon I have a knowledge of
+            %ul
+              %li CSS
+              %li CSS3
+              %li Sass
+              %li Less
+          .column-three
+            %h2.epsilon Toolkit
+            %ul
+              %li Susy
+              %li Bourbon
+              %li Compass
+              %li Font Awesome
+              %li Bootstrap
+    %article.html.collapsible-content-item
+      .collapsible-content-toggle
+      .padding
+        %h1.gamma.extra-bold-weight HTML
+        .collapsible-content-body
+          .column-one
+            %p.epsilon Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloribus reprehenderit.
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit amet reiciendis, excepturi impedit nihil id. Delectus esse quod quo facilis corporis blanditiis mollitia, quidem laboriosam odio consequuntur quae vero.
+          .column-two
+            %h2.epsilon I have a knowledge of
+            %ul
+              %li HTML
+              %li HTML5
+              %li HAML
+              %li ERB
+          .column-three
+            %h2.epsilon Toolkit
+            %ul
+              %li Susy
+              %li Bourbon
+              %li Compass
+              %li Font Awesome
+              %li Bootstrap
+    %article.javascript.collapsible-content-item
+      .collapsible-content-toggle
+      .padding
+        %h1.gamma.extra-bold-weight JavaScript
+        .collapsible-content-body
+          .column-one
+            %p.epsilon Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloribus reprehenderit.
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit amet reiciendis, excepturi impedit nihil id. Delectus esse quod quo facilis corporis blanditiis mollitia, quidem laboriosam odio consequuntur quae vero.
+          .column-two
+            %h2.epsilon I have a knowledge of
+            %ul
+              %li JavaScript
+              %li jQuery
+              %li React
+              %li AngularJS 1
+              %li CoffeeScript
+          .column-three
+            %h2.epsilon Toolkit
+            %ul
+              %li Node.js
+              %li Lodash
+              %li Bower
+              %li Gulp
+              %li Karma
+              %li Jasmine
+    %article.web-standards.collapsible-content-item
+      .collapsible-content-toggle
+      .padding
+        %h1.gamma.extra-bold-weight Web standards
+        .collapsible-content-body
+          .column-one
+            %p.epsilon Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloribus reprehenderit.
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit amet reiciendis, excepturi impedit nihil id. Delectus esse quod quo facilis corporis blanditiis mollitia, quidem laboriosam odio consequuntur quae vero.
+          .column-two
+            %h2.epsilon I have a knowledge of
+            %ul
+              %li Semantic markup
+              %li Usability
+              %li Accessibility
+              %li ERB
+          .column-three
+            %h2.epsilon Toolkit
+            %ul
+              %li ARIA
+  %footer.section-footer
+    = link_to content_tag(:span, "More skills"), "#", class: "delta"
+
+%section.latest-work.panel
+  %header.section-header
+    .padding
+      %h1.beta.extra-bold-weight Latest work
+      %p.epsilon Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores soluta voluptas placeat vero hic, nulla, officia totam nam iusto ab fugiat ea voluptatem ipsum beatae ad fugit iste rerum tempore.
+  %article.featured
+    .column-one
+      = image_tag "https://www.fillmurray.com/600/300"
+    .column-two
+      %h1.gamma Better
+      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.
+      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe magni aperiam dolor beatae consequuntur officiis culpa iure, aspernatur cum rem.
+  %article.regular
+    .column-one
+      = image_tag "https://www.fillmurray.com/700/300"
+    .column-two
+      %h1.epsilon Financial Inclusion Commission
+      %p.eta Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.
+  %article.regular
+    .column-one
+      = image_tag "https://www.fillmurray.com/800/300"
+    .column-two
+      %h1.epsilon Portland Resourcing
+      %p.eta Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.
+  %footer.section-footer
+    = link_to "More work", "#", class: "delta"
+
+%section.about.panel
+  %header.section-header
+    .padding
+      %h1.beta.extra-bold-weight About
+      %p.epsilon Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores soluta voluptas placeat vero hic, nulla, officia totam nam iusto ab fugiat ea voluptatem ipsum beatae ad fugit iste rerum tempore.
+  

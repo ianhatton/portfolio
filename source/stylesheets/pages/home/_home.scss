@@ -1,0 +1,222 @@
+body {
+  &.home {
+    section {
+      &.site-introduction {
+        a {
+          // layout
+          display: inline-block;
+          margin: -20px;
+          padding: 20px;
+          position: relative;
+
+          // styling
+          @include transition(all 0.2s ease-in-out);
+          border: 4px solid transparent;
+          border-radius: 5px;
+          color: #4a4e56;
+          text-decoration: none;
+
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 15px;
+            left: 20px;
+            right: 20px;
+            border-bottom: 1px dotted black;
+          }
+
+          &:hover {
+            @include transform(scale(1.1));
+            background-color: rgba(241, 242, 244, 0.7);
+
+            &:after {
+              border-bottom: 0 none;
+            }
+          }
+        }
+
+        h1 {
+          span {
+            color: $secondary-heading-text;
+          }
+        }
+
+        p {
+          margin-top: 40px;
+          margin-bottom: 40px;
+        }
+      }
+
+      &.skills {
+        article {
+          // layout
+          position: relative;
+          z-index: 1;
+
+          // styling
+          @include transition(all 0.2s ease-in-out);
+          @include transform(scale(1));
+          cursor: pointer;
+
+          &:after {
+            // layout
+            display: block;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+
+            // styling
+            font-size: 200px;
+          }
+
+          &:hover {
+            @include transform(scale(1.1));
+            z-index: 20; // To ensure smooth transition from 1 to 20
+          }
+
+          &.css {
+            @include linear-gradient(80deg, $denim-1 0%, $denim-1 69%, $mariner 69%);
+
+            &:after {
+              content: "}";
+              color: $denim-2;
+            }
+
+            &:hover {
+              @include linear-gradient(80deg, lighten($denim-1, 5%) 0%, lighten($denim-1, 5%) 69%, lighten($mariner, 5%) 69%);
+
+              &:after {
+                color: lighten($denim-2, 5%);
+              }
+
+              h1 {
+                color: lighten($onahau, 5%);
+                -webkit-text-stroke: 2px lighten($torea-bay, 5%);
+                -webkit-text-fill-color: lighten($onahau, 5%);
+              }
+            }
+
+            h1 {
+              color: $onahau;
+              -webkit-text-stroke: 2px $torea-bay;
+              -webkit-text-fill-color: $onahau;
+            }
+
+            h2 {
+              color: $white;
+            }
+
+            li, p {
+              color: $white;
+            }
+          }
+
+          &.html {
+            @include linear-gradient(80deg, $orange-roughy 0%, $orange-roughy 69%, $flame-pea 69%);
+
+            &:after {
+              content: "/>";
+              color: #e0561f;
+            }
+
+            &:hover {
+              @include linear-gradient(80deg, lighten($orange-roughy, 5%) 0%, lighten($orange-roughy, 5%) 69%, lighten($flame-pea, 5%) 69%);
+
+              &:after {
+                color: lighten(#e0561f, 5%);
+              }
+
+              h1 {
+                color: lighten($wafer, 5%);
+                -webkit-text-stroke: 2px lighten($tabasco, 5%);
+                -webkit-text-fill-color: lighten($wafer, 5%);
+              }
+            }
+
+            h1 {
+              color: $wafer;
+              -webkit-text-stroke: 2px $tabasco;
+              -webkit-text-fill-color: $wafer;
+            }
+
+            p {
+              color: $white;
+            }
+          }
+
+          &.javascript {
+            @include linear-gradient(80deg, $ronchi-1 0%, $ronchi-1 69%, $ronchi-2 69%);
+
+            &:after {
+              content: ";";
+              color: $husk;
+            }
+
+            &:hover {
+              @include linear-gradient(80deg, lighten($ronchi-1, 5%) 0%, lighten($ronchi-1, 5%) 69%, lighten($ronchi-2, 5%) 69%);
+
+              &:after {
+                color: lighten($husk, 5%);
+              }
+
+              h1 {
+                color: lighten($tahuna-sands, 5%);
+                -webkit-text-stroke: 2px lighten($husk, 5%);
+                -webkit-text-fill-color: lighten($tahuna-sands, 5%);
+              }
+            }
+
+            h1 {
+              color: $tahuna-sands;
+              -webkit-text-stroke: 2px $husk;
+              -webkit-text-fill-color: $tahuna-sands;
+            }
+
+            p {
+              color: $husk;
+            }
+          }
+
+          &.web-standards {
+            @include linear-gradient(80deg, #30a06f 0%, #30a06f 69%, #48a07a 69%);
+
+            &:after {
+              color: #1c9e68;
+              content: "✓";
+            }
+
+            &:hover {
+              @include linear-gradient(80deg, lighten(#30a06f, 5%) 0%, lighten(#30a06f, 5%) 69%, lighten(#48a07a, 5%) 69%);
+
+              &:after {
+                color: lighten(#1c9e68, 5%);
+              }
+
+              h1 {
+                color: lighten(#ddfff0, 5%);
+                -webkit-text-stroke: 2px lighten(#076d41, 5%);
+                -webkit-text-fill-color: lighten(#ddfff0, 5%);
+              }
+            }
+
+            h1 {
+              color: #ddfff0;
+              -webkit-text-stroke: 2px #076d41;
+              -webkit-text-fill-color: #ddfff0;
+            }
+
+            p {
+              color: $white;
+            }
+          }
+
+          h1 {
+            position: relative;
+            right: -2px;
+          }
+        }
+      }
+    }
+  }
+}

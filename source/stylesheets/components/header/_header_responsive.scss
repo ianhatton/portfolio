@@ -1,0 +1,57 @@
+header {
+  &[role=banner] {
+    @include breakpoint($mobile-breakpoint) {
+
+    }
+
+    @include breakpoint($tablet-breakpoint) {
+      
+    }
+
+    @include breakpoint($desktop-breakpoint) {
+      // layout
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 21;
+
+      // styling
+      @include transition(all 0.2s ease-in-out);
+
+      &.subtle {
+        background-color: #4a4e56;
+        border-bottom: 1px solid transparent;
+
+        h1 {
+          &:before {
+            // layout
+            height: 0;
+            width: 0;
+
+            // styling
+            @include transition(all 0.2s ease-in-out);
+          }
+
+          a {
+            color: $white;
+          }
+        }
+
+        nav {
+          &.primary-navigation {
+            a {
+              color: $white;
+            }
+          }
+        }
+
+        span {
+          &.job-title {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

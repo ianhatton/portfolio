@@ -1,0 +1,23 @@
+header {
+  &.section-header {
+    // layout
+    margin: 0 0 40px -1000px;
+    padding-left: 1000px;
+
+    // styling
+    background-color: $section-header-bg;
+    border-bottom: 3px solid $section-header-border;
+
+    h1 {
+      color: $section-header-heading-text;
+    }
+
+    p {
+      color: $section-header-text;
+    }
+
+    .padding {
+      @include padding(40px 40px 40px 0);
+    }
+  }
+}
