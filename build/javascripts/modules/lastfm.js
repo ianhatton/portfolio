@@ -1,19 +1,87 @@
-require("../vendor/javascript-last.fm-api/lastfm.api");
-
 var _       = require('lodash/core');
+_.isElement = require('lodash/isElement');
+require('../vendor/javascript-last.fm-api/lastfm.api');
 
-var lastfm = new LastFM({
-  apiKey    : 'b5a390f794f482bed0d69370f0236277',
-  apiSecret : '3f1a9ee3617408ca91d59d2599917b74'
-});
+var holder, lastFm;
+var recentTracks = [];
 
-lastfm.user.getRecentTracks({user: 'hawkeyehatton'}, {success: function(data){
-  var tracks = data.recenttracks.track;
+function createLastFmObject() {
+  return new LastFM({
+    apiKey    : 'b5a390f794f482bed0d69370f0236277',
+    apiSecret : '3f1a9ee3617408ca91d59d2599917b74'
+  });
+}
 
-  _.forEach(tracks, (track) => {
-    console.log(track)
+function createRecentTracksList() {
+  let ul = document.createElement('ul');
+
+  createRecentTracksListItems(ul);
+  
+  holder.appendChild(ul);
+}
+
+function createRecentTracksListItems(ul) {
+  let h2, h3, img, li;
+
+  _.forEach(recentTracks, (recentTrack) => {
+    h2 = document.createElement('h2');
+    h3 = document.createElement('h3');
+    img = document.createElement('img');
+    li = document.createElement('li');
+
+    h2.className = 'zeta bold-weight';
+    h3.className = 'zeta';
+
+    h2.innerHTML = recentTrack.name;
+    h3.innerHTML = recentTrack.artist;
+    img.src = recentTrack.image;
+
+    li.appendChild(img);
+    li.appendChild(h2);
+    li.appendChild(h3);
+    ul.appendChild(li);
   });
 
-}, error: function(code, message){
-  /* Show error message. */
-}});
+  return ul;
+}
+
+function getRecentTracks(lastFm) {
+  lastFm.user.getRecentTracks({user: 'hawkeyehatton', limit: 5}, {success: function(data) {
+    populateRecentTracksArray(data)
+  }, error: function(code, message){
+    /* Show error message. */
+  }});
+}
+
+function populateRecentTracksArray(data) {
+  let tracks = data.recenttracks.track;
+
+  _.forEach(tracks, (track) => {
+    if(_.isUndefined(track['@attr'])) {
+      recentTracks.push({
+        name: track.name,
+        artist: track.artist['#text'],
+        image: track.image[2]['#text']
+      });
+    }
+  });
+
+  createRecentTracksList();
+}
+
+module.exports = function(id) {
+  let object;
+
+  holder = document.getElementById(id);
+
+  if (!_.isElement(holder)) return;
+
+  object = {
+    init: () => {
+      lastFm = createLastFmObject();
+      getRecentTracks(lastFm);
+    }
+  }
+
+  return object;
+}

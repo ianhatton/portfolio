@@ -1,4 +1,6 @@
-$ui-more: -0px -0px 56px 56px;
+$ui-launch: -0px -0px 24px 24px;
+$ui-close: -0px -24px 56px 56px;
+$ui-more: -0px -80px 56px 56px;
 @mixin sprite-width($sprite) {
   width: nth($sprite, 3);
 }

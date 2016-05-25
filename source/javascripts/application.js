@@ -1,9 +1,10 @@
 var CollapsibleContentClass = require("./modules/collapsible_content")
   , HeaderModule = require("./modules/header")
-  , LastfmModule = require("./modules/lastfm");
+  , LastFmModule = require("./modules/lastfm");
 
 var collapsibleContent
-  , header;
+  , header
+  , lastFm;
 
 // Collapsible Content
 collapsibleContent = document.querySelectorAll('.collapsible-content');
@@ -28,3 +29,11 @@ if(header) {
   header.init();
 }
 // End Header
+
+// LastFm
+lastFm = LastFmModule('last-fm');
+
+if(lastFm) {
+  lastFm.init();
+}
+// End LastFm

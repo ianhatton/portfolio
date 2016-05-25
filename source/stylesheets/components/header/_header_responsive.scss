@@ -20,8 +20,8 @@ header {
       @include transition(all 0.2s ease-in-out);
 
       &.subtle {
-        background-color: #4a4e56;
-        border-bottom: 1px solid transparent;
+        background-color: $header-bg-subtle;
+        border-bottom: 1px solid $header-border-subtle;
 
         h1 {
           &:before {
@@ -34,14 +34,14 @@ header {
           }
 
           a {
-            color: $white;
+            color: $header-link-text-subtle;
           }
         }
 
         nav {
           &.primary-navigation {
             a {
-              color: $white;
+              color: $primary-navigation-link-text-subtle;
             }
           }
         }

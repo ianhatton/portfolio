@@ -84,6 +84,7 @@
     "bourbon": "^4.2.7",
     "breakpoint-sass": "^2.7.0",
     "sprity": "^1.0.8",
+    "sprity-lwip": "^1.0.6",
     "sprity-sass": "^1.0.4",
     "susy": "^2.2.12",
     "viewport-detection-es6": "^2.0.2"

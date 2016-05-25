@@ -15,59 +15,56 @@ body {
         }
 
         &.about, &.latest-work, &.skills {
+          position: relative;
+
+          &:after {
+            // layout
+            @include bleed-x(1000px 0);
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 75%;
+
+            // styling
+            border-bottom: 1px dashed #4a4e56;
+            height: 7px;
+
+          }
+
           .section-footer {
             @include span(6 of 12 last);
             clear: both;
 
-            a {
+            .button {
               display: block;
               padding: 75px 30px;
               text-align: right;
 
-              // styling
-              @include transition(all 0.2s ease-in-out);
-              border-right: 5px solid transparent;
-              color: #4a4e56;
-              text-decoration: none;
-
-              span {
-                position: relative;
-
-                &:after {
-                  // layout
-                  content: "";
-                  height: 1px;
-                  position: absolute;
-                  bottom: -10px;
-                  left: 0;
-                  right: 0;
-
-                  // styling
-                  @include transition(all 0.2s ease-in-out);
-                  border-bottom: 1px dotted #4a4e56;
-                  opacity: 1;
-                }
-              }
-
               &:hover {
                 padding-right: 20px;
-
-                // styling
-                background-color: #f27475;
-                border-right: 7px solid #ff9898;
-                color: $white;
-
-                span {
-                  &:after {
-                    opacity: 0;
-                  }
-                }
               }
             }
           }
 
           .section-header {
             @include span(6 of 12);
+          }
+        }
+
+        &.goodreads {
+          @include span(4 of 12 last);
+        }
+
+        &.last-fm {
+          @include span(8 of 12);
+
+          li {
+            @include span(1.6 of 8)
+
+            &:last-child {
+              @include last;
+            }
           }
         }
 
@@ -93,7 +90,7 @@ body {
               padding-bottom: 20px;
 
               // styling
-              border-bottom: 1px dashed $abbey;
+              border-bottom: 1px dashed $latest-work-article-border;
 
               &:last-child {
                 // layout

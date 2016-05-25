@@ -1,7 +1,21 @@
 body {
   &.home {
     section {
+      &.latest-work {
+        article {
+          h1 {
+            margin-bottom: 0;
+          }
+
+          header {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
       &.site-introduction {
+        margin: 100px 0;
+
         a {
           // layout
           display: inline-block;
@@ -11,9 +25,9 @@ body {
 
           // styling
           @include transition(all 0.2s ease-in-out);
-          border: 4px solid transparent;
+          border: 4px solid $site-introduction-link-border;
           border-radius: 5px;
-          color: #4a4e56;
+          color: $site-introduction-link-text;
           text-decoration: none;
 
           &:after {
@@ -23,12 +37,12 @@ body {
             bottom: 15px;
             left: 20px;
             right: 20px;
-            border-bottom: 1px dotted black;
+            border-bottom: 1px dotted $site-introduction-link-after-border;
           }
 
           &:hover {
             @include transform(scale(1.1));
-            background-color: rgba(241, 242, 244, 0.7);
+            background-color: $site-introduction-link-bg-hover;
 
             &:after {
               border-bottom: 0 none;
@@ -37,14 +51,11 @@ body {
         }
 
         h1 {
+          margin-bottom: 75px;
+          
           span {
             color: $secondary-heading-text;
           }
-        }
-
-        p {
-          margin-top: 40px;
-          margin-bottom: 40px;
         }
       }
 
@@ -62,29 +73,47 @@ body {
           &:after {
             // layout
             display: block;
-            position: absolute;
             bottom: 20px;
-            right: 20px;
 
             // styling
             font-size: 200px;
           }
 
+          &:after, &:before {
+            position: absolute;
+            right: 20px;
+          }
+
+          &:before {
+            // layout
+            @include sprite($ui-more);
+            content: "";
+
+            // styling
+            @include transition(opacity 0.2s ease-in-out);
+            background-image: url("../images/sprite-ui.png");
+            opacity: 0;
+          }
+
           &:hover {
             @include transform(scale(1.1));
             z-index: 20; // To ensure smooth transition from 1 to 20
+
+            &:before {
+              opacity: 1;
+            }
           }
 
           &.css {
-            @include linear-gradient(80deg, $denim-1 0%, $denim-1 69%, $mariner 69%);
+            @include linear-gradient(80deg, $skill-css-bg-1 0%, $skill-css-bg-2 69%, $skill-css-bg-3 69%);
 
             &:after {
               content: "}";
-              color: $denim-2;
+              color: $skill-css-after;
             }
 
             &:hover {
-              @include linear-gradient(80deg, lighten($denim-1, 5%) 0%, lighten($denim-1, 5%) 69%, lighten($mariner, 5%) 69%);
+              @include linear-gradient(80deg, $skill-css-bg-1-hover 0%, $skill-css-bg-2-hover 69%, $skill-css-bg-3-hover 69%);
 
               &:after {
                 color: lighten($denim-2, 5%);
@@ -175,6 +204,13 @@ body {
 
             p {
               color: $husk;
+            }
+          }
+
+          &.open {
+            &:before {
+              @include sprite($ui-close);
+              top: 20px;
             }
           }
 

@@ -29,7 +29,6 @@ module.exports = function(id) {
 
   object = {
     init: () => {
-      console.log("init");
       addScrollListener();
     }
   }

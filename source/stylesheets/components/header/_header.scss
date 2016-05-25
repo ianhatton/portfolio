@@ -5,10 +5,8 @@ header {
     padding: 20px;
 
     // styling
-    // background-color: darken(#f1f2f4, 5%);
-    // background-color: #94b0da; // with #ffffff text
-    background-color: #f27475; // with #ffb1b1 text
-    border-bottom: 7px solid #ff9898;
+    background-color: $header-bg;
+    border-bottom: 7px solid darken($header-bg, 10%);
 
     h1 {
       float: left;
@@ -32,7 +30,7 @@ header {
         float: left;
 
         // styling
-        color: $white;
+        color: $header-link-text;
         text-decoration: none;
       }
 
@@ -46,7 +44,7 @@ header {
         float: right;
 
         a {
-          color: $white;
+          color: $primary-navigation-link-text;
           text-decoration: none;
         }
 

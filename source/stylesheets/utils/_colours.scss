@@ -1,13 +1,43 @@
 // Global
-$body-bg: $athens-grey !default;
+$body-bg: $athens-grey-1 !default;
+$external-link-text: $abbey !default;
 $primary-heading-text: $abbey !default;
 $primary-text: $abbey !default;
 $secondary-heading-text: $iron !default;
 
 // Components
+$button-bg-hover: $froly !default;
+$button-border-bottom: $abbey !default;
+$button-border-right: transparent !default;
+$button-border-right-hover: $mona-lisa !default;
+$button-text: $abbey !default;
+$button-text-hover: $white !default;
+
+$header-bg: $abbey !default;
+$header-bg-subtle: $athens-grey-2-t-09 !default;
+$header-border-subtle: transparent !default;
+$header-link-text: $white !default;
+$header-link-text-subtle: $abbey !default;
+
+$primary-navigation-link-text: $white !default;
+$primary-navigation-link-text-subtle: $abbey !default;
+
 $section-header-bg: $abbey !default;
-$section-header-border: $black !default;
+$section-header-border: $tuna !default;
 $section-header-heading-text: $white !default;
 $section-header-text: $white !default;
 
 // Pages
+// Home
+$latest-work-article-border: $abbey !default;
+$site-introduction-link-border: transparent !default;
+$site-introduction-link-after-border: $abbey !default;
+$site-introduction-link-bg-hover: $athens-grey-1-t-07 !default;
+$site-introduction-link-text: $abbey !default;
+$skill-css-after: $denim-2 !default;
+$skill-css-bg-1: $denim-1 !default;
+$skill-css-bg-1-hover: lighten($denim-1, 5%) !default;
+$skill-css-bg-2: $denim-1 !default;
+$skill-css-bg-2-hover: lighten($denim-1, 5%) !default;
+$skill-css-bg-3: $mariner !default
+$skill-css-bg-3-hover: lighten($mariner, 5%) !default;

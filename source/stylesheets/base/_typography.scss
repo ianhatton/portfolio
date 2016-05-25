@@ -1,9 +1,37 @@
 $base-font-size: 1em; /* 16px */
 $base-line-height: 24; /* 24px based on 16px body font size */
 
+a {
+  &.external-link {
+    // layout
+    display: inline-block;
+
+    // styling
+    color: $external-link-text;
+    text-decoration: none;
+
+    &:after {
+      // layout
+      @include sprite($ui-launch);
+      content: "";
+      display: inline-block;
+
+      // styling
+      @include transition(all 0.2s ease-in-out);
+      background-image: url("../images/sprite-ui.png");
+    }
+
+    &:hover {
+      &:after {
+        @include transform(scale(1.1));
+      }
+    }
+  }
+}
+
 h1, .alpha {
-  font-size: 6.25em; /* 100px */
-  line-height: (108 / 100) + em;
+  font-size: 3.75em; /* 60px */
+  line-height: (72 / 60) + em;
 }
 
 h2, .beta {
