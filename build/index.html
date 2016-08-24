@@ -41,69 +41,99 @@
         </nav>
       </div>
     </header>
-    <div class='wrap' role='main'>
-      <section class='site-introduction'>
-        <h1 class='bold-weight'>
-          Ian Hatton
-          <span>is a Front-end Developer based in sunny Hitchin.</span>
-        </h1>
-        <p class='delta'>
-          Take a look at his
-          <a href="#">skills</a>,
-          view some of his
-          <a href="#">latest work</a>,
-          or just read a bit more
-          <a href="#">about</a>
-          the person behind this amazing introduction.
-        </p>
-      </section>
+    <div class='div' role='main'>
+      <div class='wrap'>
+        <section class='site-introduction'>
+          <h1 class='bold-weight'>
+            Ian Hatton
+            <span>is a Front-end Developer working in London.</span>
+          </h1>
+          <p class='delta'>
+            Take a look at his
+            <a href="#">skills</a>,
+            view some of his
+            <a href="#">latest work</a>,
+            or just read a bit more
+            <a href="#">about</a>
+            the person behind this amazing introduction.
+          </p>
+        </section>
+      </div>
       <section class='skills panel'>
-        <header class='section-header'>
-          <div class='padding'>
-            <h1 class='beta extra-bold-weight'>Skills</h1>
-            <p class='epsilon'>I'm a Front-end Developer with a keen eye for design, a soft spot for semantics and a desire to continually improve my abilities.</p>
-            <p class='epsilon'>Click on the panels below to read a little about my core skill sets and approach to web development.</p>
-          </div>
-        </header>
-        <div class='collapsible-content flexbox-container clearfix'>
-          <article class='css collapsible-content-item'>
-            <div class='collapsible-content-toggle'></div>
+        <div class='wrap'>
+          <header class='section-header'>
             <div class='padding'>
-              <h1 class='gamma extra-bold-weight'>CSS</h1>
-              <div class='collapsible-content-body'>
+              <h1 class='beta extra-bold-weight'>Skills</h1>
+              <p class='epsilon'>I'm a Front-end Developer with a keen eye for design, a desire to continually improve my abilities and over 4 years professional experience under my belt.</p>
+              <p class='epsilon'>Click on the panels below to read a little about my core skill sets and approach to web development.</p>
+            </div>
+          </header>
+        </div>
+        <div class='tabbed-content'>
+          <ul class='tabbed-content-nav' role='tablist'>
+            <li role='presentation'>
+              <a role="tab" class="css" href="#">CSS</a>
+            </li>
+            <li role='presentation'>
+              <a role="tab" class="html" href="#">HTML</a>
+            </li>
+            <li role='presentation'>
+              <a role="tab" class="javascript" href="#">JavaScript</a>
+            </li>
+            <li role='presentation'>
+              <a role="tab" class="web-standards" href="#">Web standards</a>
+            </li>
+          </ul>
+          <div class='tabbed-content-body clearfix'>
+            <article class='css tabbed-content-tab'>
+              <div class='padding'>
+                <h1 class='gamma extra-bold-weight'>CSS</h1>
                 <div class='column-one'>
                   <p class='epsilon'>The art of presenting beautiful content for the web is something which still excites me to this day.</p>
-                  <p>I find CSS to be both the most annoying . It's the part of my job which people are likely to / I'm a big fan of type-driven design and minimal</p>
+                  <p>CSS is the area of my job which always makes the biggest initial impact and it's for this reason that I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they're being viewed on.</p>
+                  <p>In my opinion, what's going on "under the hood" is just as important as what's presented in the browser, which is why I'm quite meticulous when it comes to organising my work and being as modular as possible. Spaghetti is good, but CSS spaghetti tastes bad.</p>
+                  <p>I have made great relationships with the designers I have worked with in the past and I'm always happy to provide guidance and constructive criticism where it's due in order to deliver a stunning* final product.</p>
+                  <p class='eta'>*exact level of stunningness dependent on design.</p>
                 </div>
                 <div class='column-two'>
-                  <h2 class='epsilon'>I have a knowledge of</h2>
+                  <h2 class='epsilon'>My expertise at a glance:</h2>
                   <ul>
                     <li>CSS</li>
                     <li>CSS3</li>
                     <li>Sass</li>
                     <li>Less</li>
+                    <li>Responsive web design</li>
+                    <li>Modular CSS</li>
                   </ul>
                 </div>
                 <div class='column-three'>
                   <h2 class='epsilon'>Toolkit</h2>
                   <ul>
-                    <li>Susy</li>
-                    <li>Bourbon</li>
-                    <li>Compass</li>
+                    <li><img alt="Susy" src="/images/toolkit/susy.png" /></li>
+                    <li><img alt="Bourbon" src="/images/toolkit/bourbon.png" /></li>
+                    <li><img alt="Compass" src="/images/toolkit/compass.png" /></li>
                     <li>Font Awesome</li>
                     <li>Bootstrap</li>
                   </ul>
                 </div>
               </div>
-            </div>
-          </article>
-          <article class='html collapsible-content-item'>
-            <div class='collapsible-content-toggle'></div>
-            <div class='padding'>
-              <h1 class='gamma extra-bold-weight'>HTML</h1>
-              <div class='collapsible-content-body'>
+            </article>
+            <article class='html tabbed-content-tab'>
+              <div class='padding'>
+                <h1 class='gamma extra-bold-weight'>HTML</h1>
                 <div class='column-one'>
-                  <p class='epsilon'>I'm a sucker for semantics.</p>
+                  <blockquote>
+                    <p class='epsilon'>
+                      &ldquo;We build too many walls and not enough
+                      <del>bridges</del>
+                      websites.&rdquo;
+                    </p>
+                    <cite>
+                      &mdash;
+                      <del>Isaac Newton</del>
+                      Ian Hatton
+                    </cite>
+                  </blockquote>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit amet reiciendis, excepturi impedit nihil id. Delectus esse quod quo facilis corporis blanditiis mollitia, quidem laboriosam odio consequuntur quae vero.</p>
                 </div>
                 <div class='column-two'>
@@ -126,16 +156,13 @@
                   </ul>
                 </div>
               </div>
-            </div>
-          </article>
-          <article class='javascript collapsible-content-item'>
-            <div class='collapsible-content-toggle'></div>
-            <div class='padding'>
-              <h1 class='gamma extra-bold-weight'>JavaScript</h1>
-              <div class='collapsible-content-body'>
+            </article>
+            <article class='javascript tabbed-content-tab'>
+              <div class='padding'>
+                <h1 class='gamma extra-bold-weight'>JavaScript</h1>
                 <div class='column-one'>
                   <p class='epsilon'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloribus reprehenderit.</p>
-                  <p>JavaScript is, without doubt, the most challenging part of . Having said that, I also find it's the most rewarding.</p>
+                  <p>JavaScript is, without doubt, the most challenging part of my job and . Having said that, I also find it's the most rewarding.</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit amet reiciendis, excepturi impedit nihil id. Delectus esse quod quo facilis corporis blanditiis mollitia, quidem laboriosam odio consequuntur quae vero.</p>
                 </div>
                 <div class='column-two'>
@@ -160,13 +187,10 @@
                   </ul>
                 </div>
               </div>
-            </div>
-          </article>
-          <article class='web-standards collapsible-content-item'>
-            <div class='collapsible-content-toggle'></div>
-            <div class='padding'>
-              <h1 class='gamma extra-bold-weight'>Web standards</h1>
-              <div class='collapsible-content-body'>
+            </article>
+            <article class='web-standards tabbed-content-tab'>
+              <div class='padding'>
+                <h1 class='gamma extra-bold-weight'>Web standards</h1>
                 <div class='column-one'>
                   <p class='epsilon'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloribus reprehenderit.</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit amet reiciendis, excepturi impedit nihil id. Delectus esse quod quo facilis corporis blanditiis mollitia, quidem laboriosam odio consequuntur quae vero.</p>
@@ -187,84 +211,86 @@
                   </ul>
                 </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
         <footer class='section-footer'>
           <a class="button button-primary delta" href="#"><span>More skills</span></a>
         </footer>
       </section>
-      <section class='latest-work panel'>
-        <header class='section-header'>
-          <div class='padding'>
-            <h1 class='beta extra-bold-weight'>Latest work</h1>
-            <p class='epsilon'>My work includes consumer-facing websites, content management systems, emails and rich media advertising.</p>
-            <p class='epsilon'>Below is a selection of recently completed projects. Click the buttons to read the accompanying case study for each piece.</p>
-          </div>
-        </header>
-        <article class='featured'>
-          <div class='column-one'>
-            <img src="https://www.fillmurray.com/600/300" />
-          </div>
-          <div class='column-two'>
-            <header>
-              <h1 class='gamma'>Better</h1>
-              <a class="external-link" target="_blank" href="http://www.better.org.uk">Visit live site</a>
-            </header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe magni aperiam dolor beatae consequuntur officiis culpa iure, aspernatur cum rem.</p>
-            <a class="button button-primary" href="#"><span>Read on</span></a>
-          </div>
-        </article>
-        <div class='group'>
-          <article class='regular'>
+      <div class='wrap'>
+        <section class='latest-work panel'>
+          <header class='section-header'>
+            <div class='padding'>
+              <h1 class='beta extra-bold-weight'>Latest work</h1>
+              <p class='epsilon'>My work includes consumer-facing websites, content management systems, emails and rich media advertising.</p>
+              <p class='epsilon'>Below is a selection of recently completed projects. Click the buttons to read the accompanying case study for each piece.</p>
+            </div>
+          </header>
+          <article class='featured'>
             <div class='column-one'>
-              <img src="https://www.fillmurray.com/700/300" />
+              <img src="https://www.fillmurray.com/600/300" />
             </div>
             <div class='column-two'>
               <header>
-                <h1 class='epsilon'>Financial Inclusion Commission</h1>
-                <a class="eta external-link" target="_blank" href="http://www.financialinclusioncommission.org.uk">Visit live site</a>
+                <h1 class='gamma'>Better</h1>
+                <a class="external-link" target="_blank" href="http://www.better.org.uk">Visit live site</a>
               </header>
-              <p class='eta'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe magni aperiam dolor beatae consequuntur officiis culpa iure, aspernatur cum rem.</p>
               <a class="button button-primary" href="#"><span>Read on</span></a>
             </div>
           </article>
-          <article class='regular'>
-            <div class='column-one'>
-              <img src="https://www.fillmurray.com/800/300" />
-            </div>
-            <div class='column-two'>
-              <header>
-                <h1 class='epsilon'>Portland Resourcing</h1>
-                <a class="eta external-link" target="_blank" href="http://www.portlandresourcing.com">Visit live site</a>
-              </header>
-              <p class='eta'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.</p>
-              <a class="button button-primary" href="#"><span>Read on</span></a>
-            </div>
-          </article>
-        </div>
-        <footer class='section-footer'>
-          <a class="button button-primary delta" href="#"><span>More work</span></a>
-        </footer>
-      </section>
-      <section class='about panel'>
-        <header class='section-header'>
-          <div class='padding'>
-            <h1 class='beta extra-bold-weight'>About me</h1>
-            <p class='epsilon'>I'm a man of simple pleasures.</p>
+          <div class='group'>
+            <article class='regular'>
+              <div class='column-one'>
+                <img src="https://www.fillmurray.com/700/300" />
+              </div>
+              <div class='column-two'>
+                <header>
+                  <h1 class='epsilon'>Financial Inclusion Commission</h1>
+                  <a class="eta external-link" target="_blank" href="http://www.financialinclusioncommission.org.uk">Visit live site</a>
+                </header>
+                <p class='eta'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.</p>
+                <a class="button button-primary" href="#"><span>Read on</span></a>
+              </div>
+            </article>
+            <article class='regular'>
+              <div class='column-one'>
+                <img src="https://www.fillmurray.com/800/300" />
+              </div>
+              <div class='column-two'>
+                <header>
+                  <h1 class='epsilon'>Portland Resourcing</h1>
+                  <a class="eta external-link" target="_blank" href="http://www.portlandresourcing.com">Visit live site</a>
+                </header>
+                <p class='eta'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.</p>
+                <a class="button button-primary" href="#"><span>Read on</span></a>
+              </div>
+            </article>
           </div>
-        </header>
-        <section class='last-fm' id='last-fm'>
-          <h1 class='delta'>I've been listening to these beauties:</h1>
+          <footer class='section-footer'>
+            <a class="button button-primary delta" href="#"><span>More work</span></a>
+          </footer>
         </section>
-        <section class='goodreads'>
-          <h1 class='delta'>And reading this:</h1>
+        <section class='about panel'>
+          <header class='section-header'>
+            <div class='padding'>
+              <h1 class='beta extra-bold-weight'>About me</h1>
+              <p class='epsilon'>I enjoy gardening. I like cake. I love curry. I get Steely Dan withdrawal if I go longer than 3 days without hearing them. Team Tyrion.</p>
+            </div>
+          </header>
+          <section class='last-fm' id='last-fm'>
+            <h1 class='delta'>I've been listening to these beauties:</h1>
+          </section>
+          <section class='goodreads'>
+            <h1 class='delta'>And reading this:</h1>
+          </section>
+          <footer class='section-footer'>
+            <a class="button button-primary delta" href="#"><span>More about me</span></a>
+          </footer>
         </section>
-        <footer class='section-footer'>
-          <a class="button button-primary delta" href="#"><span>More about me</span></a>
-        </footer>
-      </section>
+      </div>
     </div>
     <script src="/javascripts/application.js"></script>
   </body>
