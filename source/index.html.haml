@@ -3,58 +3,79 @@ body_class: "home"
 title: Ian Hatton
 ---
 
-%section.site-introduction
-  %h1.bold-weight
-    Ian Hatton
-    %span is a Front-end Developer based in sunny Hitchin.
-  %p.delta
-    Take a look at his
-    = succeed "," do
-      = link_to "skills", "#"
-    view some of his
-    = succeed "," do
-      = link_to "latest work", "#"
-    or just read a bit more
-    = link_to "about", "#"
-    the person behind this amazing introduction.
+.wrap
+  %section.site-introduction
+    %h1.bold-weight
+      Ian Hatton
+      %span is a Front-end Developer working in London.
+    %p.delta
+      Take a look at his
+      = succeed "," do
+        = link_to "skills", "#"
+      view some of his
+      = succeed "," do
+        = link_to "latest work", "#"
+      or just read a bit more
+      = link_to "about", "#"
+      the person behind this amazing introduction.
 
 %section.skills.panel
-  %header.section-header
-    .padding
-      %h1.beta.extra-bold-weight Skills
-      %p.epsilon I'm a Front-end Developer with a keen eye for design, a soft spot for semantics and a desire to continually improve my abilities.
-      %p.epsilon Click on the panels below to read a little about my core skill sets and approach to web development.
-  .collapsible-content.flexbox-container.clearfix
-    %article.css.collapsible-content-item
-      .collapsible-content-toggle
+  .wrap
+    %header.section-header
       .padding
-        %h1.gamma.extra-bold-weight CSS
-        .collapsible-content-body
+        %h1.beta.extra-bold-weight Skills
+        %p.epsilon I'm a Front-end Developer with a keen eye for design, a desire to continually improve my abilities and over 4 years professional experience under my belt.
+        %p.epsilon Click on the panels below to read a little about my core skill sets and approach to web development.
+  .tabbed-content
+    %ul.tabbed-content-nav{ role: "tablist" }
+      %li{ role: "presentation" }
+        = link_to "CSS", "#", role: "tab", class: "css"
+      %li{ role: "presentation" }
+        = link_to "HTML", "#", role: "tab", class: "html"
+      %li{ role: "presentation" }
+        = link_to "JavaScript", "#", role: "tab", class: "javascript"
+      %li{ role: "presentation" }
+        = link_to "Web standards", "#", role: "tab", class: "web-standards"
+    .tabbed-content-body.clearfix
+      %article.css.tabbed-content-tab
+        .padding
+          %h1.gamma.extra-bold-weight CSS
           .column-one
             %p.epsilon The art of presenting beautiful content for the web is something which still excites me to this day.
-            %p I find CSS to be both the most annoying . It's the part of my job which people are likely to / I'm a big fan of type-driven design and minimal
+            %p CSS is the area of my job which always makes the biggest initial impact and it's for this reason that I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they're being viewed on.
+            %p In my opinion, what's going on "under the hood" is just as important as what's presented in the browser, which is why I'm quite meticulous when it comes to organising my work and being as modular as possible. Spaghetti is good, but CSS spaghetti tastes bad.
+            %p I have made great relationships with the designers I have worked with in the past and I'm always happy to provide guidance and constructive criticism where it's due in order to deliver a stunning* final product.
+            %p.eta *exact level of stunningness dependent on design.
           .column-two
-            %h2.epsilon I have a knowledge of
+            %h2.epsilon My expertise at a glance:
             %ul
               %li CSS
               %li CSS3
               %li Sass
               %li Less
+              %li Responsive web design
+              %li Modular CSS
           .column-three
             %h2.epsilon Toolkit
             %ul
-              %li Susy
-              %li Bourbon
-              %li Compass
+              %li= image_tag "toolkit/susy.png", alt: "Susy"
+              %li= image_tag "toolkit/bourbon.png", alt: "Bourbon"
+              %li= image_tag "toolkit/compass.png", alt: "Compass"
               %li Font Awesome
               %li Bootstrap
-    %article.html.collapsible-content-item
-      .collapsible-content-toggle
-      .padding
-        %h1.gamma.extra-bold-weight HTML
-        .collapsible-content-body
+      %article.html.tabbed-content-tab
+        .padding
+          %h1.gamma.extra-bold-weight HTML
           .column-one
-            %p.epsilon I'm a sucker for semantics.
+            %blockquote
+              %p.epsilon
+                &ldquo;We build too many walls and not enough
+                %del bridges
+                websites.&rdquo;
+              %cite
+                &mdash;
+                %del Isaac Newton
+                Ian Hatton
             %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit amet reiciendis, excepturi impedit nihil id. Delectus esse quod quo facilis corporis blanditiis mollitia, quidem laboriosam odio consequuntur quae vero.
           .column-two
             %h2.epsilon I have a knowledge of
@@ -71,15 +92,14 @@ title: Ian Hatton
               %li Compass
               %li Font Awesome
               %li Bootstrap
-    %article.javascript.collapsible-content-item
-      .collapsible-content-toggle
-      .padding
-        %h1.gamma.extra-bold-weight JavaScript
-        .collapsible-content-body
+      %article.javascript.tabbed-content-tab
+        .padding
+          %h1.gamma.extra-bold-weight JavaScript
           .column-one
             %p.epsilon Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloribus reprehenderit.
-            %p JavaScript is, without doubt, the most challenging part of . Having said that, I also find it's the most rewarding.
+            %p JavaScript is, without doubt, the most challenging part of my job and . Having said that, I also find it's the most rewarding.
             %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit amet reiciendis, excepturi impedit nihil id. Delectus esse quod quo facilis corporis blanditiis mollitia, quidem laboriosam odio consequuntur quae vero.
+
           .column-two
             %h2.epsilon I have a knowledge of
             %ul
@@ -97,11 +117,9 @@ title: Ian Hatton
               %li Gulp
               %li Karma
               %li Jasmine
-    %article.web-standards.collapsible-content-item
-      .collapsible-content-toggle
-      .padding
-        %h1.gamma.extra-bold-weight Web standards
-        .collapsible-content-body
+      %article.web-standards.tabbed-content-tab
+        .padding
+          %h1.gamma.extra-bold-weight Web standards
           .column-one
             %p.epsilon Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloribus reprehenderit.
             %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit amet reiciendis, excepturi impedit nihil id. Delectus esse quod quo facilis corporis blanditiis mollitia, quidem laboriosam odio consequuntur quae vero.
@@ -119,57 +137,58 @@ title: Ian Hatton
   %footer.section-footer
     = link_to content_tag(:span, "More skills"), "#", class: "button button-primary delta"
 
-%section.latest-work.panel
-  %header.section-header
-    .padding
-      %h1.beta.extra-bold-weight Latest work
-      %p.epsilon My work includes consumer-facing websites, content management systems, emails and rich media advertising.
-      %p.epsilon Below is a selection of recently completed projects. Click the buttons to read the accompanying case study for each piece.
-  %article.featured
-    .column-one
-      = image_tag "https://www.fillmurray.com/600/300"
-    .column-two
-      %header
-        %h1.gamma Better
-        = link_to "Visit live site", "http://www.better.org.uk", class: "external-link", target: "_blank"
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe magni aperiam dolor beatae consequuntur officiis culpa iure, aspernatur cum rem.
-      = link_to content_tag(:span, "Read on"), "#", class: "button button-primary"
-
-  .group
-    %article.regular
+.wrap
+  %section.latest-work.panel
+    %header.section-header
+      .padding
+        %h1.beta.extra-bold-weight Latest work
+        %p.epsilon My work includes consumer-facing websites, content management systems, emails and rich media advertising.
+        %p.epsilon Below is a selection of recently completed projects. Click the buttons to read the accompanying case study for each piece.
+    %article.featured
       .column-one
-        = image_tag "https://www.fillmurray.com/700/300"
+        = image_tag "https://www.fillmurray.com/600/300"
       .column-two
         %header
-          %h1.epsilon Financial Inclusion Commission
-          = link_to "Visit live site", "http://www.financialinclusioncommission.org.uk", class: "eta external-link", target: "_blank"
-        %p.eta Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.
+          %h1.gamma Better
+          = link_to "Visit live site", "http://www.better.org.uk", class: "external-link", target: "_blank"
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe magni aperiam dolor beatae consequuntur officiis culpa iure, aspernatur cum rem.
         = link_to content_tag(:span, "Read on"), "#", class: "button button-primary"
-    %article.regular
-      .column-one
-        = image_tag "https://www.fillmurray.com/800/300"
-      .column-two
-        %header
-          %h1.epsilon Portland Resourcing
-          = link_to "Visit live site", "http://www.portlandresourcing.com", class: "eta external-link", target: "_blank"
-        %p.eta Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.
-        = link_to content_tag(:span, "Read on"), "#", class: "button button-primary"
-  %footer.section-footer
-    = link_to content_tag(:span, "More work"), "#", class: "button button-primary delta"
 
-%section.about.panel
-  %header.section-header
-    .padding
-      %h1.beta.extra-bold-weight About me
-      %p.epsilon I'm a man of simple pleasures.
+    .group
+      %article.regular
+        .column-one
+          = image_tag "https://www.fillmurray.com/700/300"
+        .column-two
+          %header
+            %h1.epsilon Financial Inclusion Commission
+            = link_to "Visit live site", "http://www.financialinclusioncommission.org.uk", class: "eta external-link", target: "_blank"
+          %p.eta Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.
+          = link_to content_tag(:span, "Read on"), "#", class: "button button-primary"
+      %article.regular
+        .column-one
+          = image_tag "https://www.fillmurray.com/800/300"
+        .column-two
+          %header
+            %h1.epsilon Portland Resourcing
+            = link_to "Visit live site", "http://www.portlandresourcing.com", class: "eta external-link", target: "_blank"
+          %p.eta Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.
+          = link_to content_tag(:span, "Read on"), "#", class: "button button-primary"
+    %footer.section-footer
+      = link_to content_tag(:span, "More work"), "#", class: "button button-primary delta"
 
-  %section.last-fm#last-fm
-    %h1.delta I've been listening to these beauties:
+  %section.about.panel
+    %header.section-header
+      .padding
+        %h1.beta.extra-bold-weight About me
+        %p.epsilon I enjoy gardening. I like cake. I love curry. I get Steely Dan withdrawal if I go longer than 3 days without hearing them. Team Tyrion.
 
-  %section.goodreads
-    %h1.delta And reading this:
+    %section.last-fm#last-fm
+      %h1.delta I've been listening to these beauties:
 
-  %footer.section-footer
-    = link_to content_tag(:span, "More about me"), "#", class: "button button-primary delta"
+    %section.goodreads
+      %h1.delta And reading this:
+
+    %footer.section-footer
+      = link_to content_tag(:span, "More about me"), "#", class: "button button-primary delta"
 

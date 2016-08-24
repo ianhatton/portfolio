@@ -1,6 +1,8 @@
-var CollapsibleContentClass = require("./modules/collapsible_content")
-  , HeaderModule = require("./modules/header")
-  , LastFmModule = require("./modules/lastfm");
+var CollapsibleContentClass = require('@ianhatton/vanilla-collapsible-content')
+  , TabbedContentClass = require('@ianhatton/vanilla-tabbed-content');
+
+var HeaderModule = require('./modules/header')
+  , LastFmModule = require('./modules/lastfm');
 
 var collapsibleContent
   , header
@@ -37,3 +39,17 @@ if(lastFm) {
   lastFm.init();
 }
 // End LastFm
+
+// Tabbed Content
+var tabbedContentElements = document.querySelectorAll('.tabbed-content');
+
+if (tabbedContentElements.length > 0){
+  let tabbedContent = _.map(tabbedContentElements, function(tc){
+    return new TabbedContentClass({
+      element: tc
+      , bodyContainerClass: 'tabbed-content-body'
+      , navContainerClass: 'tabbed-content-nav'
+    });
+  });
+}
+// End Tabbed Content

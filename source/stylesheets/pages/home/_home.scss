@@ -65,43 +65,15 @@ body {
           position: relative;
           z-index: 1;
 
-          // styling
-          @include transition(all 0.2s ease-in-out);
-          @include transform(scale(1));
-          cursor: pointer;
-
           &:after {
             // layout
             display: block;
+            position: absolute;
             bottom: 20px;
+            right: 20px;
 
             // styling
             font-size: 200px;
-          }
-
-          &:after, &:before {
-            position: absolute;
-            right: 20px;
-          }
-
-          &:before {
-            // layout
-            @include sprite($ui-more);
-            content: "";
-
-            // styling
-            @include transition(opacity 0.2s ease-in-out);
-            background-image: url("../images/sprite-ui.png");
-            opacity: 0;
-          }
-
-          &:hover {
-            @include transform(scale(1.1));
-            z-index: 20; // To ensure smooth transition from 1 to 20
-
-            &:before {
-              opacity: 1;
-            }
           }
 
           &.css {
@@ -110,20 +82,6 @@ body {
             &:after {
               content: "}";
               color: $skill-css-after;
-            }
-
-            &:hover {
-              @include linear-gradient(80deg, $skill-css-bg-1-hover 0%, $skill-css-bg-2-hover 69%, $skill-css-bg-3-hover 69%);
-
-              &:after {
-                color: lighten($denim-2, 5%);
-              }
-
-              h1 {
-                color: lighten($onahau, 5%);
-                -webkit-text-stroke: 2px lighten($torea-bay, 5%);
-                -webkit-text-fill-color: lighten($onahau, 5%);
-              }
             }
 
             h1 {
@@ -149,28 +107,25 @@ body {
               color: #e0561f;
             }
 
-            &:hover {
-              @include linear-gradient(80deg, lighten($orange-roughy, 5%) 0%, lighten($orange-roughy, 5%) 69%, lighten($flame-pea, 5%) 69%);
-
-              &:after {
-                color: lighten(#e0561f, 5%);
+            blockquote {
+              p {
+                margin-bottom: 0;
               }
+            }
 
-              h1 {
-                color: lighten($wafer, 5%);
-                -webkit-text-stroke: 2px lighten($tabasco, 5%);
-                -webkit-text-fill-color: lighten($wafer, 5%);
-              }
+            cite {
+              display: inline-block;
+              margin-bottom: 10px;
+            }
+
+            cite, p {
+              color: $white;
             }
 
             h1 {
               color: $wafer;
               -webkit-text-stroke: 2px $tabasco;
               -webkit-text-fill-color: $wafer;
-            }
-
-            p {
-              color: $white;
             }
           }
 
@@ -180,20 +135,6 @@ body {
             &:after {
               content: ";";
               color: $husk;
-            }
-
-            &:hover {
-              @include linear-gradient(80deg, lighten($ronchi-1, 5%) 0%, lighten($ronchi-1, 5%) 69%, lighten($ronchi-2, 5%) 69%);
-
-              &:after {
-                color: lighten($husk, 5%);
-              }
-
-              h1 {
-                color: lighten($tahuna-sands, 5%);
-                -webkit-text-stroke: 2px lighten($husk, 5%);
-                -webkit-text-fill-color: lighten($tahuna-sands, 5%);
-              }
             }
 
             h1 {
@@ -222,20 +163,6 @@ body {
               content: "✓";
             }
 
-            &:hover {
-              @include linear-gradient(80deg, lighten(#30a06f, 5%) 0%, lighten(#30a06f, 5%) 69%, lighten(#48a07a, 5%) 69%);
-
-              &:after {
-                color: lighten(#1c9e68, 5%);
-              }
-
-              h1 {
-                color: lighten(#ddfff0, 5%);
-                -webkit-text-stroke: 2px lighten(#076d41, 5%);
-                -webkit-text-fill-color: lighten(#ddfff0, 5%);
-              }
-            }
-
             h1 {
               color: #ddfff0;
               -webkit-text-stroke: 2px #076d41;
@@ -250,6 +177,34 @@ body {
           h1 {
             position: relative;
             right: -2px;
+          }
+        }
+
+        .tabbed-content-nav {
+          a {
+            @include transition(all 0.2s ease-in-out);
+            color: $white;
+
+            &.active {
+              margin-top: -20px;
+              padding: 20px;
+            }
+
+            &.css {
+              background-color: $skill-css-bg-1;
+            }
+
+            &.html {
+              background-color: $orange-roughy;
+            }
+
+            &.javascript {
+              background-color: $ronchi-1;
+            }
+
+            &.web-standards {
+              background-color: #30a06f;
+            }
           }
         }
       }

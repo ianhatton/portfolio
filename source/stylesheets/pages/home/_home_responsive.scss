@@ -122,48 +122,19 @@ body {
 
         &.skills {
           article {
-            flex-basis: 25%; /* spans 1/4 */
-            flex-grow: 0;
-            flex-shrink: 0;
-            min-height: 300px;
-
-            &.open {
-              position: absolute;
-              left: 0;
-              right: 0;
-              z-index: 2;
-
-              &:hover {
-                @include transform(scale(1));
-              }
-            }
-
-            .collapsible-content-toggle {
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              right: 0;
-              left: 0;
-              z-index: 1;
-            }
-
             .column-one {
               @include span(6 of 12);
+              @include suffix(1 of 12);
             }
 
             .column-two {
-              @include span(3 of 12);
+              @include span(2.5 of 12);
               
             }
 
             .column-three {
-              @include span(3 of 12 last);
+              @include span(2.5 of 12 last);
             }
-          }
-
-          .flexbox-container {
-            @include span(12 of 12 last);
-            position: relative;
           }
         }
       }

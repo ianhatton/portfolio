@@ -80,7 +80,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@morsedigital/collapsible_content_vanilla": "^1.0.0",
+    "@ianhatton/vanilla-collapsible-content": "^1.0.0",
+    "@ianhatton/vanilla-tabbed-content": "^1.0.0",
     "bourbon": "^4.2.7",
     "breakpoint-sass": "^2.7.0",
     "sprity": "^1.0.8",
