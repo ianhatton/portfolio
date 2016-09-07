@@ -80,31 +80,31 @@ body {
             @include linear-gradient(80deg, $skill-css-bg-1 0%, $skill-css-bg-2 69%, $skill-css-bg-3 69%);
 
             &:after {
-              content: "}";
               color: $skill-css-after;
+              content: "}";
             }
 
             h1 {
-              color: $onahau;
-              -webkit-text-stroke: 2px $torea-bay;
-              -webkit-text-fill-color: $onahau;
+              color: $skill-css-h1-text;
+              -webkit-text-fill-color: $skill-css-h1-fill;
+              -webkit-text-stroke: 2px $skill-css-h1-stroke;
             }
 
             h2 {
-              color: $white;
+              color: $skill-css-h2-text;;
             }
 
             li, p {
-              color: $white;
+              color: $skill-css-text;;
             }
           }
 
           &.html {
-            @include linear-gradient(80deg, $orange-roughy 0%, $orange-roughy 69%, $flame-pea 69%);
+            @include linear-gradient(80deg, $skill-html-bg-1 0%, $skill-html-bg-2 69%, $skill-html-bg-3 69%);
 
             &:after {
+              color: $skill-html-after;
               content: "/>";
-              color: #e0561f;
             }
 
             blockquote {
@@ -118,59 +118,68 @@ body {
               margin-bottom: 10px;
             }
 
-            cite, p {
-              color: $white;
+            cite, li, p {
+              color: $skill-html-text;
             }
 
             h1 {
-              color: $wafer;
-              -webkit-text-stroke: 2px $tabasco;
-              -webkit-text-fill-color: $wafer;
+              color: $skill-html-h1-text;
+              -webkit-text-fill-color: $skill-html-h1-fill;
+              -webkit-text-stroke: 2px $skill-html-h1-stroke;
+            }
+
+            h2 {
+              color: $skill-html-h2-text;;
             }
           }
 
           &.javascript {
-            @include linear-gradient(80deg, $ronchi-1 0%, $ronchi-1 69%, $ronchi-2 69%);
+            @include linear-gradient(80deg, $skill-javascript-bg-1 0%, $skill-javascript-bg-2 69%, $skill-javascript-bg-3 69%);
 
             &:after {
+              color: $skill-javascript-after;
               content: ";";
-              color: $husk;
+            }
+
+            a {
+              color: $skill-javascript-link-text;
             }
 
             h1 {
-              color: $tahuna-sands;
-              -webkit-text-stroke: 2px $husk;
-              -webkit-text-fill-color: $tahuna-sands;
+              color: $skill-javascript-h1-text;
+              -webkit-text-fill-color: $skill-javascript-h1-fill;
+              -webkit-text-stroke: 2px $skill-javascript-h1-stroke;
             }
 
-            p {
-              color: $husk;
+            h2 {
+              color: $skill-javascript-h2-text;
             }
-          }
 
-          &.open {
-            &:before {
-              @include sprite($ui-close);
-              top: 20px;
+            li, p {
+              color: $skill-javascript-text;
             }
           }
 
-          &.web-standards {
-            @include linear-gradient(80deg, #30a06f 0%, #30a06f 69%, #48a07a 69%);
+          &.other {
+            @include linear-gradient(80deg, $skill-other-bg-1 0%, $skill-other-bg-2 69%, $skill-other-bg-3 69%);
 
             &:after {
-              color: #1c9e68;
+              color: $skill-other-after;
               content: "✓";
             }
 
             h1 {
-              color: #ddfff0;
-              -webkit-text-stroke: 2px #076d41;
-              -webkit-text-fill-color: #ddfff0;
+              color: $skill-other-h1-text;
+              -webkit-text-fill-color: $skill-other-h1-fill;
+              -webkit-text-stroke: 2px $skill-other-h1-stroke;
             }
 
-            p {
-              color: $white;
+            h2 {
+              color: $skill-other-h2-text;
+            }
+
+            li, p {
+              color: $skill-other-text;
             }
           }
 
@@ -183,7 +192,13 @@ body {
         .tabbed-content-nav {
           a {
             @include transition(all 0.2s ease-in-out);
-            color: $white;
+            color: $skills-tabbed-content-nav-link-text;
+
+            &:hover {
+              margin-top: -10px;
+              padding-bottom: 15px;
+              padding-top: 15px;
+            }
 
             &.active {
               margin-top: -20px;
@@ -191,19 +206,19 @@ body {
             }
 
             &.css {
-              background-color: $skill-css-bg-1;
+              background-color: $skills-tabbed-content-nav-css-bg;
             }
 
             &.html {
-              background-color: $orange-roughy;
+              background-color: $skills-tabbed-content-nav-html-bg;
             }
 
             &.javascript {
-              background-color: $ronchi-1;
+              background-color: $skills-tabbed-content-nav-javascript-bg;
             }
 
-            &.web-standards {
-              background-color: #30a06f;
+            &.other {
+              background-color: $skills-tabbed-content-nav-other-bg;
             }
           }
         }

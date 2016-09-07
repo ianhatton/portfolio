@@ -35,7 +35,7 @@ title: Ian Hatton
       %li{ role: "presentation" }
         = link_to "JavaScript", "#", role: "tab", class: "javascript"
       %li{ role: "presentation" }
-        = link_to "Web standards", "#", role: "tab", class: "web-standards"
+        = link_to "Other stuff", "#", role: "tab", class: "other"
     .tabbed-content-body.clearfix
       %article.css.tabbed-content-tab
         .padding
@@ -47,7 +47,7 @@ title: Ian Hatton
             %p I have made great relationships with the designers I have worked with in the past and I'm always happy to provide guidance and constructive criticism where it's due in order to deliver a stunning* final product.
             %p.eta *exact level of stunningness dependent on design.
           .column-two
-            %h2.epsilon My expertise at a glance:
+            %h2.epsilon I have a knowledge of
             %ul
               %li CSS
               %li CSS3
@@ -72,11 +72,14 @@ title: Ian Hatton
                 &ldquo;We build too many walls and not enough
                 %del bridges
                 websites.&rdquo;
-              %cite
+              %cite.epsilon
                 &mdash;
                 %del Isaac Newton
                 Ian Hatton
-            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit amet reiciendis, excepturi impedit nihil id. Delectus esse quod quo facilis corporis blanditiis mollitia, quidem laboriosam odio consequuntur quae vero.
+            %p Believe it or not, the HTML behind your website is as important as the overall look and feel. I build using meaningful, descriptive markup, not only for search engine optimisation but also to provide assistive technologies with vital information for their users.
+            %p.theta It also makes me feel like a boss.
+            %p I have worked on a large number of HTML5-based websites, each with varying requirements for  
+            %p I've also worked on a large number of table-based HTML emails, both responsive and non-responsive.
           .column-two
             %h2.epsilon I have a knowledge of
             %ul
@@ -84,6 +87,8 @@ title: Ian Hatton
               %li HTML5
               %li HAML
               %li ERB
+              %li Table-based emails
+              %li Microdata
           .column-three
             %h2.epsilon Toolkit
             %ul
@@ -96,18 +101,23 @@ title: Ian Hatton
         .padding
           %h1.gamma.extra-bold-weight JavaScript
           .column-one
-            %p.epsilon Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloribus reprehenderit.
-            %p JavaScript is, without doubt, the most challenging part of my job and . Having said that, I also find it's the most rewarding.
-            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit amet reiciendis, excepturi impedit nihil id. Delectus esse quod quo facilis corporis blanditiis mollitia, quidem laboriosam odio consequuntur quae vero.
+            %p.epsilon JavaScript is, without doubt, the most challenging and, at times, frustrating part of my job. Having said that, I also find it the most rewarding.
+            %p I've found that the way I write my code has changed greatly over the past year, and thanks to tools such as ESLint and Jasmine I've been able to refactor previous work and approach it slightly differently.
+            %p I have worked on a number of projects, each utilising different libraries, so I have been exposed to several of the front-runners. With the current state of JavaScript and the "flavour of the week" scenario that we are facing, I am currently focused on making sure that my base knowledge of vanilla JavaScript is as sound as possible.
+            %p
+              I have written a number of
+              = link_to "vanilla JavaScript modules", "https://www.npmjs.com/~ianhatton"
+              which are in use across several of my recent projects.
 
           .column-two
             %h2.epsilon I have a knowledge of
             %ul
               %li JavaScript
+              %li ES6
               %li jQuery
+              %li CoffeeScript
               %li React
               %li AngularJS 1
-              %li CoffeeScript
           .column-three
             %h2.epsilon Toolkit
             %ul
@@ -117,25 +127,29 @@ title: Ian Hatton
               %li Gulp
               %li Karma
               %li Jasmine
-      %article.web-standards.tabbed-content-tab
+              %li Browserify
+      %article.other.tabbed-content-tab
         .padding
-          %h1.gamma.extra-bold-weight Web standards
+          %h1.gamma.extra-bold-weight Other stuff
           .column-one
-            %p.epsilon Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloribus reprehenderit.
+            %p.epsilon Here's all the other stuff that I've learned over the years
+            %p A number 
             %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit amet reiciendis, excepturi impedit nihil id. Delectus esse quod quo facilis corporis blanditiis mollitia, quidem laboriosam odio consequuntur quae vero.
+            %p 
           .column-two
             %h2.epsilon I have a knowledge of
             %ul
-              %li Semantic markup
               %li Usability
               %li Accessibility
-              %li ERB
+              %li Ruby on Rails (views and controllers)
+              %li WordPress
+              %li Shopify
+              %li Middleman
           .column-three
             %h2.epsilon Toolkit
             %ul
               %li ARIA
-  %footer.section-footer
-    = link_to content_tag(:span, "More skills"), "#", class: "button button-primary delta"
+              %li GitHub
 
 .wrap
   %section.latest-work.panel
@@ -151,8 +165,9 @@ title: Ian Hatton
         %header
           %h1.gamma Better
           = link_to "Visit live site", "http://www.better.org.uk", class: "external-link", target: "_blank"
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe magni aperiam dolor beatae consequuntur officiis culpa iure, aspernatur cum rem.
+        %p Better 
+        %p We were tasked with the using Ruby on Rails, React and vanilla JavaScript.
+        %p I was a number of vanilla JavaScript modules
         = link_to content_tag(:span, "Read on"), "#", class: "button button-primary"
 
     .group
@@ -161,9 +176,9 @@ title: Ian Hatton
           = image_tag "https://www.fillmurray.com/700/300"
         .column-two
           %header
-            %h1.epsilon Financial Inclusion Commission
+            %h1.epsilon London Sport Funding Search Tool
             = link_to "Visit live site", "http://www.financialinclusioncommission.org.uk", class: "eta external-link", target: "_blank"
-          %p.eta Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.
+          %p.eta London Sport required a turn their into an interactive search tool, complete with .
           = link_to content_tag(:span, "Read on"), "#", class: "button button-primary"
       %article.regular
         .column-one
@@ -188,7 +203,3 @@ title: Ian Hatton
 
     %section.goodreads
       %h1.delta And reading this:
-
-    %footer.section-footer
-      = link_to content_tag(:span, "More about me"), "#", class: "button button-primary delta"
-

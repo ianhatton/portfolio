@@ -3,6 +3,7 @@
   = partial "layouts/partials/head"
   %body{ class: body_class }
     = partial "views/components/header/header"
-    .div{ role: "main" }
+    %main{ role: "main" }
       = yield
+    = partial "views/components/footer/footer"
     = javascript_include_tag "application"
