@@ -75,6 +75,24 @@ h1, h2, h3, h4, h5, h6 {
 
   // styling
   color: $primary-heading-text;
+
+  &.accent {
+    margin-top: 10px;
+    position: relative;
+
+    &:before {
+      // layout
+      content: "";
+      height: 3px;
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 40px;
+
+      // styling
+      background-color: $primary-heading-text;
+    }
+  }
 }
 
 dd, dt, li, p {
