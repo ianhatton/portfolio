@@ -2,11 +2,14 @@ var CollapsibleContentClass = require('@ianhatton/vanilla-collapsible-content')
   , TabbedContentClass = require('@ianhatton/vanilla-tabbed-content');
 
 var HeaderModule = require('./modules/header')
-  , LastFmModule = require('./modules/lastfm');
+  , LastFmModule = require('./modules/lastfm')
+  , SmoothScrollModule = require('./modules/smooth_scroll');
 
 var collapsibleContent
   , header
-  , lastFm;
+  , lastFm
+  , primaryNavsmoothScroll
+  , siteIntrosmoothScroll;
 
 // Collapsible Content
 collapsibleContent = document.querySelectorAll('.collapsible-content');
@@ -39,6 +42,19 @@ if(lastFm) {
   lastFm.init();
 }
 // End LastFm
+
+// Smooth Scroll
+primaryNavsmoothScroll = SmoothScrollModule('primary-navigation');
+siteIntrosmoothScroll = SmoothScrollModule('site-introduction');
+
+if(primaryNavsmoothScroll) {
+  primaryNavsmoothScroll.init();
+}
+
+if(siteIntrosmoothScroll) {
+  siteIntrosmoothScroll.init();
+}
+// End Smooth Scroll
 
 // Tabbed Content
 var tabbedContentElements = document.querySelectorAll('.tabbed-content');

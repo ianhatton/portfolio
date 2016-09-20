@@ -3,10 +3,26 @@ header {
     // layout
     margin: 0 0 40px -1000px;
     padding-left: 1000px;
+    position: relative;
 
     // styling
     background-color: $section-header-bg;
     border-bottom: 7px solid $section-header-border;
+
+    &:after {
+      // layout
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -350px;
+      width: 350px;
+
+      // styling
+      background: url("../images/test4.png") 0 0 no-repeat;
+      background-size: 100% auto;
+      box-shadow: 0 7px 0 0 $section-header-after-shadow;
+    }
 
     h1 {
       color: $section-header-heading-text;

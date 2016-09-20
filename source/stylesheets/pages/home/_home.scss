@@ -60,6 +60,11 @@ body {
       }
 
       &.skills {
+        .anchor {
+          position: absolute;
+          top: 0;
+        }
+
         article {
           // layout
           position: relative;
@@ -187,6 +192,10 @@ body {
             position: relative;
             right: -2px;
           }
+        }
+
+        header.section-header {
+          margin-bottom: 60px;
         }
 
         .tabbed-content-nav {

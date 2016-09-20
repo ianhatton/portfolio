@@ -4,14 +4,14 @@ title: Ian Hatton
 ---
 
 .wrap
-  %section.site-introduction
+  %section.site-introduction#site-introduction
     %h1.bold-weight
       Ian Hatton
       %span is a Front-end Developer working in London.
     %p.delta
       Take a look at his
       = succeed "," do
-        = link_to "skills", "#"
+        = link_to "skills", "#skills"
       view some of his
       = succeed "," do
         = link_to "latest work", "#"
@@ -19,13 +19,13 @@ title: Ian Hatton
       = link_to "about", "#"
       the person behind this amazing introduction.
 
-%section.skills.panel
+%section.skills.panel#skills
   .wrap
     %header.section-header
       .padding
         %h1.beta.extra-bold-weight Skills
-        %p.epsilon I'm a Front-end Developer with a keen eye for design, a desire to continually improve my abilities and over 4 years professional experience under my belt.
-        %p.epsilon Click on the panels below to read a little about my core skill sets and approach to web development.
+        %p.epsilon I'm a Front-end Developer with over 4 years professional experience. I have an eye for detail, an appreciation of minimal design and a desire to continually improve my abilities.
+        %p.epsilon Click through the tabs below to read a little about my core skill sets and approach to web development.
   .tabbed-content
     %ul.tabbed-content-nav{ role: "tablist" }
       %li{ role: "presentation" }
@@ -41,8 +41,8 @@ title: Ian Hatton
         .padding
           %h1.gamma.extra-bold-weight CSS
           .column-one
-            %p.epsilon The art of presenting beautiful content for the web is something which still excites me to this day.
-            %p CSS is the area of my job which always makes the biggest initial impact and it's for this reason that I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they're being viewed on.
+            %p.epsilon The art of presenting beautiful content for the web is something that still excites me to this day.
+            %p CSS is the area of my job that always makes the biggest initial impact and it's for this reason that I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they're being viewed on.
             %p In my opinion, what's going on "under the hood" is just as important as what's presented in the browser, which is why I'm quite meticulous when it comes to organising my work and being as modular as possible. Spaghetti is good, but CSS spaghetti tastes bad.
             %p I have made great relationships with the designers I have worked with in the past and I'm always happy to provide guidance and constructive criticism where it's due in order to deliver a stunning* final product.
             %p.eta *exact level of stunningness dependent on design.
@@ -102,12 +102,12 @@ title: Ian Hatton
           %h1.gamma.extra-bold-weight JavaScript
           .column-one
             %p.epsilon JavaScript is, without doubt, the most challenging and, at times, frustrating part of my job. Having said that, I also find it the most rewarding.
-            %p I've found that the way I write my code has changed greatly over the past year, and thanks to tools such as ESLint and Jasmine I've been able to refactor previous work and approach it slightly differently.
-            %p I have worked on a number of projects, each utilising different libraries, so I have been exposed to several of the front-runners. With the current state of JavaScript and the "flavour of the week" scenario that we are facing, I am currently focused on making sure that my base knowledge of vanilla JavaScript is as sound as possible.
+            %p For me, it's an area of constant learning and improvement, and I've found that the way I write my code has changed greatly over the years. There's nothing like that moment where the penny drops and something turns from a fuzzy understanding into solid knowledge.
+            %p I have contributed to a number of projects, each utilising different setups, so I have been exposed to several of the front-running libraries. With the current state of JavaScript development and the "flavour of the month" scenario that seems so prevalent, I'm of the opinion that there's no better time to hone my vanilla JavaScript skills, and so it's in this area that I am focusing my efforts.
             %p
               I have written a number of
               = link_to "vanilla JavaScript modules", "https://www.npmjs.com/~ianhatton"
-              which are in use across several of my recent projects.
+              which are in use across several of my recent projects, and I'm looking forward to expanding my knowledge with each new project I work on.
 
           .column-two
             %h2.epsilon I have a knowledge of
@@ -125,8 +125,8 @@ title: Ian Hatton
               %li Lodash
               %li Bower
               %li Gulp
-              %li Karma
               %li Jasmine
+              %li ESLint
               %li Browserify
       %article.other.tabbed-content-tab
         .padding
@@ -150,6 +150,8 @@ title: Ian Hatton
             %ul
               %li ARIA
               %li GitHub
+  %footer.section-footer
+    = link_to content_tag(:span, "View my CV"), "#", class: "button button-primary delta"
 
 .wrap
   %section.latest-work.panel
