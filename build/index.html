@@ -32,9 +32,9 @@
             <span class='job-title'>Front-end Developer</span>
           </a>
         </h1>
-        <nav class='primary-navigation'>
+        <nav class='primary-navigation' id='primary-navigation'>
           <ul>
-            <li class='bold-weight'><a href="#">Skills</a></li>
+            <li class='bold-weight'><a href="#skills">Skills</a></li>
             <li class='bold-weight'><a href="#">Work</a></li>
             <li class='bold-weight'><a href="#">About</a></li>
           </ul>
@@ -43,14 +43,14 @@
     </header>
     <main role='main'>
       <div class='wrap'>
-        <section class='site-introduction'>
+        <section class='site-introduction' id='site-introduction'>
           <h1 class='bold-weight'>
             Ian Hatton
             <span>is a Front-end Developer working in London.</span>
           </h1>
           <p class='delta'>
             Take a look at his
-            <a href="#">skills</a>,
+            <a href="#skills">skills</a>,
             view some of his
             <a href="#">latest work</a>,
             or just read a bit more
@@ -59,13 +59,13 @@
           </p>
         </section>
       </div>
-      <section class='skills panel'>
+      <section class='skills panel' id='skills'>
         <div class='wrap'>
           <header class='section-header'>
             <div class='padding'>
               <h1 class='beta extra-bold-weight'>Skills</h1>
-              <p class='epsilon'>I'm a Front-end Developer with a keen eye for design, a desire to continually improve my abilities and over 4 years professional experience under my belt.</p>
-              <p class='epsilon'>Click on the panels below to read a little about my core skill sets and approach to web development.</p>
+              <p class='epsilon'>I'm a Front-end Developer with over 4 years professional experience. I have an eye for detail, an appreciation of minimal design and a desire to continually improve my abilities.</p>
+              <p class='epsilon'>Click through the tabs below to read a little about my core skill sets and approach to web development.</p>
             </div>
           </header>
         </div>
@@ -89,8 +89,8 @@
               <div class='padding'>
                 <h1 class='gamma extra-bold-weight'>CSS</h1>
                 <div class='column-one'>
-                  <p class='epsilon'>The art of presenting beautiful content for the web is something which still excites me to this day.</p>
-                  <p>CSS is the area of my job which always makes the biggest initial impact and it's for this reason that I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they're being viewed on.</p>
+                  <p class='epsilon'>The art of presenting beautiful content for the web is something that still excites me to this day.</p>
+                  <p>CSS is the area of my job that always makes the biggest initial impact and it's for this reason that I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they're being viewed on.</p>
                   <p>In my opinion, what's going on "under the hood" is just as important as what's presented in the browser, which is why I'm quite meticulous when it comes to organising my work and being as modular as possible. Spaghetti is good, but CSS spaghetti tastes bad.</p>
                   <p>I have made great relationships with the designers I have worked with in the past and I'm always happy to provide guidance and constructive criticism where it's due in order to deliver a stunning* final product.</p>
                   <p class='eta'>*exact level of stunningness dependent on design.</p>
@@ -167,12 +167,12 @@
                 <h1 class='gamma extra-bold-weight'>JavaScript</h1>
                 <div class='column-one'>
                   <p class='epsilon'>JavaScript is, without doubt, the most challenging and, at times, frustrating part of my job. Having said that, I also find it the most rewarding.</p>
-                  <p>I've found that the way I write my code has changed greatly over the past year, and thanks to tools such as ESLint and Jasmine I've been able to refactor previous work and approach it slightly differently.</p>
-                  <p>I have worked on a number of projects, each utilising different libraries, so I have been exposed to several of the front-runners. With the current state of JavaScript and the "flavour of the week" scenario that we are facing, I am currently focused on making sure that my base knowledge of vanilla JavaScript is as sound as possible.</p>
+                  <p>For me, it's an area of constant learning and improvement, and I've found that the way I write my code has changed greatly over the years. There's nothing like that moment where the penny drops and something turns from a fuzzy understanding into solid knowledge.</p>
+                  <p>I have contributed to a number of projects, each utilising different setups, so I have been exposed to several of the front-running libraries. With the current state of JavaScript development and the "flavour of the month" scenario that seems so prevalent, I'm of the opinion that there's no better time to hone my vanilla JavaScript skills, and so it's in this area that I am focusing my efforts.</p>
                   <p>
                     I have written a number of
                     <a href="https://www.npmjs.com/~ianhatton">vanilla JavaScript modules</a>
-                    which are in use across several of my recent projects.
+                    which are in use across several of my recent projects, and I'm looking forward to expanding my knowledge with each new project I work on.
                   </p>
                 </div>
                 <div class='column-two'>
@@ -193,8 +193,8 @@
                     <li>Lodash</li>
                     <li>Bower</li>
                     <li>Gulp</li>
-                    <li>Karma</li>
                     <li>Jasmine</li>
+                    <li>ESLint</li>
                     <li>Browserify</li>
                   </ul>
                 </div>
@@ -231,6 +231,9 @@
             </article>
           </div>
         </div>
+        <footer class='section-footer'>
+          <a class="button button-primary delta" href="#"><span>View my CV</span></a>
+        </footer>
       </section>
       <div class='wrap'>
         <section class='latest-work panel'>
@@ -247,7 +250,7 @@
             </div>
             <div class='column-two'>
               <header>
-                <h1 class='gamma'>Better</h1>
+                <h1 class='gamma bold-weight accent'>Better</h1>
                 <a class="external-link" target="_blank" href="http://www.better.org.uk">Visit live site</a>
               </header>
               <p>Better</p>
@@ -263,7 +266,7 @@
               </div>
               <div class='column-two'>
                 <header>
-                  <h1 class='epsilon'>London Sport Funding Search Tool</h1>
+                  <h1 class='epsilon bold-weight accent'>London Sport Funding Search Tool</h1>
                   <a class="eta external-link" target="_blank" href="http://www.financialinclusioncommission.org.uk">Visit live site</a>
                 </header>
                 <p class='eta'>London Sport required a turn their into an interactive search tool, complete with .</p>
@@ -276,7 +279,7 @@
               </div>
               <div class='column-two'>
                 <header>
-                  <h1 class='epsilon'>Portland Resourcing</h1>
+                  <h1 class='epsilon bold-weight accent'>Portland Resourcing</h1>
                   <a class="eta external-link" target="_blank" href="http://www.portlandresourcing.com">Visit live site</a>
                 </header>
                 <p class='eta'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam placeat porro dolorum eos odit. Explicabo voluptatum eveniet repellat officiis, quibusdam, quod facilis rerum reiciendis provident perferendis rem itaque, expedita qui.</p>
@@ -296,10 +299,10 @@
             </div>
           </header>
           <section class='last-fm' id='last-fm'>
-            <h1 class='delta'>I've been listening to these beauties:</h1>
+            <h1 class='delta bold-weight accent'>I've been listening to these beauties:</h1>
           </section>
           <section class='goodreads'>
-            <h1 class='delta'>And reading this:</h1>
+            <h1 class='delta bold-weight accent'>And reading this:</h1>
           </section>
         </section>
       </div>
