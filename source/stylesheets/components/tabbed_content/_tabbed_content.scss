@@ -1,9 +1,3 @@
-.tabbed-content-body {
-  // layout
-  overflow: hidden;
-  position: relative;
-}
-
 .tabbed-content-body, .tabbed-content-nav {
   @include clearfix;
 }

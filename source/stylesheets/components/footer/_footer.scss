@@ -1,5 +1,49 @@
 footer {
   &[role=contentinfo] {
     background-color: $footer-bg;
+
+    section {
+      &.social {
+        a {
+          background-image: url("../images/sprite-social.png");
+
+          &.github {
+            @include sprite($social-github);
+          }
+
+          &.linkedin {
+            @include sprite($social-linkedin);
+          }
+
+          &.npm {
+            @include sprite($social-npm);
+          }
+        }
+
+        h1 {
+          color: $footer-social-h1-text;
+
+          &.accent {
+            &:before {
+              background-color: $footer-social-h1-text;
+            }
+          }
+        }
+
+        li {
+          display: inline-block;
+          margin-right: 10px;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    small {
+      color: $footer-small-text;
+
+      a {
+        color: $footer-small-link-text;
+      }
+    }
   }
 }

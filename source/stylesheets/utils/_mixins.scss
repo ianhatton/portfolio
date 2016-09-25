@@ -1,3 +1,11 @@
+@mixin center() {
+  text-align: center;
+}
+
+.center {
+  @include center;
+}
+
 @mixin clearfix() {
   *zoom: 1;
   

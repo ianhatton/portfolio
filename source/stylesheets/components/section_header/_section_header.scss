@@ -7,21 +7,29 @@ header {
 
     // styling
     background-color: $section-header-bg;
-    border-bottom: 7px solid $section-header-border;
 
     &:after {
       // layout
-      content: "";
-      position: absolute;
       top: 0;
       bottom: 0;
-      right: -350px;
       width: 350px;
 
       // styling
-      background: url("../images/test4.png") 0 0 no-repeat;
+      background: url("../images/test4.png") 0 0 repeat-y;
       background-size: 100% auto;
-      box-shadow: 0 7px 0 0 $section-header-after-shadow;
+    }
+
+    &:after, &:before {
+      content: "";
+      position: absolute;
+      right: -350px;
+    }
+
+    &:before {
+      @include linear-gradient(to right, $section-header-before-bg 0%, $section-header-before-bg 80%, $section-header-before-bg 81%, $body-bg);
+      bottom: -7px;
+      left: 0;
+      height: 7px;
     }
 
     h1 {

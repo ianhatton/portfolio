@@ -14,17 +14,60 @@ title: Ian Hatton
         = link_to "skills", "#skills"
       view some of his
       = succeed "," do
-        = link_to "latest work", "#"
-      or just read a bit more
-      = link_to "about", "#"
+        = link_to "latest work", "#latest-work"
+      or read a little bit more
+      = link_to "about", "#about"
       the person behind this amazing introduction.
+
+    %p.delta I'm going to stop talking in the third person now.
+
+    %p.delta
+      %span.bold-weight tl;dr:
+      I've done lots of really cool front-end work for clients like:
+    %ul.clients
+      %li.center
+        .padding
+          = image_tag "clients/gll.png", alt: "GLL"
+      %li.center
+        .padding
+          = image_tag "clients/sony.png", alt: "Sony Pictures UK"
+      %li.center
+        .padding
+          = image_tag "clients/tabasco.png", alt: "Tabasco"
+      %li.center
+        .padding
+          = image_tag "clients/london_sport.png", alt: "London Sport"
+      %li.center
+        .padding
+          = image_tag "clients/imex.png", alt: "IMEX"
+      %li.center
+        .padding
+          = image_tag "clients/pataks.png", alt: "Patak's"
+      %li.center
+        .padding
+          = image_tag "clients/canon.png", alt: "Canon"
+      %li.center
+        .padding
+          = image_tag "clients/bord_bia.png", alt: "Bord Bia"
+      %li.center
+        .padding
+          = image_tag "clients/cft.png", alt: "Children's Food Trust"
+      %li.center
+        .padding
+          = image_tag "clients/blue_dragon.png", alt: "Blue Dragon"
+      %li.center
+        .padding
+          = image_tag "clients/tesco.png", alt: "Tesco"
+      %li.center
+        .padding
+          = image_tag "clients/walkabout.png", alt: "Walkabout"
 
 %section.skills.panel#skills
   .wrap
     %header.section-header
       .padding
         %h1.beta.extra-bold-weight Skills
-        %p.epsilon I'm a Front-end Developer with over 4 years professional experience. I have an eye for detail, an appreciation of minimal design and a desire to continually improve my abilities.
+        %p.epsilon I'm a creative, forward-thinking Front-end Developer with over 5 years' professional experience. I use clean, modular stylesheets, semantic markup and JavaScript to turn beautiful designs into functional, intuitive builds.
         %p.epsilon Click through the tabs below to read a little about my core skill sets and approach to web development.
   .tabbed-content
     %ul.tabbed-content-nav{ role: "tablist" }
@@ -47,7 +90,7 @@ title: Ian Hatton
             %p I have made great relationships with the designers I have worked with in the past and I'm always happy to provide guidance and constructive criticism where it's due in order to deliver a stunning* final product.
             %p.eta *exact level of stunningness dependent on design.
           .column-two
-            %h2.epsilon I have a knowledge of
+            %h2.epsilon.bold-weight.accent I have a knowledge of
             %ul
               %li CSS
               %li CSS3
@@ -55,14 +98,12 @@ title: Ian Hatton
               %li Less
               %li Responsive web design
               %li Modular CSS
-          .column-three
-            %h2.epsilon Toolkit
             %ul
-              %li= image_tag "toolkit/susy.png", alt: "Susy"
-              %li= image_tag "toolkit/bourbon.png", alt: "Bourbon"
-              %li= image_tag "toolkit/compass.png", alt: "Compass"
-              %li Font Awesome
+              %li Susy
+              %li Bourbon
+              %li Compass
               %li Bootstrap
+              %li Font Awesome
       %article.html.tabbed-content-tab
         .padding
           %h1.gamma.extra-bold-weight HTML
@@ -81,22 +122,15 @@ title: Ian Hatton
             %p I have worked on a large number of HTML5-based websites, each with varying requirements for  
             %p I've also worked on a large number of table-based HTML emails, both responsive and non-responsive.
           .column-two
-            %h2.epsilon I have a knowledge of
+            %h2.epsilon.bold-weight.accent I have a knowledge of
             %ul
               %li HTML
               %li HTML5
               %li HAML
+            %ul
               %li ERB
               %li Table-based emails
               %li Microdata
-          .column-three
-            %h2.epsilon Toolkit
-            %ul
-              %li Susy
-              %li Bourbon
-              %li Compass
-              %li Font Awesome
-              %li Bootstrap
       %article.javascript.tabbed-content-tab
         .padding
           %h1.gamma.extra-bold-weight JavaScript
@@ -110,7 +144,7 @@ title: Ian Hatton
               which are in use across several of my recent projects, and I'm looking forward to expanding my knowledge with each new project I work on.
 
           .column-two
-            %h2.epsilon I have a knowledge of
+            %h2.epsilon.bold-weight.accent I have a knowledge of
             %ul
               %li JavaScript
               %li ES6
@@ -118,8 +152,6 @@ title: Ian Hatton
               %li CoffeeScript
               %li React
               %li AngularJS 1
-          .column-three
-            %h2.epsilon Toolkit
             %ul
               %li Node.js
               %li Lodash
@@ -133,28 +165,26 @@ title: Ian Hatton
           %h1.gamma.extra-bold-weight Other stuff
           .column-one
             %p.epsilon Here's all the other stuff that I've learned over the years
-            %p A number 
-            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odit amet reiciendis, excepturi impedit nihil id. Delectus esse quod quo facilis corporis blanditiis mollitia, quidem laboriosam odio consequuntur quae vero.
-            %p 
+            %p Working in digital agencies has exposed me to a number
           .column-two
-            %h2.epsilon I have a knowledge of
+            %h2.epsilon.bold-weight.accent I have a knowledge of
             %ul
               %li Usability
               %li Accessibility
+              %li WAI-ARIA
+              %li Cross-browser testing
+              %li Progressive enhancement
+            %ul
               %li Ruby on Rails (views and controllers)
               %li WordPress
               %li Shopify
               %li Middleman
-          .column-three
-            %h2.epsilon Toolkit
-            %ul
-              %li ARIA
               %li GitHub
   %footer.section-footer
     = link_to content_tag(:span, "View my CV"), "#", class: "button button-primary delta"
 
 .wrap
-  %section.latest-work.panel
+  %section.latest-work.panel#latest-work
     %header.section-header
       .padding
         %h1.beta.extra-bold-weight Latest work
@@ -166,7 +196,7 @@ title: Ian Hatton
       .column-two
         %header
           %h1.gamma.bold-weight.accent Better
-          = link_to "Visit live site", "http://www.better.org.uk", class: "external-link", target: "_blank"
+          = link_to content_tag(:span, "Visit live site"), "http://www.better.org.uk", class: "external-link", target: "_blank", rel: "noopener noreferrer"
         %p Better 
         %p We were tasked with the using Ruby on Rails, React and vanilla JavaScript.
         %p I was a number of vanilla JavaScript modules
@@ -194,14 +224,15 @@ title: Ian Hatton
     %footer.section-footer
       = link_to content_tag(:span, "More work"), "#", class: "button button-primary delta"
 
-  %section.about.panel
+  %section.about.panel#about
     %header.section-header
       .padding
         %h1.beta.extra-bold-weight About me
+        %p.epsilon I was going to write but then decided to give you snippets of information. Ready?
         %p.epsilon I enjoy gardening. I like cake. I love curry. I get Steely Dan withdrawal if I go longer than 3 days without hearing them. Team Tyrion.
 
     %section.last-fm#last-fm
-      %h1.delta.bold-weight.accent I've been listening to these beauties:
+      %h1.epsilon.bold-weight.accent I've been listening to these beauties:
 
     %section.goodreads
-      %h1.delta.bold-weight.accent And reading this:
+      %h1.epsilon.bold-weight.accent And reading this:

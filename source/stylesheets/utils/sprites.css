@@ -1,3 +1,6 @@
+$social-npm: -0px -0px 87px 39px;
+$social-linkedin: -0px -39px 79px 67px;
+$social-github: -0px -106px 72px 72px;
 $ui-launch: -0px -0px 24px 24px;
 $ui-close: -0px -24px 56px 56px;
 $ui-more: -0px -80px 56px 56px;
@@ -25,6 +28,10 @@ $ui-more: -0px -80px 56px 56px;
   display: $display;
   @include sprite-width($sprite);
   @include sprite-height($sprite);
+}
+
+.icon-social {
+  background-image: url('../images/sprite-social.png');
 }
 
 .icon-ui {

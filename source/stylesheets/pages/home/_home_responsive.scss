@@ -10,11 +10,11 @@ body {
 
     @include breakpoint($desktop-breakpoint) {
       section {
-        &.about, &.latest-work, &.site-introduction, &.skills {
+        &.about, &.latest-work, &.site-introduction, &.skills, &.tldr {
           @include span(12 of 12 last);
         }
 
-        &.about, &.latest-work, &.skills {
+        &.about, &.latest-work, &.skills, &.tldr {
           position: relative;
 
           &:after {
@@ -128,12 +128,27 @@ body {
             }
 
             .column-two {
-              @include span(2.5 of 12);
-              
-            }
+              @include span(5 of 12 last);
 
-            .column-three {
-              @include span(2.5 of 12 last);
+              ul {
+                @include span(2.5 of 5);
+
+                &:last-child {
+                  @include last;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      ul {
+        &.clients {
+          li {
+            width: percentage(1/6);
+
+            .padding {
+              @include padding(50px);
             }
           }
         }

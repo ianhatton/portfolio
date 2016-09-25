@@ -52,7 +52,7 @@ function _navItemClick(navItem, element, e) {
   let elementTop = element.offsetTop;
   let distance = Math.abs(windowTop - elementTop);
 
-  _scroll(windowTop, elementTop, distance/2);
+  _scroll(windowTop, elementTop, distance/6);
 }
 
 function _scroll(from, to, duration) {

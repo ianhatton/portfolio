@@ -14,6 +14,9 @@ $button-text: $abbey !default;
 $button-text-hover: $white !default;
 
 $footer-bg: $abbey !default;
+$footer-small-link-text: $white !default;
+$footer-small-text: $white !default;
+$footer-social-h1-text: $white !default;
 
 $header-bg: $mariner !default;
 $header-bg-subtle: $athens-grey-2-t-09 !default;
@@ -25,9 +28,8 @@ $header-link-text-subtle: $abbey !default;
 $primary-navigation-link-text: $white !default;
 $primary-navigation-link-text-subtle: $abbey !default;
 
-$section-header-after-shadow: $tuna !default;
+$section-header-before-bg: $tuna !default;
 $section-header-bg: $abbey !default;
-$section-header-border: $tuna !default;
 $section-header-heading-text: $white !default;
 $section-header-text: $white !default;
 
@@ -75,8 +77,8 @@ $skill-other-h1-stroke: $salem !default;
 $skill-other-h1-text: $frosted-mint !default;
 $skill-other-h2-text: $white !default;
 $skill-other-text: $white !default;
-$skills-tabbed-content-nav-css-bg: $denim-1 !default;
-$skills-tabbed-content-nav-html-bg: $orange-roughy !default;
-$skills-tabbed-content-nav-javascript-bg: $ronchi-1 !default;
+$skills-tabbed-content-nav-css-bg: $mariner !default;
+$skills-tabbed-content-nav-html-bg: $flame-pea !default;
+$skills-tabbed-content-nav-javascript-bg: $ronchi-2 !default;
 $skills-tabbed-content-nav-link-text: $white !default;
-$skills-tabbed-content-nav-other-bg: #30a06f !default;
+$skills-tabbed-content-nav-other-bg: $ocean-green !default;

@@ -15,16 +15,12 @@ a {
       @include sprite($ui-launch);
       content: "";
       display: inline-block;
+      position: relative;
+      top: 6px;
 
       // styling
       @include transition(all 0.2s ease-in-out);
       background-image: url("../images/sprite-ui.png");
-    }
-
-    &:hover {
-      &:after {
-        @include transform(scale(1.1));
-      }
     }
   }
 }
