@@ -1,6 +1,23 @@
 footer {
   &[role=contentinfo] {
+    // layout
+    position: relative;
+
+    // styling
     background-color: $footer-bg;
+
+    &:after {
+      // layout
+      content: "";
+      height: 7px;
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      right: 0;
+
+      // styling
+      background-image: repeating-linear-gradient(to right, $footer-after-bg-1 0px, $footer-after-bg-1 150px, $footer-after-bg-2 150px, $footer-after-bg-2 300px, $footer-after-bg-3 300px, $footer-after-bg-3 450px, $footer-after-bg-4 450px, $footer-after-bg-4 600px);
+    }
 
     section {
       &.social {

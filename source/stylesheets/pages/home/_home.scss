@@ -1,6 +1,21 @@
 body {
   &.home {
     section {
+      &.bio {
+        @include span(full);
+        margin-bottom: 40px;
+
+        img {
+          width: 50%;
+          height: auto;
+          float: left;
+          margin-right: 100px; 
+          border-radius: 50%;
+          -webkit-shape-outside: circle();
+          shape-outside: circle();
+        }
+      }
+
       &.latest-work {
         article {
           h1 {

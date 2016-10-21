@@ -84,6 +84,7 @@
     "@ianhatton/vanilla-tabbed-content": "^1.0.0",
     "bourbon": "^4.2.7",
     "breakpoint-sass": "^2.7.0",
+    "lwip": "0.0.9",
     "sprity": "^1.0.8",
     "sprity-lwip": "^1.0.6",
     "sprity-sass": "^1.0.4",

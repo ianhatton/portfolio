@@ -1,6 +1,12 @@
+// #1c1d26;
+
 // Global
-$body-bg: $athens-grey-1 !default;
+$body-bg: #f5f4f0 !default;
 $external-link-text: $abbey !default;
+$html-bg-1: $mariner !default;
+$html-bg-2: $flame-pea !default;
+$html-bg-3: $ronchi-2 !default;
+$html-bg-4: $ocean-green !default;
 $primary-heading-text: $abbey !default;
 $primary-text: $abbey !default;
 $secondary-heading-text: $iron !default;
@@ -13,18 +19,29 @@ $button-border-right-hover: $mona-lisa !default;
 $button-text: $abbey !default;
 $button-text-hover: $white !default;
 
+$footer-after-bg-1: $mariner !default;
+$footer-after-bg-2: $flame-pea !default;
+$footer-after-bg-3: $ronchi-2 !default;
+$footer-after-bg-4: $ocean-green !default;
 $footer-bg: $abbey !default;
 $footer-small-link-text: $white !default;
 $footer-small-text: $white !default;
 $footer-social-h1-text: $white !default;
 
-$header-bg: $mariner !default;
-$header-bg-subtle: $athens-grey-2-t-09 !default;
-$header-border: $denim-2 !default;
-$header-border-subtle: transparent !default;
+$header-after-bg-1: $mariner !default;
+$header-after-bg-2: $flame-pea !default;
+$header-after-bg-3: $ronchi-2 !default;
+$header-after-bg-4: $ocean-green !default;
+$header-bg: $ocean-green !default;
 $header-link-text: $white !default;
-$header-link-text-subtle: $abbey !default;
+$header-subtle-bg: $athens-grey-2-t-09 !default;
+$header-subtle-bg-after: $silver-tree !default;
+$header-subtle-link-text: $abbey !default;
 
+$primary-navigation-link-after-bg-subtle: $silver-tree !default;
+$primary-navigation-link-bg-hover: $pampas !default;
+$primary-navigation-link-hover-after-bg-subtle: $vista-blue !default;
+$primary-navigation-link-text-hover: $shuttle-grey !default;
 $primary-navigation-link-text: $white !default;
 $primary-navigation-link-text-subtle: $abbey !default;
 

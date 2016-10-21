@@ -19,22 +19,36 @@ header {
       // styling
       @include transition(all 0.2s ease-in-out);
 
-      &.subtle {
-        background-color: $header-bg-subtle;
-        border-bottom: 1px solid $header-border-subtle;
+      &:after {
+        // layout
+        content: "";
+        height: 7px;
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        right: 0;
 
-        h1 {
+        // styling
+        background-image: repeating-linear-gradient(to right, $header-after-bg-1 0px, $header-after-bg-1 150px, $header-after-bg-2 150px, $header-after-bg-2 300px, $header-after-bg-3 300px, $header-after-bg-3 450px, $header-after-bg-4 450px, $header-after-bg-4 600px);
+      }
+
+      &.subtle {
+        background-color: $header-subtle-bg;
+
+        &:after {
+          bottom: -7px;
+          background-color: $header-subtle-bg-after;
+          background-image: none;
+        }
+
+        h1 {          
           &:before {
-            // layout
             height: 0;
             width: 0;
-
-            // styling
-            @include transition(all 0.2s ease-in-out);
           }
 
           a {
-            color: $header-link-text-subtle;
+            color: $header-subtle-link-text;
           }
         }
 
@@ -42,6 +56,27 @@ header {
           &.primary-navigation {
             a {
               color: $primary-navigation-link-text-subtle;
+
+              &:after {
+                // layout
+                content: "";
+                height: 7px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 1;
+
+                // styling
+                @include transition(all 0.2s ease-in-out);
+                background-color: $primary-navigation-link-after-bg-subtle;
+              }
+
+              &:hover {
+                &:after {
+                  background-color: $primary-navigation-link-hover-after-bg-subtle;
+                }
+              }
             }
           }
         }

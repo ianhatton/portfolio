@@ -1,12 +1,10 @@
 header {
   &[role=banner] {
     // layout
-    margin-bottom: 20px;
     padding: 20px;
 
     // styling
     background-color: $header-bg;
-    border-bottom: 7px solid $header-border;
 
     h1 {
       float: left;
@@ -22,6 +20,7 @@ header {
         width: 48px;
 
         // styling
+        @include transition(all 0.2s ease-in-out);
         background: url("../images/hat.png") 0 0 no-repeat;
       }
 
@@ -41,16 +40,44 @@ header {
 
     nav {
       &.primary-navigation {
-        float: right;
-
         a {
+          // layout
+          align-items: center;
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          position: relative;
+
+          // styling
           color: $primary-navigation-link-text;
           text-decoration: none;
+          @include transition(all 0.2s ease-in-out);
+
+          &:hover {
+            background-color: $primary-navigation-link-bg-hover;
+            color: $primary-navigation-link-text-hover;
+          }
         }
 
         li {
-          float: left;
-          margin-right: 20px;
+          // layout
+          flex: 1;
+
+          // styling
+          border-right: 1px solid desaturate($ocean-green, 10%);
+
+          &:last-child {
+            border-right: 0 none;
+          }
+        }
+
+        ul {
+          display: flex;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          width: 30%;
         }
       }
     }
