@@ -44,7 +44,7 @@ body {
 
           &:hover {
             background-color: $button-bg-hover;
-            box-shadow: 0 0 0 7px $button-bg-hover;
+            box-shadow: 0 0 0 13px $button-bg-hover;
             color: $button-text-hover;
 
             &:after {
@@ -53,8 +53,8 @@ body {
 
             &:before {
               opacity: 1;
-              top: -7px;
-              bottom: -7px;
+              top: -13px;
+              bottom: -13px;
               right: -14px;
             }
           }

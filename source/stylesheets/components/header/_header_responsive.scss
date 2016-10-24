@@ -1,14 +1,28 @@
 header {
   &[role=banner] {
     @include breakpoint($mobile-breakpoint) {
-
+      position: relative;
+      
+      nav {
+        &.primary-navigation {
+          ul {
+            width: 100%;
+          }
+        }
+      }
     }
 
     @include breakpoint($tablet-breakpoint) {
-      
+      nav {
+        &.primary-navigation {
+          ul {
+            width: 50%;
+          }
+        }
+      }
     }
 
-    @include breakpoint($desktop-breakpoint) {
+    @include breakpoint($tablet-and-desktop-breakpoint) {
       // layout
       position: fixed;
       top: 0;
@@ -19,21 +33,8 @@ header {
       // styling
       @include transition(all 0.2s ease-in-out);
 
-      &:after {
-        // layout
-        content: "";
-        height: 7px;
-        position: absolute;
-        bottom: -7px;
-        left: 0;
-        right: 0;
-
-        // styling
-        background-image: repeating-linear-gradient(to right, $header-after-bg-1 0px, $header-after-bg-1 150px, $header-after-bg-2 150px, $header-after-bg-2 300px, $header-after-bg-3 300px, $header-after-bg-3 450px, $header-after-bg-4 450px, $header-after-bg-4 600px);
-      }
-
       &.subtle {
-        background-color: $header-subtle-bg;
+        background-color: $header-bg-subtle;
 
         &:after {
           bottom: -7px;
@@ -48,13 +49,14 @@ header {
           }
 
           a {
-            color: $header-subtle-link-text;
+            color: $header-link-text-subtle;
           }
         }
 
         nav {
           &.primary-navigation {
             a {
+              border-right: 1px solid $primary-navigation-link-border-subtle;
               color: $primary-navigation-link-text-subtle;
 
               &:after {
@@ -73,6 +75,9 @@ header {
               }
 
               &:hover {
+                background-color: $primary-navigation-link-bg-hover-subtle;
+                color: $primary-navigation-link-text-hover-subtle;
+
                 &:after {
                   background-color: $primary-navigation-link-hover-after-bg-subtle;
                 }
@@ -84,6 +89,16 @@ header {
         span {
           &.job-title {
             display: none;
+          }
+        }
+      }
+    }
+
+    @include breakpoint($desktop-breakpoint) {
+      nav {
+        &.primary-navigation {
+          ul {
+            width: 30%;
           }
         }
       }

@@ -1,11 +1,19 @@
 body {
   &.home {
     @include breakpoint($mobile-breakpoint) {
-
+      section {
+        &.about, &.latest-work, &.site-introduction, &.skills, &.tldr {
+          @include span(4 of 4 last);
+        }
+      }
     }
 
     @include breakpoint($tablet-breakpoint) {
-      
+      section {
+        &.about, &.latest-work, &.site-introduction, &.skills, &.tldr {
+          @include span(10 of 10 last);
+        }
+      }
     }
 
     @include breakpoint($desktop-breakpoint) {
