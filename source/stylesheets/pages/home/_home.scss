@@ -288,6 +288,11 @@ body {
           margin-bottom: 60px;
         }
 
+        .tabbed-content {
+          margin-left: -7px;
+          margin-right: -7px;
+        }
+
         .tabbed-content-nav {
           a {
             @include transition(all 0.2s ease-in-out);

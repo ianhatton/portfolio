@@ -21,15 +21,6 @@ function _checkNavItemHrefs(navItems) {
   });
 }
 
-function _config() {
-  console.log('called');
-  
-  return {
-    inPos: 'test'
-    , outPos: 'es'
-  };
-}
-
 function _getNavItemPair(href) {
   let id = href.substring(1);
   let element = document.getElementById(id);
@@ -49,7 +40,7 @@ function _navItemClick(navItem, element, e) {
   e.preventDefault();
 
   let windowTop = window.scrollY;
-  let elementTop = element.offsetTop;
+  let elementTop = element.offsetTop - 69; /* The 69 should be moved into a config block */
   let distance = Math.abs(windowTop - elementTop);
 
   _scroll(windowTop, elementTop, distance/6);
@@ -71,15 +62,11 @@ function _scroll(from, to, duration) {
 }
 
 module.exports = function(id) {
-  let config, navigation, navItems, object;
+  let navigation, navItems, object;
 
   navigation = document.getElementById(id);
 
   if(!_.isElement(navigation)) return;
-
-  config = _config();
-
-  console.log(config.inPos);
 
   object = {
     init: () => {
