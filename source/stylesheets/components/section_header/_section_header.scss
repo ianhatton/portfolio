@@ -1,47 +1,19 @@
-header {
-  &.section-header {
-    // layout
-    margin: 0 0 40px -1000px;
-    padding-left: 1000px;
-    position: relative;
+header.section-header {
+  // layout
+  margin-bottom: 40px;
 
-    // styling
-    background-color: $section-header-bg;
+  // styling
+  background-color: $section-header-bg;
 
-    &:after {
-      // layout
-      top: 0;
-      bottom: 0;
-      width: 350px;
+  h1 {
+    color: $section-header-heading-text;
+  }
 
-      // styling
-      background: url("../images/test4.png") 0 0 repeat-y;
-      background-size: 100% auto;
-    }
+  p {
+    color: $section-header-text;
+  }
 
-    &:after, &:before {
-      content: "";
-      position: absolute;
-      right: -350px;
-    }
-
-    &:before {
-      @include linear-gradient(to right, $section-header-before-bg 0%, $section-header-before-bg 80%, $section-header-before-bg 81%, $body-bg);
-      bottom: -7px;
-      left: 0;
-      height: 7px;
-    }
-
-    h1 {
-      color: $section-header-heading-text;
-    }
-
-    p {
-      color: $section-header-text;
-    }
-
-    .padding {
-      @include padding(40px 40px 40px 0);
-    }
+  .padding {
+    @include padding(40px 40px 40px 0);
   }
 }

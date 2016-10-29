@@ -37,10 +37,6 @@ body {
       &.latest-work, &.skills {
         .section-footer {
           clear: both;
-          float: right;
-          margin-right: -7px;
-          margin-left: -7px;
-          width: 50%;
 
           .button {
             display: block;
@@ -289,11 +285,6 @@ body {
 
         header.section-header {
           margin-bottom: 60px;
-        }
-
-        .tabbed-content {
-          margin-left: -7px;
-          margin-right: -7px;
         }
 
         .tabbed-content-nav {

@@ -8,7 +8,7 @@ body {
 
         &.latest-work, &.skills {
           .section-footer {
-            width: 100%;
+            width: auto;
           }
         }
 
@@ -22,6 +22,18 @@ body {
               ul {
                 @include span(full);
               }
+            }
+          }
+
+          .tabbed-content-nav {
+            span {
+              &.desktop {
+                display: none;
+              }
+            }
+
+            li {
+              width: 25%;
             }
           }
         }
@@ -58,12 +70,6 @@ body {
           @include span(10 of 10 last);
         }
 
-        &.latest-work, &.skills {
-          .section-footer {
-            width: 50%;
-          }
-        }
-
         &.skills {
           article {
             .column-one, .column-two {
@@ -90,6 +96,38 @@ body {
 
             .padding {
               @include padding(50px);
+            }
+          }
+        }
+      }
+    }
+
+    @include breakpoint($tablet-and-desktop-breakpoint) {
+      section {
+        &.latest-work, &.skills {
+          .section-footer {
+            float: right;
+            margin-right: -7px;
+            margin-left: -7px;
+            width: 50%;
+          }
+        }
+
+        &.skills {
+          .tabbed-content {
+            margin-left: -7px;
+            margin-right: -7px;
+          }
+
+          .tabbed-content-nav {
+            a {
+              &.javascript {
+                span {
+                  &.mobile {
+                    display: none;
+                  }
+                }
+              }
             }
           }
         }
