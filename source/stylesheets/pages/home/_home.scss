@@ -17,6 +17,12 @@ body {
       }
 
       &.latest-work {
+        a {
+          &.external-link {
+            color: $latest-work-external-link-text;
+          }
+        }
+
         article {
           h1 {
             margin-bottom: 0;
@@ -24,6 +30,26 @@ body {
 
           header {
             margin-bottom: 20px;
+          }
+        }
+      }
+
+      &.latest-work, &.skills {
+        .section-footer {
+          clear: both;
+          float: right;
+          margin-right: -7px;
+          margin-left: -7px;
+          width: 50%;
+
+          .button {
+            display: block;
+            padding: 75px 30px;
+            text-align: right;
+
+            &:hover {
+              padding-right: 20px;
+            }
           }
         }
       }
@@ -106,38 +132,22 @@ body {
         }
 
         article {
-          // layout
           position: relative;
           z-index: 1;
 
-          &:after {
-            // layout
-            display: block;
-            bottom: 20px;
-            right: 20px;
-
-            // styling
-            font-size: 200px;
-          }
-
-          &:after, &:before {
-            position: absolute;
-          }
-
           &:before {
+            // layout
             content: "";
+            position: absolute;
             top: 100%;
             left: 0;
-            border-bottom: 50px solid transparent;
+
+            // styling
+            border-bottom: 50px solid $skill-before-border;
           }
 
           &.css {
             @include linear-gradient(-36deg, $skill-css-bg-1 0%, $skill-css-bg-2 69%, $skill-css-bg-3 69%);
-
-            &:after {
-              color: $skill-css-after;
-              content: "}";
-            }
 
             &:before {
               border-right: 100vw solid $skill-css-bg-1;
@@ -166,11 +176,6 @@ body {
 
           &.html {
             @include linear-gradient(-36deg, $skill-html-bg-1 0%, $skill-html-bg-2 69%, $skill-html-bg-3 69%);
-
-            &:after {
-              color: $skill-html-after;
-              content: "/>";
-            }
 
             &:before {
               border-right: 100vw solid $skill-html-bg-1;
@@ -211,17 +216,14 @@ body {
           &.javascript {
             @include linear-gradient(-36deg, $skill-javascript-bg-1 0%, $skill-javascript-bg-2 69%, $skill-javascript-bg-3 69%);
 
-            &:after {
-              color: $skill-javascript-after;
-              content: ";";
-            }
-
             &:before {
               border-right: 100vw solid $skill-javascript-bg-1;
             }
 
             a {
-              color: $skill-javascript-link-text;
+              &.external-link {
+                color: $skill-javascript-external-link-text;
+              }
             }
 
             h1 {
@@ -248,13 +250,14 @@ body {
           &.other {
             @include linear-gradient(-36deg, $skill-other-bg-1 0%, $skill-other-bg-2 69%, $skill-other-bg-3 69%);
 
-            &:after {
-              color: $skill-other-after;
-              content: "✓";
-            }
-
             &:before {
               border-right: 100vw solid $skill-other-bg-1;
+            }
+
+            a {
+              &.external-link {
+                color: $skill-other-external-link-text;
+              }
             }
 
             h1 {

@@ -6,21 +6,18 @@ a {
     // layout
     display: inline-block;
 
-    // styling
-    color: $external-link-text;
-    text-decoration: none;
-
     &:after {
       // layout
-      @include sprite($ui-launch);
-      content: "";
+      content: "\E89E";
       display: inline-block;
-      position: relative;
-      top: 6px;
 
       // styling
       @include transition(all 0.2s ease-in-out);
-      background-image: url("../images/sprite-ui.png");
+      font-family: "Material Icons";
+    }
+
+    &:hover {
+      text-decoration: none;
     }
   }
 }

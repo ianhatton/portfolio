@@ -85,9 +85,9 @@ title: Ian Hatton | Home
           %h1.gamma.extra-bold-weight CSS
           .column-one
             %p.epsilon The art of presenting beautiful content for the web is something that still excites me to this day.
-            %p CSS is the area of my job that always makes the biggest initial impact and it's for this reason that I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they're being viewed on.
-            %p In my opinion, what's going on "under the hood" is just as important as what's presented in the browser, which is why I'm quite meticulous when it comes to organising my work and being as modular as possible. Spaghetti is good, but CSS spaghetti tastes bad.
-            %p I have made great relationships with the designers I have worked with in the past and I'm always happy to provide guidance and constructive criticism where it's due in order to deliver a stunning* final product.
+            %p In my opinion CSS always makes the biggest initial impact on user experience, and it's for this reason that I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they're being viewed on.
+            %p What's going on "under the hood" is just as important as what's presented in the browser, which is why I'm meticulous when it comes to organising my work and being as modular as possible. Spaghetti is good, but CSS spaghetti tastes bad.
+            %p I have built great relationships with the designers I have worked with in the past and I'm always happy to provide guidance and constructive criticism where it's due in order to deliver a stunning* final product.
             %p.eta *exact level of stunningness dependent on design.
           .column-two
             %h2.epsilon.bold-weight.accent I have a knowledge of
@@ -119,8 +119,8 @@ title: Ian Hatton | Home
                 %del Isaac Newton
                 Ian Hatton
             %p Believe it or not, the HTML behind your website is just as important as what's presented to the user in the browser. I build using meaningful, descriptive markup, not only to benefit search engine optimisation but also to provide assistive technologies with vital information for their users.
-            %p I have been lucky enough to work on a wide range of HTML5-based websites across sectors including finance, fitness, food, film and fashion. That's a lot of F's.
-            %p I've also worked on a large number of table-based HTML email campaigns, both responsive and non-responsive and, with the aid of copious amounts of tea, crying, and swearing, have always ensured that they are cross-client compatible down to pixel precision (hello Outlook).
+            %p I have been lucky enough to work on a wide range of HTML5-based websites across sectors including finance, fitness, food, film and fashion. That's a lot of Fs.
+            %p I've also worked on a large number of table-based HTML email campaigns, both responsive and non-responsive and, with the aid of copious amounts of tea, crying and swearing, have always ensured that they are cross-client compatible down to pixel precision (hello Outlook).
           .column-two
             %h2.epsilon.bold-weight.accent I have a knowledge of
             %ul
@@ -140,7 +140,7 @@ title: Ian Hatton | Home
             %p I have contributed to a number of projects, each utilising different setups, so I have been exposed to several of the front-running libraries. With the current state of the JavaScript ecosystem and the "flavour of the month" scenario that seems so prevalent, I'm of the opinion that there's no better time to hone my vanilla JavaScript skills, and so it's in this area that I am focusing my efforts.
             %p
               I have written a number of
-              = link_to "vanilla JavaScript modules", "https://www.npmjs.com/~ianhatton"
+              = link_to "vanilla JavaScript modules", "https://www.npmjs.com/~ianhatton", class: "external-link", target: "_blank", rel: "noopener noreferrer"
               which are in use across several of my recent projects, and I'm looking forward to expanding my knowledge with each new project I work on.
 
           .column-two
@@ -165,9 +165,13 @@ title: Ian Hatton | Home
           %h1.gamma.extra-bold-weight Bits and bobs
           .column-one
             %p.epsilon Web development fundamentals, platforms and anything else that didn't quite fit into the other categories.
-            %p Working in digital agencies has exposed me to various requirements for use and acc
-            %p The majority of my projects have been built using Ruby on Rails, which has provided my understanding of MVC architecture and bespoke CMSs, but I've also had experience with WordPress, Tumblr and Shopify, where I've used the platforms to create themes from scratch, or modify existing ones to suit the client's needs.
-            %p Over the years, I've supported browsers all the way down to IE6, so I'm well-versed to the joys of cross-browser testing and compatibility issues and workarounds.
+            %p Working in digital agencies has exposed me to a myriad of real-world requirements for web development projects, including usability, accessibility and performance.
+            %p The majority of my work has been built on top of Ruby on Rails, which has provided my understanding of MVC architecture and bespoke CMSs, but I've also had experience with WordPress, Tumblr and Shopify, where I've either created themes from scratch or modified existing ones to meet the client's specification.
+            %p
+              Over the years, I've factored in browser support all the way down to
+              = succeed "," do
+                = link_to "IE6", "http://www.saveie6.com", class: "external-link", target: "_blank", rel: "noopener noreferrer"
+              so I'm well-versed to the joys of cross-browser testing, compatibility issues and workarounds.
             %p
               I also
               %span.bold-weight rocked
@@ -208,11 +212,12 @@ title: Ian Hatton | Home
       .column-two
         %header
           %h1.gamma.bold-weight.accent Better
-          = link_to content_tag(:span, "http://www.better.org.uk"), "http://www.better.org.uk", class: "external-link", target: "_blank", rel: "noopener noreferrer"
-        %p Better 
+          = link_to content_tag(:span, "better.org.uk"), "http://www.better.org.uk", class: "external-link", target: "_blank", rel: "noopener noreferrer"
         %p We were tasked with the using Ruby on Rails, React and vanilla JavaScript.
-        %p I was a number of vanilla JavaScript modules
-        = link_to content_tag(:span, "Read on"), "#", class: "button button-primary"
+        %p I've worked with GLL for the last 4 years. The previous iteration of their Better Leisure website was the first major project I cut my teeth on as a Junior Developer.
+        %p I completed the vast majority of the front-end development of the site, including all of the vanilla JavaScript functionality, some React work 
+        %p.bold-weight Full case study coming soon.
+        -# = link_to content_tag(:span, "Read on"), "/better", class: "button button-primary"
 
     .group
       %article.regular
@@ -221,8 +226,8 @@ title: Ian Hatton | Home
         .column-two
           %header
             %h1.epsilon.bold-weight.accent{ "data-mobile-font-size" => "gamma" } London Sport Funding Search Tool
-            = link_to "http://funding.londonsport.org", "http://funding.londonsport.org", class: "eta external-link", target: "_blank"
-          %p.eta{ "data-mobile-font-size" => "zeta" } London Sport wanted to turn their Word document into a fully-responsive, interactive search tool. As the sole Front-end Developer on the project, I worked closely with the Back-end team and the client to deliver their requirements.
+            = link_to "funding.londonsport.org", "http://funding.londonsport.org", class: "eta external-link", target: "_blank"
+          %p.eta{ "data-mobile-font-size" => "zeta" } London Sport approached us with the brief of turning their internally circulated list of grant-funded projects into a fully-responsive, interactive search tool. As the sole Front-end Developer on the project, I worked closely with the back-end team and the client to deliver their requirements.
           %p.eta.bold-weight Full case study coming soon.
           -# = link_to content_tag(:span, "Read on"), "#", class: "button button-primary"
       %article.regular
@@ -231,8 +236,8 @@ title: Ian Hatton | Home
         .column-two
           %header
             %h1.epsilon.bold-weight.accent{ "data-mobile-font-size" => "gamma" } Portland Resourcing
-            = link_to "http://www.portlandresourcing.com", "http://www.portlandresourcing.com", class: "eta external-link", target: "_blank"
-          %p.eta{ "data-mobile-font-size" => "zeta" } Portland Resourcing approached the development team to take over the maintenance of their existing site. We were tasked with keeping the look and feel, whilst improving performance by stripping away the layers of bloat from things like unnecessary jQuery, poorly written views and mismanaged stylesheets.
+            = link_to "portlandresourcing.com", "http://www.portlandresourcing.com", class: "eta external-link", target: "_blank"
+          %p.eta{ "data-mobile-font-size" => "zeta" } Portland Resourcing approached the development team to take over the maintenance of their existing site. They wanted to keep the look and feel, whilst improving performance. We did this by stripping away layers of bloat from things like unnecessary jQuery, poorly written views and mismanaged stylesheets.
           %p.eta.bold-weight Full case study coming soon.
           -# = link_to content_tag(:span, "Read on"), "/portland-resourcing", class: "button button-primary"
   %footer.section-footer

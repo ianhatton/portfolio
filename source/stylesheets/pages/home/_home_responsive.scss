@@ -3,7 +3,27 @@ body {
     @include breakpoint($mobile-breakpoint) {
       section {
         &.about, &.latest-work, &.site-introduction, &.skills, &.tldr {
-          @include span(4 of 4 last);
+          @include span(full);
+        }
+
+        &.latest-work, &.skills {
+          .section-footer {
+            width: 100%;
+          }
+        }
+
+        &.skills {
+          article {
+            .column-one, .column-two {
+              @include span(full);
+            }
+
+            .column-two {
+              ul {
+                @include span(full);
+              }
+            }
+          }
         }
       }
 
@@ -20,10 +40,46 @@ body {
       }
     }
 
+    @include breakpoint($mobile-and-tablet-breakpoint) {
+      section {
+        &.skills {
+          article {
+            .column-one {
+              margin-bottom: 40px;
+            }
+          }
+        }
+      }
+    }
+
     @include breakpoint($tablet-breakpoint) {
       section {
         &.about, &.latest-work, &.site-introduction, &.skills, &.tldr {
           @include span(10 of 10 last);
+        }
+
+        &.latest-work, &.skills {
+          .section-footer {
+            width: 50%;
+          }
+        }
+
+        &.skills {
+          article {
+            .column-one, .column-two {
+              @include span(10 of 10 last);
+            }
+
+            .column-two {
+              ul {
+                @include span(5 of 10);
+
+                &:last-child {
+                  @include last;
+                }
+              }
+            }
+          }
         }
       }
 
@@ -73,24 +129,6 @@ body {
             border-bottom: 1px dashed #4a4e56;
             height: 7px;
 
-          }
-
-          .section-footer {
-            clear: both;
-            float: right;
-            margin-right: -7px;
-            margin-left: -7px;
-            width: 50%;
-
-            .button {
-              display: block;
-              padding: 75px 30px;
-              text-align: right;
-
-              &:hover {
-                padding-right: 20px;
-              }
-            }
           }
 
           .section-header {

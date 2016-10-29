@@ -2,7 +2,6 @@
 
 // Global
 $body-bg: $pampas !default;
-$external-link-text: $abbey !default;
 $html-bg-1: $mariner !default;
 $html-bg-2: $flame-pea !default;
 $html-bg-3: $ronchi-2 !default;
@@ -57,20 +56,20 @@ $section-header-text: $white !default;
 // Pages
 // Home
 $latest-work-article-border: $abbey !default;
+$latest-work-external-link-text: $abbey !default;
 $site-introduction-link-border: transparent !default;
 $site-introduction-link-after-border: $abbey !default;
 $site-introduction-link-bg-hover: $athens-grey-1-t-07 !default;
 $site-introduction-link-text: $abbey !default;
-$skill-css-after: $denim-2 !default;
-$skill-css-bg-1: $denim-1 !default;
-$skill-css-bg-2: $denim-1 !default;
+$skill-before-border: transparent !default;
+$skill-css-bg-1: $denim !default;
+$skill-css-bg-2: $denim !default;
 $skill-css-bg-3: $mariner !default
 $skill-css-h1-fill: $onahau !default;
 $skill-css-h1-stroke: $torea-bay !default;
 $skill-css-h1-text: $onahau !default;
 $skill-css-h2-text: $white !default;
 $skill-css-text: $white !default;
-$skill-html-after: $hot-cinnamon !default;
 $skill-html-bg-1: $orange-roughy !default;
 $skill-html-bg-2: $orange-roughy !default;
 $skill-html-bg-3: $flame-pea !default;
@@ -79,7 +78,6 @@ $skill-html-h1-stroke: $tabasco !default;
 $skill-html-h1-text: $wafer !default;
 $skill-html-h2-text: $white !default;
 $skill-html-text: $white !default;
-$skill-javascript-after: $husk !default;
 $skill-javascript-bg-1: $ronchi-1 !default;
 $skill-javascript-bg-2: $ronchi-1 !default;
 $skill-javascript-bg-3: $ronchi-2 !default;
@@ -87,9 +85,8 @@ $skill-javascript-h1-fill: $tahuna-sands !default;
 $skill-javascript-h1-stroke: $husk !default;
 $skill-javascript-h1-text: $tahuna-sands !default;
 $skill-javascript-h2-text: $pesto !default;
-$skill-javascript-link-text: $pesto !default;
+$skill-javascript-external-link-text: $pesto !default;
 $skill-javascript-text: $pesto !default;
-$skill-other-after: $mountain-meadow !default;
 $skill-other-bg-1: $sea-green !default;
 $skill-other-bg-2: $sea-green !default;
 $skill-other-bg-3: $ocean-green !default;
@@ -97,6 +94,7 @@ $skill-other-h1-fill: $frosted-mint !default;
 $skill-other-h1-stroke: $salem !default;
 $skill-other-h1-text: $frosted-mint !default;
 $skill-other-h2-text: $white !default;
+$skill-other-external-link-text: $white !default;
 $skill-other-text: $white !default;
 $skills-tabbed-content-nav-css-bg: $mariner !default;
 $skills-tabbed-content-nav-html-bg: $flame-pea !default;
