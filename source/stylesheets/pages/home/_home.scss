@@ -51,8 +51,6 @@ body {
       }
 
       &.site-introduction {
-        margin: 100px 0;
-
         a {
           // layout
           display: inline-block;
@@ -289,7 +287,7 @@ body {
 
         .tabbed-content-nav {
           a {
-            @include transition(all 0.2s ease-in-out);
+            @include transition(margin-top 0.2s ease-in-out, padding 0.2s ease-in-out);
             color: $skills-tabbed-content-nav-link-text;
 
             &:hover {
@@ -313,6 +311,7 @@ body {
 
             &.javascript {
               background-color: $skills-tabbed-content-nav-javascript-bg;
+              text-shadow: 2px 2px 2px $skills-tabbed-content-nav-javascript-text-shadow;
             }
 
             &.other {

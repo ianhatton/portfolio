@@ -26,6 +26,10 @@ body {
           }
 
           .tabbed-content-nav {
+            a {
+              @include transition(margin-top 0s ease-in-out, padding 0s ease-in-out);
+            }
+
             span {
               &.desktop {
                 display: none;
@@ -111,6 +115,10 @@ body {
             margin-left: -7px;
             width: 50%;
           }
+        }
+
+        &.site-introduction {
+          margin: 100px 0;
         }
 
         &.skills {

@@ -16,6 +16,10 @@
         "base/global",
         "base/global_responsive";
 
+// Layout
+@import "layout/primary_navigation/primary_navigation",
+        "layout/primary_navigation/primary_navigation_responsive";
+
 // Components
 @import "components/buttons/buttons",
         "components/collapsible_content/collapsible_content",

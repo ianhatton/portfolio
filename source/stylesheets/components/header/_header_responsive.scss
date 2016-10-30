@@ -1,106 +1,81 @@
-header {
-  &[role=banner] {
-    @include breakpoint($mobile-breakpoint) {
-      position: relative;
-      
-      nav {
-        &.primary-navigation {
-          ul {
-            width: 100%;
-          }
+header[role=banner] {
+  @include breakpoint($mobile-breakpoint) {
+    position: relative;
+
+    &:after {
+      background-image: repeating-linear-gradient(to right, $header-after-bg-1 0, $header-after-bg-1 10%, $header-after-bg-2 10%, $header-after-bg-2 20%, $header-after-bg-3 20%, $header-after-bg-3 30%, $header-after-bg-4 30%, $header-after-bg-4 40%);
+    }
+
+    h1 {
+      text-align: center;
+
+      &:before {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      span {
+        display: inline-block;
+      }
+    }
+  }
+
+  @include breakpoint($tablet-and-desktop-breakpoint) {
+    // layout
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 21;
+
+    // styling
+    @include transition(all 0.2s ease-in-out);
+
+    &:after {
+      background-image: repeating-linear-gradient(to right, $header-after-bg-1 0px, $header-after-bg-1 150px, $header-after-bg-2 150px, $header-after-bg-2 300px, $header-after-bg-3 300px, $header-after-bg-3 450px, $header-after-bg-4 450px, $header-after-bg-4 600px);
+    }
+
+    &.subtle {
+      background-color: $header-bg-subtle;
+
+      &:after {
+        bottom: -7px;
+        background-color: $header-subtle-bg-after;
+        background-image: none;
+      }
+
+      h1 {          
+        &:before {
+          height: 0;
+          width: 0;
+        }
+
+        a {
+          color: $header-link-text-subtle;
+        }
+      }
+
+      span {
+        &.job-title {
+          display: none;
         }
       }
     }
 
-    @include breakpoint($tablet-breakpoint) {
-      nav {
-        &.primary-navigation {
-          ul {
-            width: 50%;
-          }
-        }
+    h1 {
+      float: left;
+
+      &:before {
+        float: left;
       }
-    }
 
-    @include breakpoint($tablet-and-desktop-breakpoint) {
-      // layout
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 21;
-
-      // styling
-      @include transition(all 0.2s ease-in-out);
-
-      &.subtle {
-        background-color: $header-bg-subtle;
-
-        &:after {
-          bottom: -7px;
-          background-color: $header-subtle-bg-after;
-          background-image: none;
-        }
-
-        h1 {          
-          &:before {
-            height: 0;
-            width: 0;
-          }
-
-          a {
-            color: $header-link-text-subtle;
-          }
-        }
-
-        nav {
-          &.primary-navigation {
-            a {
-              border-right: 1px solid $primary-navigation-link-border-subtle;
-              color: $primary-navigation-link-text-subtle;
-
-              &:after {
-                // layout
-                content: "";
-                height: 7px;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                z-index: 1;
-
-                // styling
-                @include transition(all 0.2s ease-in-out);
-                background-color: $primary-navigation-link-after-bg-subtle;
-              }
-
-              &:hover {
-                background-color: $primary-navigation-link-bg-hover-subtle;
-                color: $primary-navigation-link-text-hover-subtle;
-
-                &:after {
-                  background-color: $primary-navigation-link-hover-after-bg-subtle;
-                }
-              }
-            }
-          }
-        }
-
-        span {
-          &.job-title {
-            display: none;
-          }
-        }
+      a {
+        float: left;
       }
-    }
 
-    @include breakpoint($desktop-breakpoint) {
-      nav {
-        &.primary-navigation {
-          ul {
-            width: 30%;
-          }
-        }
+      span {
+        display: block;
       }
     }
   }
