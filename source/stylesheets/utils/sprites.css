@@ -1,9 +1,9 @@
-$ui-launch: -0px -0px 24px 24px;
-$ui-close: -0px -24px 56px 56px;
-$ui-more: -0px -80px 56px 56px;
 $social-npm: -0px -0px 87px 39px;
 $social-linkedin: -0px -39px 79px 67px;
 $social-github: -0px -106px 72px 72px;
+$ui-launch: -0px -0px 24px 24px;
+$ui-close: -0px -24px 56px 56px;
+$ui-more: -0px -80px 56px 56px;
 @mixin sprite-width($sprite) {
   width: nth($sprite, 3);
 }
@@ -30,10 +30,10 @@ $social-github: -0px -106px 72px 72px;
   @include sprite-height($sprite);
 }
 
-.icon-ui {
-  background-image: url('../images/sprite-ui.png');
-}
-
 .icon-social {
   background-image: url('../images/sprite-social.png');
+}
+
+.icon-ui {
+  background-image: url('../images/sprite-ui.png');
 }

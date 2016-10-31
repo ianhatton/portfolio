@@ -1,7 +1,1 @@
-.icon-ui {
-  background-image: url("../images/sprite-ui.png"); }
-
-.icon-social {
-  background-image: url("../images/sprite-social.png"); }
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNwcml0ZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsaURBQWlELEVBQUU7O0FBRXJEO0VBQ0UscURBQXFELEVBQUUiLCJmaWxlIjoidXRpbHMvc3ByaXRlcy5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaWNvbi11aSB7XG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uL2ltYWdlcy9zcHJpdGUtdWkucG5nXCIpOyB9XG5cbi5pY29uLXNvY2lhbCB7XG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uL2ltYWdlcy9zcHJpdGUtc29jaWFsLnBuZ1wiKTsgfVxuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */
+.icon-social{background-image:url(../images/sprite-social.png)}.icon-ui{background-image:url(../images/sprite-ui.png)}
