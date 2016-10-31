@@ -70,131 +70,135 @@ title: Ian Hatton | Home
         %p.epsilon I'm a creative, forward-thinking Front-end Developer with over 4 years' professional experience. I use clean, modular stylesheets, semantic markup and JavaScript to turn beautiful designs into functional, intuitive builds.
         %p.epsilon Click through the tabs below to read a little about my core skill sets and approach to web development.
   .tabbed-content
-    %ul.tabbed-content-nav{ role: "tablist" }
-      %li{ role: "presentation" }
-        = link_to "CSS", "#", role: "tab", class: "css"
-      %li{ role: "presentation" }
-        = link_to "HTML", "#", role: "tab", class: "html"
-      %li{ role: "presentation" }
-        = link_to content_tag(:span, "JS", class: "mobile") + content_tag(:span, "JavaScript", class: "desktop"), "#", role: "tab", class: "javascript"
-      %li{ role: "presentation" }
-        = link_to content_tag(:span, "Bits", class: "mobile") + content_tag(:span, " and bobs", class: "desktop"), "#", role: "tab", class: "other"
+    .wrap
+      %ul.tabbed-content-nav{ role: "tablist" }
+        %li{ role: "presentation" }
+          = link_to "CSS", "#", role: "tab", class: "css"
+        %li{ role: "presentation" }
+          = link_to "HTML", "#", role: "tab", class: "html"
+        %li{ role: "presentation" }
+          = link_to content_tag(:span, "JS", class: "mobile") + content_tag(:span, "JavaScript", class: "desktop"), "#", role: "tab", class: "javascript"
+        %li{ role: "presentation" }
+          = link_to content_tag(:span, "Bits", class: "mobile") + content_tag(:span, " and bobs", class: "desktop"), "#", role: "tab", class: "other"
     .tabbed-content-body.clearfix
       %article.css.tabbed-content-tab
-        .padding
-          %h1.gamma.extra-bold-weight CSS
-          .column-one
-            %p.epsilon{ "data-mobile-font-size" => "delta" } The art of presenting beautiful content for the web is something that still excites me to this day.
-            %p{ "data-mobile-font-size" => "epsilon" } In my opinion CSS always makes the biggest initial impact on user experience, and it's for this reason that I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they're being viewed on.
-            %p{ "data-mobile-font-size" => "epsilon" } What's going on "under the hood" is just as important as what's presented in the browser, which is why I'm meticulous when it comes to organising my work and being as modular as possible. Spaghetti is good, but CSS spaghetti tastes bad.
-            %p{ "data-mobile-font-size" => "epsilon" } I have built great relationships with the designers I have worked with in the past and I'm always happy to provide guidance and constructive criticism where it's due in order to deliver a stunning* final product.
-            %p.eta{ "data-mobile-font-size" => "zeta" } *exact level of stunningness dependent on design.
-          .column-two
-            %h2.epsilon.bold-weight.accent{ "data-mobile-font-size" => "delta" } I have a knowledge of
-            %ul
-              %li{ "data-mobile-font-size" => "epsilon" } CSS
-              %li{ "data-mobile-font-size" => "epsilon" } CSS3
-              %li{ "data-mobile-font-size" => "epsilon" } Sass
-              %li{ "data-mobile-font-size" => "epsilon" } Less
-              %li{ "data-mobile-font-size" => "epsilon" } PostCSS
-              %li{ "data-mobile-font-size" => "epsilon" } Responsive web design
-              %li{ "data-mobile-font-size" => "epsilon" } Modular CSS
-            %ul
-              %li{ "data-mobile-font-size" => "epsilon" } Susy
-              %li{ "data-mobile-font-size" => "epsilon" } Bourbon
-              %li{ "data-mobile-font-size" => "epsilon" } Compass
-              %li{ "data-mobile-font-size" => "epsilon" } Bootstrap
-              %li{ "data-mobile-font-size" => "epsilon" } Font Awesome
+        .wrap
+          .padding
+            %h1.gamma.extra-bold-weight CSS
+            .column-one
+              %p.epsilon{ "data-mobile-font-size" => "delta" } The art of presenting beautiful content for the web is something that still excites me to this day.
+              %p{ "data-mobile-font-size" => "epsilon" } In my opinion CSS always makes the biggest initial impact on user experience, and it's for this reason that I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they're being viewed on.
+              %p{ "data-mobile-font-size" => "epsilon" } What's going on "under the hood" is just as important as what's presented in the browser, which is why I'm meticulous when it comes to organising my work and being as modular as possible. Spaghetti is good, but CSS spaghetti tastes bad.
+              %p{ "data-mobile-font-size" => "epsilon" } I have built great relationships with the designers I have worked with in the past and I'm always happy to provide guidance and constructive criticism where it's due in order to deliver a stunning* final product.
+              %p.eta{ "data-mobile-font-size" => "zeta" } *exact level of stunningness dependent on design.
+            .column-two
+              %h2.epsilon.bold-weight.accent{ "data-mobile-font-size" => "delta" } I have a knowledge of
+              %ul
+                %li{ "data-mobile-font-size" => "epsilon" } CSS
+                %li{ "data-mobile-font-size" => "epsilon" } CSS3
+                %li{ "data-mobile-font-size" => "epsilon" } Sass
+                %li{ "data-mobile-font-size" => "epsilon" } Less
+                %li{ "data-mobile-font-size" => "epsilon" } PostCSS
+                %li{ "data-mobile-font-size" => "epsilon" } Responsive web design
+                %li{ "data-mobile-font-size" => "epsilon" } Modular CSS
+              %ul
+                %li{ "data-mobile-font-size" => "epsilon" } Susy
+                %li{ "data-mobile-font-size" => "epsilon" } Bourbon
+                %li{ "data-mobile-font-size" => "epsilon" } Compass
+                %li{ "data-mobile-font-size" => "epsilon" } Bootstrap
+                %li{ "data-mobile-font-size" => "epsilon" } Font Awesome
       %article.html.tabbed-content-tab
-        .padding
-          %h1.gamma.extra-bold-weight HTML
-          .column-one
-            %blockquote
-              %p.epsilon{ "data-mobile-font-size" => "delta" }
-                &ldquo;We build too many walls and not enough
-                %del bridges
-                websites.&rdquo;
-              %cite.epsilon{ "data-mobile-font-size" => "delta" }
-                &mdash;
-                %del Isaac Newton
-                Ian Hatton
-            %p{ "data-mobile-font-size" => "epsilon" } Believe it or not, the HTML behind your website is just as important as what's presented to the user in the browser. I build using meaningful, descriptive markup, not only to benefit search engine optimisation but also to provide assistive technologies with vital information for their users.
-            %p{ "data-mobile-font-size" => "epsilon" } I have been lucky enough to work on a wide range of HTML5-based websites across sectors including finance, fitness, food, film and fashion. That's a lot of Fs.
-            %p{ "data-mobile-font-size" => "epsilon" } I've also worked on a large number of table-based HTML email campaigns, both responsive and non-responsive and, with the aid of copious amounts of tea, crying and swearing, have always ensured that they are cross-client compatible down to pixel precision (hello Outlook).
-          .column-two
-            %h2.epsilon.bold-weight.accent{ "data-mobile-font-size" => "delta" } I have a knowledge of
-            %ul
-              %li{ "data-mobile-font-size" => "epsilon" } HTML
-              %li{ "data-mobile-font-size" => "epsilon" } HTML5
-              %li{ "data-mobile-font-size" => "epsilon" } HAML
-            %ul
-              %li{ "data-mobile-font-size" => "epsilon" } ERB
-              %li{ "data-mobile-font-size" => "epsilon" } Table-based emails
-              %li{ "data-mobile-font-size" => "epsilon" } Microdata
+        .wrap
+          .padding
+            %h1.gamma.extra-bold-weight HTML
+            .column-one
+              %blockquote
+                %p.epsilon{ "data-mobile-font-size" => "delta" }
+                  &ldquo;We build too many walls and not enough
+                  %del bridges
+                  websites.&rdquo;
+                %cite.epsilon{ "data-mobile-font-size" => "delta" }
+                  &mdash;
+                  %del Isaac Newton
+                  Ian Hatton
+              %p{ "data-mobile-font-size" => "epsilon" } Believe it or not, the HTML behind your website is just as important as what's presented to the user in the browser. I build using meaningful, descriptive markup, not only to benefit search engine optimisation but also to provide assistive technologies with vital information for their users.
+              %p{ "data-mobile-font-size" => "epsilon" } I have been lucky enough to work on a wide range of HTML5-based websites across sectors including finance, fitness, food, film and fashion. That's a lot of Fs.
+              %p{ "data-mobile-font-size" => "epsilon" } I've also worked on a large number of table-based HTML email campaigns, both responsive and non-responsive and, with the aid of copious amounts of tea, crying and swearing, have always ensured that they are cross-client compatible down to pixel precision (hello Outlook).
+            .column-two
+              %h2.epsilon.bold-weight.accent{ "data-mobile-font-size" => "delta" } I have a knowledge of
+              %ul
+                %li{ "data-mobile-font-size" => "epsilon" } HTML
+                %li{ "data-mobile-font-size" => "epsilon" } HTML5
+                %li{ "data-mobile-font-size" => "epsilon" } HAML
+              %ul
+                %li{ "data-mobile-font-size" => "epsilon" } ERB
+                %li{ "data-mobile-font-size" => "epsilon" } Table-based emails
+                %li{ "data-mobile-font-size" => "epsilon" } Microdata
       %article.javascript.tabbed-content-tab
-        .padding
-          %h1.gamma.extra-bold-weight JavaScript
-          .column-one
-            %p.epsilon{ "data-mobile-font-size" => "delta" } JavaScript is, without doubt, the most challenging and, at times, frustrating part of my job. Having said that, I also find it the most rewarding.
-            %p{ "data-mobile-font-size" => "epsilon" } For me, it's an area of constant learning and improvement, and I've found that the way I write my code has changed greatly over the years. There's nothing like that moment where the penny drops and something turns from a fuzzy understanding into solid knowledge.
-            %p{ "data-mobile-font-size" => "epsilon" } I have contributed to a number of projects, each utilising different setups, so I have been exposed to several of the front-running libraries. With the current state of the JavaScript ecosystem and the "flavour of the month" scenario that seems so prevalent, I'm of the opinion that there's no better time to hone my vanilla JavaScript skills, and so it's in this area that I am focusing my efforts.
-            %p{ "data-mobile-font-size" => "epsilon" }
-              I have written a number of
-              = link_to "vanilla JavaScript modules", "https://www.npmjs.com/~ianhatton", class: "external-link", target: "_blank", rel: "noopener noreferrer"
-              which are in use across several of my recent projects, and I'm looking forward to expanding my knowledge with each new project I work on.
-
-          .column-two
-            %h2.epsilon.bold-weight.accent{ "data-mobile-font-size" => "delta" } I have a knowledge of
-            %ul
-              %li{ "data-mobile-font-size" => "epsilon" } JavaScript
-              %li{ "data-mobile-font-size" => "epsilon" } ES6
-              %li{ "data-mobile-font-size" => "epsilon" } jQuery
-              %li{ "data-mobile-font-size" => "epsilon" } CoffeeScript
-              %li{ "data-mobile-font-size" => "epsilon" } React
-              %li{ "data-mobile-font-size" => "epsilon" } AngularJS 1
-            %ul
-              %li{ "data-mobile-font-size" => "epsilon" } Node.js
-              %li{ "data-mobile-font-size" => "epsilon" } Lodash
-              %li{ "data-mobile-font-size" => "epsilon" } Bower
-              %li{ "data-mobile-font-size" => "epsilon" } Gulp
-              %li{ "data-mobile-font-size" => "epsilon" } Jasmine
-              %li{ "data-mobile-font-size" => "epsilon" } ESLint
-              %li{ "data-mobile-font-size" => "epsilon" } Browserify
+        .wrap
+          .padding
+            %h1.gamma.extra-bold-weight JavaScript
+            .column-one
+              %p.epsilon{ "data-mobile-font-size" => "delta" } JavaScript is, without doubt, the most challenging and, at times, frustrating part of my job. Having said that, I also find it the most rewarding.
+              %p{ "data-mobile-font-size" => "epsilon" } For me, it's an area of constant learning and improvement, and I've found that the way I write my code has changed greatly over the years. There's nothing like that moment where the penny drops and something turns from a fuzzy understanding into solid knowledge.
+              %p{ "data-mobile-font-size" => "epsilon" } I have contributed to a number of projects, each utilising different setups, so I have been exposed to several of the front-running libraries. With the current state of the JavaScript ecosystem and the "flavour of the month" scenario that seems so prevalent, I'm of the opinion that there's no better time to hone my vanilla JavaScript skills, and so it's in this area that I am focusing my efforts.
+              %p{ "data-mobile-font-size" => "epsilon" }
+                I have written a number of
+                = link_to "vanilla JavaScript modules", "https://www.npmjs.com/~ianhatton", class: "external-link", target: "_blank", rel: "noopener noreferrer"
+                which are in use across several of my recent projects, and I'm looking forward to expanding my knowledge with each new project I work on.
+            .column-two
+              %h2.epsilon.bold-weight.accent{ "data-mobile-font-size" => "delta" } I have a knowledge of
+              %ul
+                %li{ "data-mobile-font-size" => "epsilon" } JavaScript
+                %li{ "data-mobile-font-size" => "epsilon" } ES6
+                %li{ "data-mobile-font-size" => "epsilon" } jQuery
+                %li{ "data-mobile-font-size" => "epsilon" } CoffeeScript
+                %li{ "data-mobile-font-size" => "epsilon" } React
+                %li{ "data-mobile-font-size" => "epsilon" } AngularJS 1
+              %ul
+                %li{ "data-mobile-font-size" => "epsilon" } Node.js
+                %li{ "data-mobile-font-size" => "epsilon" } Lodash
+                %li{ "data-mobile-font-size" => "epsilon" } Bower
+                %li{ "data-mobile-font-size" => "epsilon" } Gulp
+                %li{ "data-mobile-font-size" => "epsilon" } Jasmine
+                %li{ "data-mobile-font-size" => "epsilon" } ESLint
+                %li{ "data-mobile-font-size" => "epsilon" } Browserify
       %article.other.tabbed-content-tab
-        .padding
-          %h1.gamma.extra-bold-weight Bits and bobs
-          .column-one
-            %p.epsilon{ "data-mobile-font-size" => "delta" } Web development fundamentals, platforms and anything else that didn't quite fit into the other categories.
-            %p{ "data-mobile-font-size" => "epsilon" } Working in digital agencies has exposed me to a myriad of real-world requirements for web development projects, including usability, accessibility and performance.
-            %p{ "data-mobile-font-size" => "epsilon" } The majority of my work has been built on top of Ruby on Rails, which has provided my understanding of MVC architecture and bespoke CMSs, but I've also had experience with WordPress, Tumblr and Shopify, where I've either created themes from scratch or modified existing ones to meet the client's specification.
-            %p{ "data-mobile-font-size" => "epsilon" }
-              Over the years, I've factored in browser support all the way down to
-              = succeed "," do
-                = link_to "IE6", "http://www.saveie6.com", class: "external-link", target: "_blank", rel: "noopener noreferrer"
-              so I'm well-versed to the joys of cross-browser testing, compatibility issues and workarounds.
-            %p
-              I also
-              %span.bold-weight rocked
-              GeoCities back in the day, but we don't talk about that, do we?
-          .column-two
-            %h2.epsilon.bold-weight.accent{ "data-mobile-font-size" => "delta" } I have a knowledge of
-            %ul
-              %li{ "data-mobile-font-size" => "epsilon" } Usability
-              %li{ "data-mobile-font-size" => "epsilon" } Accessibility
-              %li{ "data-mobile-font-size" => "epsilon" } WAI-ARIA
-              %li{ "data-mobile-font-size" => "epsilon" } Cross-browser testing
-              %li{ "data-mobile-font-size" => "epsilon" } Progressive enhancement
-              %li{ "data-mobile-font-size" => "epsilon" } Ruby on Rails (views and controllers)
-              %li{ "data-mobile-font-size" => "epsilon" } GitHub
-            %ul
-              %li{ "data-mobile-font-size" => "epsilon" } Adobe Creative Suite
-              %li{ "data-mobile-font-size" => "epsilon" } WordPress
-              %li{ "data-mobile-font-size" => "epsilon" } Shopify
-              %li{ "data-mobile-font-size" => "epsilon" } Tumblr
-              %li{ "data-mobile-font-size" => "epsilon" } Mailchimp
-              %li{ "data-mobile-font-size" => "epsilon" } dotMailer
-              %li{ "data-mobile-font-size" => "epsilon" } Maxemail
-              %li{ "data-mobile-font-size" => "epsilon" } Middleman
+        .wrap
+          .padding
+            %h1.gamma.extra-bold-weight Bits and bobs
+            .column-one
+              %p.epsilon{ "data-mobile-font-size" => "delta" } Web development fundamentals, platforms and anything else that didn't quite fit into the other categories.
+              %p{ "data-mobile-font-size" => "epsilon" } Working in digital agencies has exposed me to a myriad of real-world requirements for web development projects, including usability, accessibility and performance.
+              %p{ "data-mobile-font-size" => "epsilon" } The majority of my work has been built on top of Ruby on Rails, which has provided my understanding of MVC architecture and bespoke CMSs, but I've also had experience with WordPress, Tumblr and Shopify, where I've either created themes from scratch or modified existing ones to meet the client's specification.
+              %p{ "data-mobile-font-size" => "epsilon" }
+                Over the years, I've factored in browser support all the way down to
+                = succeed "," do
+                  = link_to "IE6", "http://www.saveie6.com", class: "external-link", target: "_blank", rel: "noopener noreferrer"
+                so I'm well-versed to the joys of cross-browser testing, compatibility issues and workarounds.
+              %p
+                I also
+                %span.bold-weight rocked
+                GeoCities back in the day, but we don't talk about that, do we?
+            .column-two
+              %h2.epsilon.bold-weight.accent{ "data-mobile-font-size" => "delta" } I have a knowledge of
+              %ul
+                %li{ "data-mobile-font-size" => "epsilon" } Usability
+                %li{ "data-mobile-font-size" => "epsilon" } Accessibility
+                %li{ "data-mobile-font-size" => "epsilon" } WAI-ARIA
+                %li{ "data-mobile-font-size" => "epsilon" } Cross-browser testing
+                %li{ "data-mobile-font-size" => "epsilon" } Progressive enhancement
+                %li{ "data-mobile-font-size" => "epsilon" } Ruby on Rails (views and controllers)
+                %li{ "data-mobile-font-size" => "epsilon" } GitHub
+              %ul
+                %li{ "data-mobile-font-size" => "epsilon" } Adobe Creative Suite
+                %li{ "data-mobile-font-size" => "epsilon" } WordPress
+                %li{ "data-mobile-font-size" => "epsilon" } Shopify
+                %li{ "data-mobile-font-size" => "epsilon" } Tumblr
+                %li{ "data-mobile-font-size" => "epsilon" } Mailchimp
+                %li{ "data-mobile-font-size" => "epsilon" } dotMailer
+                %li{ "data-mobile-font-size" => "epsilon" } Maxemail
+                %li{ "data-mobile-font-size" => "epsilon" } Middleman
   %footer.section-footer
     = link_to content_tag(:span, "View my CV"), "#", class: "button button-primary delta"
 

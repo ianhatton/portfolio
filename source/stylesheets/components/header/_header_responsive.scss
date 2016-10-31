@@ -18,6 +18,16 @@ header[role=banner] {
         display: inline-block;
       }
     }
+
+    span {
+      &.job-title {
+        &:before {
+          content: "\2014";
+          display: inline-block;
+          margin-right: 3px;
+        }
+      }
+    }
   }
 
   @include breakpoint($tablet-and-desktop-breakpoint) {

@@ -203,10 +203,6 @@ body {
             &.featured {
               @include span(6 of 12);
 
-              img {
-                margin-bottom: 20px;
-              }
-
               .column-one, .column-two {
                 @include span(6 of 6 last);
               }
