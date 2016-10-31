@@ -3,7 +3,15 @@ header.section-header {
     @include bleed-x(10px);
   }
 
-  @include breakpoint($tablet-and-desktop-breakpoint) {
+  @include breakpoint($mobile-and-tablet-breakpoint) {
+    border-bottom: 7px solid $section-header-border;
+  }
+
+  @include breakpoint($tablet-breakpoint) {
+    @include bleed-x(17px);
+  }
+
+  @include breakpoint($desktop-breakpoint) {
     margin-left: -1000px;
     padding-left: 1000px;
     position: relative;
@@ -26,7 +34,7 @@ header.section-header {
     }
 
     &:before {
-      @include linear-gradient(to right, $section-header-before-bg 0%, $section-header-before-bg 80%, $section-header-before-bg 81%, $body-bg);
+      @include linear-gradient(to right, $section-header-before-bg-1 0%, $section-header-before-bg-1 80%, $section-header-before-bg-1 81%, $section-header-before-bg-2);
       bottom: -7px;
       left: 0;
       height: 7px;

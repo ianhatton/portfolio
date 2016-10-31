@@ -1,8 +1,15 @@
 nav.primary-navigation {
   @include breakpoint($mobile-breakpoint) {
+    margin-left: -10px;
+    margin-right: -10px;
+
     ul {
+      // layout
       height: 70px;
       width: 100%;
+
+      // styling
+      border-top: 1px solid $primary-navigation-border;
     }
   }
 
