@@ -1,10 +1,10 @@
 footer[role=contentinfo] {
-  @include breakpoint($mobile-breakpoint) {
-
-  }
-
-  @include breakpoint($tablet-breakpoint) {
-    
+  @include breakpoint($mobile-and-tablet-breakpoint) {
+    section {
+      &.social {
+        margin-bottom: 40px;
+      }
+    }
   }
 
   @include breakpoint($desktop-breakpoint) {

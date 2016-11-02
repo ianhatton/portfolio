@@ -26,10 +26,6 @@ body {
           }
 
           .tabbed-content-nav {
-            a {
-              @include transition(margin-top 0s ease-in-out, padding 0s ease-in-out);
-            }
-
             span {
               &.desktop {
                 display: none;

@@ -6,7 +6,18 @@ header.section-header {
   background-color: $section-header-bg;
 
   h1 {
-    color: $section-header-heading-text;
+    color: $section-header-h1-text;
+
+    &:after {
+      // layout
+      display: inline-block;
+
+      // styling
+      color: $section-header-h1-after-text;
+      font-family: "Material Icons";
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
   }
 
   p {

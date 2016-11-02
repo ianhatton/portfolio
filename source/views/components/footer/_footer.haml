@@ -1,7 +1,14 @@
 %footer{ role: "contentinfo" }
   .wrap
     .padding
-      
+      %section.social
+        %h1.epsilon.bold-weight.accent
+          Elsewhere
+        %ul
+          %li= link_to content_tag(:span, "GitHub", class: "hidden"), "https://github.com/ianhatton", class: "github external-link", target: "_blank", rel: "noopener noreferrer"
+          %li= link_to content_tag(:span, "LinkedIn", class: "hidden"), "https://uk.linkedin.com/in/ian-hatton", class: "linkedin external-link", target: "_blank", rel: "noopener noreferrer"
+          %li= link_to content_tag(:span, "NPM", class: "hidden"), "https://www.npmjs.com/~ianhatton", class: "npm external-link", target: "_blank", rel: "noopener noreferrer"
+
       %small
         Copyright &copy;
         = Time.now.year
@@ -11,10 +18,3 @@
         Built with the awesome
         = link_to "Middleman", "https://middlemanapp.com", class: "external-link", target: "_blank", rel: "noopener noreferrer"
       
-      %section.social
-        %h1.epsilon.bold-weight.accent
-          Elsewhere
-        %ul
-          %li= link_to content_tag(:span, "GitHub", class: "hidden"), "https://github.com/ianhatton", class: "github"
-          %li= link_to content_tag(:span, "LinkedIn", class: "hidden"), "https://uk.linkedin.com/in/ian-hatton", class: "linkedin"
-          %li= link_to content_tag(:span, "NPM", class: "hidden"), "https://www.npmjs.com/~ianhatton", class: "npm"

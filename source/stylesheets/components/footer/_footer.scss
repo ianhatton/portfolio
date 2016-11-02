@@ -22,7 +22,17 @@ footer {
     section {
       &.social {
         a {
+          // layout
+          overflow: visible !important;
+          text-align: right;
+
+          // styling
           background-image: url("../images/sprite-social.png");
+          color: $footer-social-link-text;
+
+          &:after {
+            margin-right: -15px;
+          }
 
           &.github {
             @include sprite($social-github);

@@ -13,9 +13,11 @@ nav.primary-navigation {
     text-decoration: none;
     @include transition(all 0.2s ease-in-out);
 
-    &:hover {
-      background-color: $primary-navigation-link-bg-hover;
-      color: $primary-navigation-link-text-hover;
+    @media(hover) {
+      &:hover {
+        background-color: $primary-navigation-link-bg-hover;
+        color: $primary-navigation-link-text-hover;
+      }
     }
   }
 
