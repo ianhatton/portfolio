@@ -11,6 +11,17 @@ body {
         }
       }
 
+      &.about, &.latest-work {
+        header.section-header {
+          h1 {
+            &:after {
+              position: relative;
+              top: 5px;
+            }
+          }
+        }
+      }
+
       &.bio {
         @include span(full);
         margin-bottom: 40px;

@@ -18,6 +18,12 @@ header.section-header {
       font-weight: 300;
       -webkit-font-smoothing: antialiased;
     }
+
+    &.accent {
+      &:before {
+        background-color: $section-header-h1-text;
+      }
+    }
   }
 
   p {
