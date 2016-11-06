@@ -29,12 +29,14 @@ function createRecentTracksListItems(ul) {
     img = document.createElement('img');
     li = document.createElement('li');
 
-    h2.className = 'zeta bold-weight';
-    h3.className = 'zeta';
+    h2.className = 'theta bold-weight';
+    h3.className = 'theta';
 
     h2.innerHTML = recentTrack.name;
     h3.innerHTML = recentTrack.artist;
     img.src = recentTrack.image;
+
+    img.src = getImage(recentTrack.image)
 
     li.appendChild(img);
     li.appendChild(h2);
@@ -43,6 +45,19 @@ function createRecentTracksListItems(ul) {
   });
 
   return ul;
+}
+
+function getImage(path) {
+  let src;
+  console.log(src);
+
+  if (path) {
+    src = path;
+  } else {
+    src = "/images/pages/home/last_fm_artwork.png";
+  }
+
+  return src;
 }
 
 function getRecentTracks(lastFm) {

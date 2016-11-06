@@ -20,21 +20,26 @@
   }
 
   [data-mobile-font-size="epsilon"] {
+    font-size: 24px; /* 24px */
+    line-height: (30 / 24) + em; 
+  }
+
+  [data-mobile-font-size="zeta"] {
     font-size: 1.188em; /* 19px */
     line-height: (24 / 19) + em; 
   }
 
-  [data-mobile-font-size="zeta"] {
+  [data-mobile-font-size="eta"] {
     font-size: 0.938em; /* 16px */
     line-height: (24 / 16) + em; 
   }
 
-  [data-mobile-font-size="eta"] {
+  [data-mobile-font-size="theta"] {
     font-size: 0.875em; /* 14px */
     line-height: (24 / 14) + em; 
   }
 
-  [data-mobile-font-size="theta"] {
+  [data-mobile-font-size="iota"] {
     font-size: 0.75em; /* 12px */
     line-height: (24 / 12) + em; 
   }
@@ -61,22 +66,27 @@
     line-height: (36 / 30) + em; 
   }
 
-  [data-tablet-font-size="epsilon"] {
+  [data-mobile-font-size="epsilon"] {
+    font-size: 24px; /* 24px */
+    line-height: (30 / 24) + em; 
+  }
+
+  [data-mobile-font-size="zeta"] {
     font-size: 1.188em; /* 19px */
     line-height: (24 / 19) + em; 
   }
 
-  [data-tablet-font-size="zeta"] {
+  [data-mobile-font-size="eta"] {
     font-size: 0.938em; /* 16px */
     line-height: (24 / 16) + em; 
   }
 
-  [data-tablet-font-size="eta"] {
+  [data-mobile-font-size="theta"] {
     font-size: 0.875em; /* 14px */
     line-height: (24 / 14) + em; 
   }
 
-  [data-tablet-font-size="theta"] {
+  [data-mobile-font-size="iota"] {
     font-size: 0.75em; /* 12px */
     line-height: (24 / 12) + em; 
   }

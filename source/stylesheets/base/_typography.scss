@@ -44,21 +44,26 @@ h4, .delta {
 }
 
 h5, .epsilon {
+  font-size: 24px; /* 24px */
+  line-height: (30 / 24) + em;
+}
+
+h6, .zeta {
   font-size: 1.188em; /* 19px */
   line-height: (24 / 19) + em;
 }
 
-h6, .zeta {
+.eta {
   font-size: 0.938em; /* 16px */
   line-height: (24 / 16) + em;
 }
 
-.eta {
+.theta {
   font-size: 0.875em; /* 14px */
   line-height: (24 / 14) + em;
 }
 
-.theta {
+.iota {
   font-size: 0.75em; /* 12px */
   line-height: (24 / 12) + em;
 }

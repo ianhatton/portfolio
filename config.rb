@@ -16,7 +16,9 @@ page '/*.txt', layout: false
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
-["better", "london-sport-funding-search-tool", "portland-resourcing"].each do |case_study|
+['better',
+ 'london-sport-funding-search-tool',
+ 'portland-resourcing'].each do |case_study|
   proxy "/work/#{case_study}.html", "#{case_study}.html"
 end
 
@@ -48,9 +50,18 @@ configure :build do
   # activate :minify_javascript
 end
 
+# activate :deploy do |deploy|
+#   deploy.deploy_method   = :ftp
+#   deploy.host            = 'ftp.example.com'
+#   deploy.path            = '/srv/www/site'
+#   deploy.user            = 'tvaughan'
+#   deploy.password        = 'secret'
+# end
+
 activate :directory_indexes
+
 activate :external_pipeline,
-  name: :gulp,
-  command: build? ? 'npm run production' : 'npm run gulp',
-  source: ".tmp",
-  latency: 1
+         name: :gulp,
+         command: build? ? 'npm run production' : 'npm run gulp',
+         source: '.tmp',
+         latency: 1

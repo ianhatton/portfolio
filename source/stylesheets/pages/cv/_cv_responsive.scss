@@ -1,3 +1,54 @@
 body.cv {
-  
+  @include breakpoint($mobile-breakpoint) {
+    .button {
+      top: -80px;
+    }
+  }
+
+  @include breakpoint($tablet-and-desktop-breakpoint) {
+    article.cv {
+      margin: 100px 0;
+    }
+    
+    .button {
+      top: 20px;
+    }
+  }
+
+  @include breakpoint($desktop-breakpoint) {
+    article.cv {
+      header {
+        @include span(4 of 12);
+      }
+
+      .body {
+        @include span(8 of 12 last);
+      }
+
+      .education {
+        @include span(2.5 of 8);
+        clear: left;
+      }
+
+      .experience, .objective {
+        @include span(5 of 8);
+      }
+
+      .introduction {
+        @include span(8 of 8 last);
+      }
+
+      .skills {
+        @include span(5.5 of 8 last);
+
+        ul {
+          @include span(2.75 of 5.5);
+
+          &:last-child {
+            @include last;
+          }
+        }
+      }
+    }
+  }
 }

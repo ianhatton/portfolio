@@ -1,3 +1,23 @@
 body.cv {
-  
+  [role="main"] {
+    position: relative;
+  }
+
+  article.cv {
+    @include span(full);
+
+    .education, .experience, .introduction, .objective {
+      margin-bottom: 40px;
+    }
+
+    .experience, .skills {
+      li {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .button {
+    position: absolute;
+  }
 }

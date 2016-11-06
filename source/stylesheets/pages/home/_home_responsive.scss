@@ -183,10 +183,10 @@ body {
         }
 
         &.last-fm {
-          @include span(8 of 12);
+          @include span(7 of 12);
 
           li {
-            @include span(1.6 of 8)
+            @include span(1.4 of 7)
 
             &:last-child {
               @include last;
