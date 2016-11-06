@@ -54,6 +54,24 @@ body {
 
     @include breakpoint($mobile-and-tablet-breakpoint) {
       section {
+        &.latest-work {
+          article {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+
+            // styling
+            border-bottom: 1px dashed $latest-work-article-border;
+
+            &:last-child {
+              // layout
+              margin-bottom: 0;
+              padding-bottom: 0;
+
+              // styling
+              border-bottom: 0 none;
+            }
+          }
+        }
         &.skills {
           article {
             .column-one {
