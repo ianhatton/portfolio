@@ -88,6 +88,10 @@ body {
           @media (hover) {
             @include transition(all 0.2s ease-in-out);
 
+            &:after, &:before {
+              @include transition(all 0.2s ease-in-out);
+            }
+
             &:hover {
               background-color: $button-bg-hover;
               box-shadow: 0 0 0 13px $button-bg-hover;
@@ -125,12 +129,10 @@ body {
             right: 0;
 
             // styling
-            @include transition(all 0.2s ease-in-out);
             border-bottom: 1px dotted $site-introduction-link-after-border;
           }
 
           &:before {
-            @include transition(all 0.2s ease-in-out);
             content: "";
             opacity: 0;
             position: absolute;

@@ -1,6 +1,8 @@
 body.cv {
   [role="main"] {
-    position: relative;
+    > .wrap {
+      position: relative;
+    }
   }
 
   article.cv {
@@ -19,6 +21,6 @@ body.cv {
 
   .button {
     position: absolute;
-    left: 10px;
+    left: 15px;
   }
 }
