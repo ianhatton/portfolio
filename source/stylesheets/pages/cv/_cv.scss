@@ -12,6 +12,42 @@ body.cv {
       margin-bottom: 60px;
     }
 
+    .experience {
+      // layout
+      @include bleed-x(0 1000px);
+
+      // styling
+      background-color: $section-header-bg;
+
+      a {
+        color: $white;
+      }
+
+      h3 {
+        &.accent {
+          &:before {
+            background-color: $white;
+          }
+        }
+      }
+
+      h3, h4, h5 {
+        color: $white;
+      }
+
+      p {
+        color: $white;
+      }
+
+      ul {
+        color: $white;
+      }
+
+      .padding {
+        padding: 30px;
+      }
+    }
+
     .experience, .skills {
       li {
         margin-bottom: 40px;

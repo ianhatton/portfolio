@@ -30,12 +30,16 @@ body.cv {
         clear: left;
       }
 
-      .experience, .objective {
-        @include span(5 of 8);
+      .experience {
+        @include span(5.5 of 8);
       }
 
       .introduction {
         @include span(8 of 8 last);
+      }
+
+      .objective {
+        @include span(5 of 8);
       }
 
       .skills {
