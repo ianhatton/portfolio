@@ -23,7 +23,7 @@ body.cv {
         color: $white;
       }
 
-      h3 {
+      h1 {
         &.accent {
           &:before {
             background-color: $white;
@@ -31,8 +31,16 @@ body.cv {
         }
       }
 
-      h3, h4, h5 {
+      h1, h2, h3 {
         color: $white;
+      }
+
+      li {
+        // layout
+        padding-bottom: 40px;
+
+        // styling
+        border-bottom: 1px dashed $white;
       }
 
       p {
