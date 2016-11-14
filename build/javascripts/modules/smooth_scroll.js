@@ -40,7 +40,7 @@ function _navItemClick(navItem, element, e) {
   e.preventDefault();
 
   let windowTop = window.scrollY;
-  let elementTop = element.offsetTop - 69; /* The 69 should be moved into a config block */
+  let elementTop = element.offsetTop;
   let distance = Math.abs(windowTop - elementTop);
 
   _scroll(windowTop, elementTop, distance/6);
