@@ -8,15 +8,17 @@ body.cv {
   article.cv {
     @include span(full);
 
-    .education, .experience, .introduction, .objective {
+    footer {
+      a {
+        color: $cv-footer-link-text;
+      }
+    }
+
+    footer, .education, .experience, .introduction, .objective, .skills {
       margin-bottom: 60px;
     }
 
     .experience {
-      // layout
-      @include bleed-x(0 1000px);
-
-      // styling
       background-color: $section-header-bg;
 
       a {

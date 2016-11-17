@@ -17,6 +17,10 @@ body.cv {
 
   @include breakpoint($desktop-breakpoint) {
     article.cv {
+      footer {
+        @include span(8 of 8 last);
+      }
+
       header {
         @include span(4 of 12);
       }
@@ -26,11 +30,11 @@ body.cv {
       }
 
       .education {
-        @include span(2.5 of 8);
-        clear: left;
+        @include span(2.5 of 8 last);
       }
 
       .experience {
+        @include bleed-x(0 1000px);
         @include span(5.5 of 8);
       }
 
@@ -43,7 +47,8 @@ body.cv {
       }
 
       .skills {
-        @include span(5.5 of 8 last);
+        @include span(5.5 of 8);
+        clear: left;
 
         ul {
           @include span(2.75 of 5.5);

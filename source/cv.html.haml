@@ -7,15 +7,18 @@ title: Ian Hatton | CV
   = link_to content_tag(:span, "&lsaquo; Back to Skills"), root_path("#skills"), class: "button button-primary"
   %article.cv
     %header
-      %h1.bold-weight Ian Hatton
-      %h2 Front-end Web Developer
+      %h1.bold-weight{ "data-mobile-font-size": "gamma" } Ian Hatton
+      %h2{ "data-mobile-font-size": "gamma" } Front-end Web Developer
+      
     .body
       %section.introduction
         %p.epsilon A creative, forward-thinking Front-end Web Developer with over 4 years' agency experience. My strengths range from a thorough understanding of CSS and HTML, a proficiency in JavaScript and a firm grasp of web standards, typography and graphic design principles.
         %p.epsilon I am in my element whether I am hand-coding beautiful, bespoke designs, tailoring and using content management systems or working closely with clients to ensure that their ideas are realised to their full potential.
+
       %section.objective
         %h1.delta.bold-weight.accent Objective
         %p.zeta To put my skills into practice for a driven company and to add value across a range of projects. I seek to work in an environment which will inspire and encourage me to grow as a developer, whilst sharing and learning ideas alongside my peers.
+
       %section.experience
         .padding
           %h1.delta.bold-weight.accent Experience
@@ -26,10 +29,10 @@ title: Ian Hatton | CV
                   Morse Digital / 
                 Front-end Web Developer
               %p April 2014 &ndash; present
-              %p As part of the core Front-end team, my responsibilities include building, testing and maintaining the front-end code base, developing prototypes, working alongside designers to advise on potential caveats, meeting with clients, making deployments and BLAH.
+              %p As part of the core Front-end team, my responsibilities include building, testing and maintaining the front-end code base, developing prototypes, advising designers on potential build caveats, meeting with clients and deploying production-ready code.
               %h3.eta.bold-weight Key accomplishments:
               %p
-                Provided design consultancy, build, maintenance and i18n Internationalisation for the re-launch of GLL's 
+                Provided design consultancy, build, maintenance and i18n internationalisation for the re-launch of GLL's 
                 = link_to "Better", "http://www.better.org.uk", class: "external-link", target: "_blank", rel: "noopener noreferrer"
                 website
               %p
@@ -59,7 +62,6 @@ title: Ian Hatton | CV
                   Spinnaker London / 
                 Front-end Web Developer
               %p August 2013 &ndash; March 2014
-              %p Continuing my employment at Spinnaker, I 
               %h3.eta.bold-weight Key accomplishments:
               %p
                 Provided design consultancy and build for the re-launch of the
@@ -73,7 +75,7 @@ title: Ian Hatton | CV
                   Spinnaker London / 
                 Junior Front-end Web Developer
               %p January 2012 &ndash; July 2013
-              %p I worked alongside Spinnaker's inspirational Creative and Technical team to deliver some fantastic results across a number of platforms, contributing to all sorts of projects, from HTML emails to websites, microsites, Facebook campaigns and Rich Media advertising.
+              %p I worked alongside Spinnaker's inspirational Creative and Technical team to deliver some fantastic results across a number of platforms, from HTML emails to websites, microsites, Facebook campaigns and Rich Media advertising.
               %h3.eta.bold-weight Key accomplishments:
               %p Built and maintained HTML email campaigns for Baking Mad, Bord Bia, IMEX, Patak's and Tabasco
               %p
@@ -84,22 +86,30 @@ title: Ian Hatton | CV
                 Refactored the Less stylesheets on the
                 = link_to "Blue Dragon", "https://bluedragon.co.uk", class: "external-link", target: "_blank", rel: "noopener noreferrer"
                 website
-      %section.education
-        %h1.delta.bold-weight.accent Education
-        %ul
-          %li
-            %h2.zeta.bold-weight Open University
-            Certificate in Web Applications Development
 
       %section.skills
         %h1.delta.bold-weight.accent Skills
         %ul
           %li Excellent knowledge of CSS, semantic HTML and associated preprocessors/templating systems
           %li Proficient in vanilla JavaScript and jQuery, with a working knowledge of Angular 1 and React
-          %li A firm understanding of layouts, typography and graphic design principles applied to web development
+          %li A firm understanding of layouts, typography and graphic design principles in application to web development
           %li Awareness of usability, accessibility, cross-browser testing and responsive design issues
         %ul
           %li Experience with Ruby on Rails
           %li Experience with MySQL and other relational databases
           %li Knowledge of Cucumber and Jasmine testing
-          %li Knowledge of Adobe Creative Suite
+          %li Knowledge of Adobe Photoshop
+
+      %section.education
+        %h1.delta.bold-weight.accent Education
+        %ul
+          %li
+            %h2.zeta.bold-weight Open University
+            2008 &ndash; 2010
+            %br
+            Certificate in Web Applications Development
+
+      %footer
+        %p
+          My CV is also available as a
+          = link_to "Google Doc", "https://docs.google.com/document/d/1FQ61caG2E176JoBO7ojUYgWuYK-U6PYPS57PGA2L8v4", class: "external-link", target: "_blank", rel: "noopener noreferrer"
