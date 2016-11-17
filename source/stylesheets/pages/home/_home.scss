@@ -64,6 +64,33 @@ body {
             }
           }
 
+          // Firefox fix for lack of (media) support
+          @-moz-document url-prefix() {
+            @include transition(all 0.2s ease-in-out);
+
+            &:after, &:before {
+              @include transition(all 0.2s ease-in-out);
+            }
+
+            &:hover {
+              background-color: $button-bg-hover;
+              box-shadow: 0 0 0 13px $button-bg-hover;
+              color: $button-text-hover;
+
+              &:after {
+                border-bottom: 0 none;
+              }
+
+              &:before {
+                opacity: 1;
+                top: -13px;
+                bottom: -13px;
+                right: -14px;
+              }
+            }
+          }
+          // End Firefox fix for lack of (media) support
+
           // layout
           display: inline-block;
           padding-bottom: 3px;
@@ -285,6 +312,10 @@ body {
 
         .tabbed-content-nav {
           a {
+            @-moz-document url-prefix() { 
+              @include transition(margin-top 0.2s ease-in-out, padding 0.2s ease-in-out);
+            }
+
             @media (hover) {
               @include transition(margin-top 0.2s ease-in-out, padding 0.2s ease-in-out);
             }
