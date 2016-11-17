@@ -11,10 +11,14 @@ body.cv {
     footer {
       a {
         color: $cv-footer-link-text;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
 
-    footer, .education, .experience, .introduction, .objective, .skills {
+    footer, .education, .experience, .introduction, .objective {
       margin-bottom: 60px;
     }
 
@@ -62,6 +66,10 @@ body.cv {
       li {
         margin-bottom: 40px;
       }
+    }
+
+    .skills {
+      margin-bottom: 20px;
     }
   }
 

@@ -110,6 +110,8 @@ title: Ian Hatton | CV
             Certificate in Web Applications Development
 
       %footer
+        %h1.delta.bold-weight.accent Download
         %p
-          My CV is also available as a
-          = link_to "Google Doc", "https://docs.google.com/document/d/1FQ61caG2E176JoBO7ojUYgWuYK-U6PYPS57PGA2L8v4", class: "external-link", target: "_blank", rel: "noopener noreferrer"
+          My CV is also available for download as a
+          = succeed "." do
+            = link_to "Word document", "/assets/CV.docx"
