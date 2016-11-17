@@ -23,6 +23,9 @@ nav.primary-navigation {
 
   li {
     flex: 1;
+    // Safari fix
+    height: 100%;
+    // End Safari fix
     
     &:last-child {
       a {
