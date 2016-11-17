@@ -2,8 +2,30 @@ body {
   &.home {
     @include breakpoint($mobile-breakpoint) {
       section {
-        &.about, &.site-introduction, &.skills, &.tldr, &.work {
+        &.about, &.goodreads, &.last-fm, &.site-introduction, &.skills, &.tldr, &.work {
           @include span(full);
+        }
+
+        &.goodreads {
+          img {
+            max-width: 50%;
+          }
+        }
+
+        &.last-fm {
+          margin-bottom: 40px;
+
+          li {
+            @include span(2 of 4)
+
+            &:last-child {
+              display: none;
+            }
+
+            &:nth-child(2n+2) {
+              @include last;
+            }
+          }
         }
 
         &.skills {
@@ -180,17 +202,6 @@ body {
 
     @include breakpoint($desktop-breakpoint) {
       section {
-        &.bio {
-          .column-one {
-            @include span(7 of 12);
-            @include suffix(1 of 12);
-          }
-
-          .column-two {
-            @include span(4 of 12 last);
-          }
-        }
-
         &.about, &.site-introduction, &.skills, &.tldr, &.work {
           @include span(12 of 12 last);
         }
@@ -201,8 +212,19 @@ body {
           }
         }
 
+        &.bio {
+          .column-one {
+            @include span(7 of 12);
+            @include prefix(2.5 of 12);
+          }
+        }
+
         &.goodreads {
           @include span(4 of 12 last);
+
+          img {
+            max-width: 50%;
+          }
         }
 
         &.last-fm {

@@ -21,26 +21,24 @@ function createRecentTracksList() {
 }
 
 function createRecentTracksListItems(ul) {
-  let h2, h3, img, li;
+  let h2, h3, img, li, span;
 
   _.forEach(recentTracks, (recentTrack) => {
     h2 = document.createElement('h2');
-    h3 = document.createElement('h3');
     img = document.createElement('img');
     li = document.createElement('li');
+    span = document.createElement('span');
 
-    h2.className = 'theta bold-weight';
-    h3.className = 'theta';
+    h2.className = 'theta';
+    span.className = 'bold-weight';
 
-    h2.innerHTML = recentTrack.name;
-    h3.innerHTML = recentTrack.artist;
-    img.src = recentTrack.image;
-
+    span.innerHTML = recentTrack.artist;
+    h2.appendChild(span);
+    h2.innerHTML += ` - ${recentTrack.name}`;
     img.src = getImage(recentTrack.image)
 
     li.appendChild(img);
     li.appendChild(h2);
-    li.appendChild(h3);
     ul.appendChild(li);
   });
 
