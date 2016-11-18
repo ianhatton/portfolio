@@ -3,6 +3,24 @@ body.cv {
     .button {
       top: -80px;
     }
+
+    .experience {
+      @include bleed-x(10px);
+    }
+  }
+
+  @include breakpoint($mobile-and-tablet-breakpoint) {
+    .experience {
+      .padding {
+        padding: 20px 0;
+      }
+    }
+  }
+
+  @include breakpoint($tablet-breakpoint) {
+    .experience {
+      @include bleed-x(20px);
+    }
   }
 
   @include breakpoint($tablet-and-desktop-breakpoint) {
@@ -36,6 +54,10 @@ body.cv {
       .experience {
         @include bleed-x(0 1000px);
         @include span(5.5 of 8);
+
+        .padding {
+          padding: 30px;
+        }
       }
 
       .introduction {

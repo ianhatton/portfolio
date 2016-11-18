@@ -1,4 +1,10 @@
 footer[role=contentinfo] {
+  @include breakpoint($mobile-breakpoint) {
+    .padding {
+      padding: 20px 0;
+    }
+  }
+  
   @include breakpoint($mobile-and-tablet-breakpoint) {
     section {
       &.social {

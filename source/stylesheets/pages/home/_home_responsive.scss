@@ -39,6 +39,10 @@ body {
                 @include span(full);
               }
             }
+
+            .padding {
+              padding: 20px 0;
+            }
           }
 
           .tabbed-content-nav {

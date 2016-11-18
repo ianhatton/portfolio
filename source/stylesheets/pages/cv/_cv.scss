@@ -22,6 +22,12 @@ body.cv {
       margin-bottom: 60px;
     }
 
+    header {
+      h2 {
+        color: $secondary-heading-text;
+      }
+    }
+
     .experience {
       background-color: $section-header-bg;
 
@@ -47,6 +53,15 @@ body.cv {
 
         // styling
         border-bottom: 1px dashed $white;
+
+        &:last-child {
+          // layout
+          margin-bottom: 0;
+          padding-bottom: 0;
+
+          // styling
+          border-bottom: 0 none;
+        }
       }
 
       p {
@@ -55,10 +70,6 @@ body.cv {
 
       ul {
         color: $white;
-      }
-
-      .padding {
-        padding: 30px;
       }
     }
 
@@ -69,7 +80,7 @@ body.cv {
     }
 
     .skills {
-      margin-bottom: 20px;
+      margin-bottom: 50px;
     }
   }
 
