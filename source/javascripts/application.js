@@ -2,10 +2,12 @@ var TabbedContentClass = require('@ianhatton/vanilla-tabbed-content');
 
 var HeaderModule = require('./modules/header')
   , LastFmModule = require('./modules/lastfm')
+  , ModalClass = require('./modules/modal')
   , SmoothScrollModule = require('./modules/smooth_scroll');
 
 var header
   , lastFm
+  , modalElements
   , primaryNavsmoothScroll
   , siteIntrosmoothScroll;
 
@@ -24,6 +26,18 @@ if(lastFm) {
   lastFm.init();
 }
 // End LastFm
+
+// Modals
+modalElements = document.querySelectorAll('.modal');
+
+if (modalElements.length > 0){
+  let modal = _.map(modalElements, (m)=>{
+    return new ModalClass({
+      element: m
+    });
+  });
+}
+// End Modals
 
 // Smooth Scroll
 primaryNavsmoothScroll = SmoothScrollModule('primary-navigation');

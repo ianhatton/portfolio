@@ -1,0 +1,58 @@
+body.modal-open {
+  overflow: hidden;
+
+  .modal-overlay {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.modal-overlay {
+  // layout
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+
+  // styling
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.modal-content {
+  // layout
+  position: absolute;
+  z-index: 3;
+
+  // styling
+  background-color: $white;
+  cursor: default;
+  opacity: 0;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.modal-content, .modal-overlay {
+  @include transition(all .15s linear);
+  opacity: 0;
+
+  &.active {
+    // layout
+    display: block;
+
+    // styling
+    opacity: 1;
+  }
+}
+
+.modal-source {
+  display: none;
+}
+
+.modal-toggle {
+  cursor: pointer;
+}

@@ -47,7 +47,6 @@ function createRecentTracksListItems(ul) {
 
 function getImage(path) {
   let src;
-  console.log(src);
 
   if (path) {
     src = path;
