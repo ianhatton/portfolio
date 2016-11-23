@@ -1,7 +1,7 @@
 footer[role=contentinfo] {
   @include breakpoint($mobile-breakpoint) {
     .padding {
-      padding: 20px 0;
+      padding: 75px 0;
     }
   }
   
@@ -11,6 +11,11 @@ footer[role=contentinfo] {
         margin-bottom: 40px;
       }
     }
+  }
+
+  @include breakpoint($tablet-and-desktop-breakpoint) {
+    margin-left: -7px;
+    margin-right: -7px;
   }
 
   @include breakpoint($desktop-breakpoint) {

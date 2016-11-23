@@ -1,6 +1,7 @@
 footer {
   &[role=contentinfo] {
     // layout
+    clear: both;
     position: relative;
 
     // styling
@@ -75,6 +76,10 @@ footer {
       a {
         color: $footer-small-link-text;
       }
+    }
+
+    .padding {
+      padding: 75px 20px;
     }
   }
 }

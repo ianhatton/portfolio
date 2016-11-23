@@ -29,7 +29,7 @@ class ModalClass{
   }
 
   _addOverlayClickListener(){
-    this.overlay.addEventListener('click', this.overlayClick, {capture: false, once: true});
+    this.overlay.addEventListener('click', this.overlayClick, false);
   }
 
   _addToggleClickListener(){
@@ -43,14 +43,6 @@ class ModalClass{
       this._toggleModalClass();
       this._toggleOverlayClass();
     }, 100);
-  }
-
-  _overlayClick(e){
-    e.preventDefault();
-
-    if(e.target === this.overlay){
-      this._toggleModal();
-    }
   }
 
   _createModal(){
@@ -85,6 +77,14 @@ class ModalClass{
     /* eslint-enable */
 
     this._addToggleClickListener();
+  }
+
+  _overlayClick(e){
+    e.preventDefault();
+
+    if(e.target === this.overlay){
+      this._toggleModal();
+    }
   }
 
   _removeOverlay(){
