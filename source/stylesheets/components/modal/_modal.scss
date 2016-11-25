@@ -1,5 +1,9 @@
-body.modal-open {
+html.modal-open {
   overflow: hidden;
+
+  body {
+    overflow: hidden;
+  }
 
   .modal-overlay {
     overflow-x: hidden;
@@ -7,32 +11,23 @@ body.modal-open {
   }
 }
 
-.modal-overlay {
-  // layout
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 2;
-
-  // styling
-  background-color: rgba(0, 0, 0, 0.7);
-  cursor: pointer;
-}
-
 .modal-content {
   // layout
   position: absolute;
+  top: 40px;
   z-index: 3;
 
   // styling
-  background-color: $white;
+  background-color: $modal-bg;
   cursor: default;
   opacity: 0;
 
   h2 {
     margin-bottom: 20px;
+  }
+
+  .padding {
+    padding: 40px;
   }
 }
 
@@ -49,10 +44,23 @@ body.modal-open {
   }
 }
 
-.modal-source {
-  display: none;
+.modal-overlay {
+  // layout
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+
+  // styling
+  background-color: $modal-overlay-bg;
 }
 
-.modal-toggle {
+.modal-overlay, .modal-toggle {
   cursor: pointer;
+}
+
+.modal-source {
+  display: none;
 }
