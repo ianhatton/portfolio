@@ -19,7 +19,6 @@ class ModalClass{
 
   _init(){
     this.open = false;
-    this.overlayClick = this._overlayClick.bind(this);
     this._render();
   }
 
@@ -32,8 +31,12 @@ class ModalClass{
     }
   }
 
+  _addCloseClickListener(){
+    this.close.addEventListener('click', this._closeClick.bind(this), false);
+  }
+
   _addOverlayClickListener(){
-    this.overlay.addEventListener('click', this.overlayClick, false);
+    this.overlay.addEventListener('click', this._overlayClick.bind(this), false);
   }
 
   _addToggleClickListener(){
@@ -49,12 +52,35 @@ class ModalClass{
     }, 100);
   }
 
+  _closeClick(e){
+    e.preventDefault();
+
+    this._setModalVisibility();
+  }
+
+  _createClose(){
+    let span = document.createElement('span');
+    this.close = document.createElement('a');
+
+    span.innerHTML = 'close';
+
+    this.close.className = this.config.closeClass;
+    this.close.setAttribute('href', '#');
+    this.close.appendChild(span);
+
+    this._addCloseClickListener();
+
+    this.content.appendChild(this.close);
+  }
+
   _createContent(){
     this.content = document.createElement('div');
 
-    this.content.className += this.config.contentClass;
+    this.content.className = this.config.contentClass;
 
     this.content.innerHTML = this.source.innerHTML;
+
+    this._createClose();
 
     this.overlay.appendChild(this.content);
   }
@@ -62,7 +88,7 @@ class ModalClass{
   _createOverlay(){
     this.overlay = document.createElement('div');
 
-    this.overlay.className += this.config.overlayClass;
+    this.overlay.className = this.config.overlayClass;
 
     this._addOverlayClickListener();
 

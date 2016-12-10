@@ -11,6 +11,32 @@ html.modal-open {
   }
 }
 
+.modal-close {
+  // layout
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  // styling
+  color: $modal-close-text;
+
+  &:after {
+    // layout
+    content: "\E5CD";
+    display: inline-block;
+
+    // styling
+    @include transition(all 0.2s ease-in-out);
+    font-family: "Material Icons";
+    font-size: 2.5em; /* 40px */
+    -webkit-font-smoothing: antialiased;
+  }
+
+  span {
+    @include hidden;
+  }
+}
+
 .modal-content {
   // layout
   position: absolute;
