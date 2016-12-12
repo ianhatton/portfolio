@@ -1,10 +1,11 @@
 !!!
 %html{ itemscope: "itemscope", itemtype: "http://schema.org/WebSite" }
   = partial "layouts/partials/head"
-  %body{ class: body_class }
+  %body{ class: body_class, id: "top" }
     = partial "views/components/header/header"
     %main{ role: "main" }
       = yield
+    = partial "views/components/top_button/top_button"
     = partial "views/components/footer/footer"
     = javascript_include_tag "application"
     = javascript_include_tag "ga"

@@ -3,13 +3,16 @@ var TabbedContentClass = require('@ianhatton/vanilla-tabbed-content');
 var HeaderModule = require('./modules/header')
   , LastFmModule = require('./modules/lastfm')
   , ModalClass = require('./modules/modal')
-  , SmoothScrollModule = require('./modules/smooth_scroll');
+  , SmoothScrollModule = require('./modules/smooth_scroll')
+  , TopButtonModule = require('./modules/top_button');
 
 var header
   , lastFm
   , modalElements
-  , primaryNavsmoothScroll
-  , siteIntrosmoothScroll;
+  , primaryNavSmoothScroll
+  , siteIntroSmoothScroll
+  , topButton
+  , topButtonSmoothScroll;
 
 // Header
 header = HeaderModule('header');
@@ -40,15 +43,20 @@ if (modalElements.length > 0){
 // End Modals
 
 // Smooth Scroll
-primaryNavsmoothScroll = SmoothScrollModule('primary-navigation');
-siteIntrosmoothScroll = SmoothScrollModule('site-introduction');
+primaryNavSmoothScroll = SmoothScrollModule('primary-navigation');
+siteIntroSmoothScroll = SmoothScrollModule('site-introduction');
+topButtonSmoothScroll = SmoothScrollModule('button-top');
 
-if(primaryNavsmoothScroll) {
-  primaryNavsmoothScroll.init();
+if(primaryNavSmoothScroll) {
+  primaryNavSmoothScroll.init();
 }
 
-if(siteIntrosmoothScroll) {
-  siteIntrosmoothScroll.init();
+if(siteIntroSmoothScroll) {
+  siteIntroSmoothScroll.init();
+}
+
+if(topButtonSmoothScroll) {
+  topButtonSmoothScroll.init();
 }
 // End Smooth Scroll
 
@@ -65,3 +73,11 @@ if (tabbedContentElements.length > 0){
   });
 }
 // End Tabbed Content
+
+// Top button
+topButton = TopButtonModule('button-top');
+
+if(topButton) {
+  topButton.init();
+}
+// End Top button
