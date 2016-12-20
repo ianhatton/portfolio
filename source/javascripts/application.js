@@ -1,8 +1,8 @@
-var TabbedContentClass = require('@ianhatton/vanilla-tabbed-content');
+var ModalClass = require('@ianhatton/vanilla-modal')
+  , TabbedContentClass = require('@ianhatton/vanilla-tabbed-content');
 
 var HeaderModule = require('./modules/header')
   , LastFmModule = require('./modules/lastfm')
-  , ModalClass = require('./modules/modal')
   , SmoothScrollModule = require('./modules/smooth_scroll')
   , TopButtonModule = require('./modules/top_button');
 

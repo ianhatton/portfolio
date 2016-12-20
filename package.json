@@ -103,6 +103,7 @@
     "webpack-hot-middleware": "2.13.2"
   },
   "dependencies": {
+    "@ianhatton/vanilla-modal": "^1.0.0",
     "@ianhatton/vanilla-tabbed-content": "^1.0.0",
     "bourbon": "^4.2.7",
     "breakpoint-sass": "^2.7.0",
