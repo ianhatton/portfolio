@@ -36,7 +36,9 @@ class ModalClass{
   }
 
   _addOverlayClickListener(){
+    /* eslint-disable max-len */
     this.overlay.addEventListener('click', this._overlayClick.bind(this), false);
+    /* eslint-enable */
   }
 
   _addToggleClickListener(){
@@ -112,7 +114,7 @@ class ModalClass{
   _lazyLoadImages(){
     let images = this.content.querySelectorAll('img');
 
-    _.forEach(images, (image)=>{
+    _.forEach(images, (image)=> {
       let dataSrc = image.getAttribute('data-src');
       let src = image.getAttribute('src');
 
@@ -121,9 +123,9 @@ class ModalClass{
       }
     });
   }
-
+  
   _overlayClick(e){
-    if(e.target === this.overlay){
+    if (e.target === this.overlay){
       e.preventDefault();
 
       this._setModalVisibility();
@@ -142,7 +144,7 @@ class ModalClass{
   _setContentClass(){
     let className = this.content.className;
 
-    if(_.includes(className, 'active')){
+    if (_.includes(className, 'active')){
       this.content.className = className.replace(/(?:^|\s)active(?!\S)/g, '');
     } else {
       this.content.className += ' active';
@@ -150,10 +152,10 @@ class ModalClass{
   }
 
   _setHTMLClass(){
-    let html = document.getElementsByTagName("html")[0];
+    let html = document.getElementsByTagName('html')[0];
     let className = html.className;
 
-    if(_.includes(className, 'modal-open')){
+    if (_.includes(className, 'modal-open')){
       html.className = className.replace(/(?:^|\s)modal-open(?!\S)/g, '');
     } else {
       html.className += ' modal-open';
@@ -161,7 +163,7 @@ class ModalClass{
   }
 
   _setModalVisibility(){
-    if(this.open){
+    if (this.open){
       this._removeOverlay();
     } else {
       this._appendOverlay();
@@ -178,7 +180,7 @@ class ModalClass{
   _setOverlayClass(){
     let className = this.overlay.className;
 
-    if(_.includes(className, 'active')){
+    if (_.includes(className, 'active')){
       this.overlay.className = className.replace(/(?:^|\s)active(?!\S)/g, '');
     } else {
       this.overlay.className += ' active';
