@@ -15,14 +15,12 @@ function toggleHeaderClass(){
     if (_.includes(className, 'subtle')){
       header.className = className.replace(/(?:^|\s)subtle(?!\S)/g, '');
     }
-  } else {
-    if (!_.includes(className, 'subtle')){
-      header.className += ' subtle';
-    }
+  } else if (!_.includes(className, 'subtle')){
+    header.className += ' subtle';
   }
 }
 
-module.exports = function(elementId) {
+module.exports = function(elementId){
   let object;
 
   header = document.getElementById(elementId);
@@ -33,7 +31,7 @@ module.exports = function(elementId) {
     init: ()=>{
       addScrollListener();
     }
-  }
+  };
 
   return object;
-}
+};

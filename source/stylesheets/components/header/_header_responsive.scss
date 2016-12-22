@@ -28,6 +28,11 @@ header[role=banner] {
         }
       }
     }
+
+    .top-link {
+      position: fixed;
+      top: 0;
+    }
   }
 
   @include breakpoint($tablet-and-desktop-breakpoint) {
@@ -87,6 +92,11 @@ header[role=banner] {
       span {
         display: block;
       }
+    }
+
+    .top-link {
+      position: absolute;
+      top: 100%;
     }
   }
 }

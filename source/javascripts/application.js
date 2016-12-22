@@ -4,20 +4,20 @@ var ModalClass = require('@ianhatton/vanilla-modal')
 var HeaderModule = require('./modules/header')
   , LastFmModule = require('./modules/lastfm')
   , SmoothScrollModule = require('./modules/smooth_scroll')
-  , TopButtonModule = require('./modules/top_button');
+  , TopLinkModule = require('./modules/top_link');
 
 var header
   , lastFm
   , modalElements
   , primaryNavSmoothScroll
   , siteIntroSmoothScroll
-  , topButton
-  , topButtonSmoothScroll;
+  , topLink
+  , topLinkSmoothScroll;
 
 // Header
 header = HeaderModule('header');
 
-if(header) {
+if (header){
   header.init();
 }
 // End Header
@@ -25,7 +25,7 @@ if(header) {
 // LastFm
 lastFm = LastFmModule('last-fm');
 
-if(lastFm) {
+if (lastFm){
   lastFm.init();
 }
 // End LastFm
@@ -34,9 +34,9 @@ if(lastFm) {
 modalElements = document.querySelectorAll('.modal');
 
 if (modalElements.length > 0){
-  let modal = _.map(modalElements, (m)=>{
+  Array.from(modalElements).map((element)=>{
     return new ModalClass({
-      element: m
+      element: element
     });
   });
 }
@@ -45,18 +45,18 @@ if (modalElements.length > 0){
 // Smooth Scroll
 primaryNavSmoothScroll = SmoothScrollModule('primary-navigation');
 siteIntroSmoothScroll = SmoothScrollModule('site-introduction');
-topButtonSmoothScroll = SmoothScrollModule('button-top');
+topLinkSmoothScroll = SmoothScrollModule('top-link');
 
-if(primaryNavSmoothScroll) {
+if (primaryNavSmoothScroll){
   primaryNavSmoothScroll.init();
 }
 
-if(siteIntroSmoothScroll) {
+if (siteIntroSmoothScroll){
   siteIntroSmoothScroll.init();
 }
 
-if(topButtonSmoothScroll) {
-  topButtonSmoothScroll.init();
+if (topLinkSmoothScroll){
+  topLinkSmoothScroll.init();
 }
 // End Smooth Scroll
 
@@ -64,9 +64,9 @@ if(topButtonSmoothScroll) {
 var tabbedContentElements = document.querySelectorAll('.tabbed-content');
 
 if (tabbedContentElements.length > 0){
-  let tabbedContent = _.map(tabbedContentElements, function(tc){
+  Array.from(tabbedContentElements).map((element)=>{
     return new TabbedContentClass({
-      element: tc
+      element: element
       , bodyContainerClass: 'tabbed-content-body'
       , navContainerClass: 'tabbed-content-nav'
     });
@@ -74,10 +74,10 @@ if (tabbedContentElements.length > 0){
 }
 // End Tabbed Content
 
-// Top button
-topButton = TopButtonModule('button-top');
+// Top link
+topLink = TopLinkModule('top-link');
 
-if(topButton) {
-  topButton.init();
+if (topLink){
+  topLink.init();
 }
-// End Top button
+// End Top link

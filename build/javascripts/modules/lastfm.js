@@ -5,25 +5,25 @@ require('../vendor/javascript-last.fm-api/lastfm.api');
 var holder, lastFm;
 var recentTracks = [];
 
-function createLastFmObject() {
+function createLastFmObject(){
   return new LastFM({
-    apiKey    : 'b5a390f794f482bed0d69370f0236277',
-    apiSecret : '3f1a9ee3617408ca91d59d2599917b74'
+    apiKey: 'b5a390f794f482bed0d69370f0236277'
+    , apiSecret: '3f1a9ee3617408ca91d59d2599917b74'
   });
 }
 
-function createRecentTracksList() {
+function createRecentTracksList(){
   let ul = document.createElement('ul');
 
   createRecentTracksListItems(ul);
-  
+
   holder.appendChild(ul);
 }
 
-function createRecentTracksListItems(ul) {
-  let h2, h3, img, li, span;
+function createRecentTracksListItems(ul){
+  let h2, img, li, span;
 
-  _.forEach(recentTracks, (recentTrack) => {
+  _.forEach(recentTracks, (recentTrack)=>{
     h2 = document.createElement('h2');
     img = document.createElement('img');
     li = document.createElement('li');
@@ -35,7 +35,7 @@ function createRecentTracksListItems(ul) {
     span.innerHTML = recentTrack.artist;
     h2.appendChild(span);
     h2.innerHTML += ` - ${recentTrack.name}`;
-    img.src = getImage(recentTrack.image)
+    img.src = getImage(recentTrack.image);
 
     li.appendChild(img);
     li.appendChild(h2);
@@ -45,43 +45,45 @@ function createRecentTracksListItems(ul) {
   return ul;
 }
 
-function getImage(path) {
+function getImage(path){
   let src;
 
-  if (path) {
+  if (path){
     src = path;
   } else {
-    src = "/images/pages/home/last_fm_artwork.png";
+    src = '/images/pages/home/last_fm_artwork.png';
   }
 
   return src;
 }
 
-function getRecentTracks(lastFm) {
-  lastFm.user.getRecentTracks({user: 'hawkeyehatton', limit: 5}, {success: function(data) {
-    populateRecentTracksArray(data)
+function getRecentTracks(lastFm){
+  /* eslint-disable max-len */
+  lastFm.user.getRecentTracks({user: 'hawkeyehatton', limit: 5}, {success: function(data){
+  /* eslint-enable */
+    populateRecentTracksArray(data);
   }, error: function(code, message){
     /* Show error message. */
   }});
 }
 
-function populateRecentTracksArray(data) {
+function populateRecentTracksArray(data){
   let tracks = data.recenttracks.track;
 
-  _.forEach(tracks, (track) => {
-    if(_.isUndefined(track['@attr'])) {
-      recentTracks.push({
-        name: track.name,
-        artist: track.artist['#text'],
-        image: track.image[2]['#text']
-      });
-    }
+  recentTracks = tracks.filter((track)=>{
+    return _.isUndefined(track['@attr']);
+  }).map((track)=>{
+    return {
+      name: track.name
+      , artist: track.artist['#text']
+      , image: track.image[2]['#text']
+    };
   });
 
   createRecentTracksList();
 }
 
-module.exports = function(id) {
+module.exports = function(id){
   let object;
 
   holder = document.getElementById(id);
@@ -89,11 +91,11 @@ module.exports = function(id) {
   if (!_.isElement(holder)) return;
 
   object = {
-    init: () => {
+    init: ()=>{
       lastFm = createLastFmObject();
       getRecentTracks(lastFm);
     }
-  }
+  };
 
   return object;
-}
+};

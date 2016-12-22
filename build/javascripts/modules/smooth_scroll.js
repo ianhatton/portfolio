@@ -1,16 +1,18 @@
 var _       = require('lodash/core');
 _.isElement = require('lodash/isElement');
 
-function _addNavItemClickListeners(navItem, element) {
+function _addNavItemClickListeners(navItem, element){
+  /* eslint-disable max-len */
   navItem.addEventListener('click', _navItemClick.bind(this, navItem, element), false);
+  /* eslint-enable */
 }
 
-function _checkNavItemHrefs(navItems) {
+function _checkNavItemHrefs(navItems){
   let element, href;
 
-  _.forEach(navItems, (navItem)=> {
+  _.forEach(navItems, (navItem)=>{
     href = navItem.getAttribute('href');
-    
+
     if (href.charAt(0 === '#')){
       element = _getNavItemPair(href);
 
@@ -21,32 +23,32 @@ function _checkNavItemHrefs(navItems) {
   });
 }
 
-function _getNavItemPair(href) {
+function _getNavItemPair(href){
   let id = href.substring(1);
   let element = document.getElementById(id);
 
-  if(!_.isElement(element)) return;
+  if (!_.isElement(element)) return;
 
   return element;
 }
 
-function _getNavItems(navigation) {
+function _getNavItems(navigation){
   let navItems = navigation.getElementsByTagName('a');
 
   return navItems;
 }
 
-function _navItemClick(navItem, element, e) {
+function _navItemClick(navItem, element, e){
   e.preventDefault();
 
   let windowTop = window.scrollY;
   let elementTop = element.offsetTop;
   let distance = Math.abs(windowTop - elementTop);
 
-  _scroll(windowTop, elementTop, distance/6);
+  _scroll(windowTop, elementTop, distance / 6);
 }
 
-function _scroll(from, to, duration) {
+function _scroll(from, to, duration){
   let start = new Date().getTime();
 
   let timer = setInterval(()=>{
@@ -55,25 +57,25 @@ function _scroll(from, to, duration) {
 
     window.scroll(0, endPoint);
 
-    if(step == 1) {
+    if (step === 1){
       clearInterval(timer);
     }
   }, 10);
 }
 
-module.exports = function(id) {
+module.exports = function(id){
   let navigation, navItems, object;
 
   navigation = document.getElementById(id);
 
-  if(!_.isElement(navigation)) return;
+  if (!_.isElement(navigation)) return;
 
   object = {
-    init: () => {
+    init: ()=>{
       navItems = _getNavItems(navigation);
       _checkNavItemHrefs(navItems);
     }
-  }
+  };
 
   return object;
-}
+};
