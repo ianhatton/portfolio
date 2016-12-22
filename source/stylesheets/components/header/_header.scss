@@ -45,8 +45,10 @@ header[role=banner] {
     @include transition(all 0.2s ease-in-out);
     background-color: $header-top-link-bg;
 
-    &:hover {
-      background-color: $header-top-link-bg-hover;
+    @media(hover), (min-device-width: 960px) {
+      &:hover {
+        background-color: $header-top-link-bg-hover;
+      }
     }
 
     &.visible {
