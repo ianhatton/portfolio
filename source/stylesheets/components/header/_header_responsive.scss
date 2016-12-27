@@ -35,6 +35,19 @@ header[role=banner] {
     }
   }
 
+  @include breakpoint($mobile-and-tablet-breakpoint) {
+    .top-link {
+      &.visible {
+        height: 36px;
+      }
+
+
+      a {
+        top: 7px;
+      }
+    }
+  }
+
   @include breakpoint($tablet-and-desktop-breakpoint) {
     // layout
     padding: 20px;
@@ -97,6 +110,18 @@ header[role=banner] {
     .top-link {
       position: absolute;
       top: 100%;
+    }
+  }
+
+  @include breakpoint($desktop-breakpoint) {
+    .top-link {
+      &.visible {
+        height: 24px;
+      }
+
+      a {
+        top: 0;
+      }
     }
   }
 }

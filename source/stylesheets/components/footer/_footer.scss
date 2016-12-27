@@ -21,6 +21,44 @@ footer {
     }
 
     section {
+      &.contact {
+        @include span(full);
+        text-align: center;
+
+        a {
+          // layout
+          display: block;
+          padding: 75px;
+
+          // styling
+          @include transition(all 0.2s ease-in-out);
+          background-color: $contact-button-bg;
+          border-right: 7px solid $contact-button-border;
+          border-left: 7px solid $contact-button-border;
+          color: $contact-button-text;
+          text-decoration: none;
+
+          &:after {
+            // layout
+            content: "\E0E1";
+            display: inline-block;
+            margin-left: 5px;
+            position: relative;
+            top: 5px;
+
+            // styling
+            font-family: "Material Icons";
+            -webkit-font-smoothing: antialiased;
+          }
+
+          &:hover {
+            background-color: $contact-button-bg-hover;
+            border-right: 7px solid $contact-button-border-hover;
+            border-left: 7px solid $contact-button-border-hover;
+          }
+        }
+      }
+      
       &.social {
         a {
           // layout
@@ -80,6 +118,10 @@ footer {
 
     .padding {
       padding: 75px 20px;
+    }
+
+    .wrap {
+      clear: both;
     }
   }
 }
