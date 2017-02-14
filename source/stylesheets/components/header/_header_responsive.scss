@@ -58,7 +58,7 @@ header[role=banner] {
     z-index: 2;
 
     // styling
-    @include transition(all 0.2s ease-in-out);
+    transition: all 0.2s ease-in-out;
 
     &:after {
       background-image: repeating-linear-gradient(to right, $header-after-bg-1 0px, $header-after-bg-1 150px, $header-after-bg-2 150px, $header-after-bg-2 300px, $header-after-bg-3 300px, $header-after-bg-3 450px, $header-after-bg-4 450px, $header-after-bg-4 600px);

@@ -22,7 +22,7 @@ header[role=banner] {
       width: 48px;
 
       // styling
-      @include transition(all 0.2s ease-in-out);
+      transition: all 0.2s ease-in-out;
       background: url("../images/layout/header/logo.png") 0 0 no-repeat;
     }
 
@@ -42,7 +42,7 @@ header[role=banner] {
     z-index: 2;
 
     // styling
-    @include transition(all 0.2s ease-in-out);
+    transition: all 0.2s ease-in-out;
     background-color: $header-top-link-bg;
 
     @media(hover), (min-device-width: 960px) {

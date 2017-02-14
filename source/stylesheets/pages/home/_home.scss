@@ -63,10 +63,10 @@ body {
       &.site-introduction {
         a {
           @media (hover), (min-device-width: 960px) {
-            @include transition(all 0.2s ease-in-out);
+            transition: all 0.2s ease-in-out;
 
             &:after, &:before {
-              @include transition(all 0.2s ease-in-out);
+              transition: all 0.2s ease-in-out;
             }
 
             &:hover {
@@ -156,7 +156,8 @@ body {
           }
 
           &.css {
-            @include linear-gradient(-36deg, $skill-css-bg-1 0%, $skill-css-bg-2 69%, $skill-css-bg-3 69%);
+            background-color: $skill-css-bg-1;
+            background-image: linear-gradient(-36deg, $skill-css-bg-1 0%, $skill-css-bg-2 69%, $skill-css-bg-3 69%);
 
             &:before {
               border-right: 100vw solid $skill-css-bg-1;
@@ -184,7 +185,8 @@ body {
           }
 
           &.html {
-            @include linear-gradient(-36deg, $skill-html-bg-1 0%, $skill-html-bg-2 69%, $skill-html-bg-3 69%);
+            background-color: $skill-html-bg-1;
+            background-image: linear-gradient(-36deg, $skill-html-bg-1 0%, $skill-html-bg-2 69%, $skill-html-bg-3 69%);
 
             &:before {
               border-right: 100vw solid $skill-html-bg-1;
@@ -223,7 +225,8 @@ body {
           }
 
           &.javascript {
-            @include linear-gradient(-36deg, $skill-javascript-bg-1 0%, $skill-javascript-bg-2 69%, $skill-javascript-bg-3 69%);
+            background-color: $skill-javascript-bg-1;
+            background-image: linear-gradient(-36deg, $skill-javascript-bg-1 0%, $skill-javascript-bg-2 69%, $skill-javascript-bg-3 69%);
 
             &:before {
               border-right: 100vw solid $skill-javascript-bg-1;
@@ -257,7 +260,8 @@ body {
           }
 
           &.other {
-            @include linear-gradient(-36deg, $skill-other-bg-1 0%, $skill-other-bg-2 69%, $skill-other-bg-3 69%);
+            background-color: $skill-other-bg-1;
+            background-image: linear-gradient(-36deg, $skill-other-bg-1 0%, $skill-other-bg-2 69%, $skill-other-bg-3 69%);
 
             &:before {
               border-right: 100vw solid $skill-other-bg-1;
@@ -309,7 +313,7 @@ body {
         .tabbed-content-nav {
           a {
             @media (hover), (min-device-width: 960px) {
-              @include transition(margin-top 0.2s ease-in-out, padding 0.2s ease-in-out);
+              transition: margin-top 0.2s ease-in-out, padding 0.2s ease-in-out;
             }
 
             color: $skills-tabbed-content-nav-link-text;

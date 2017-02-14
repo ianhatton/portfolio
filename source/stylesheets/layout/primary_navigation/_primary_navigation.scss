@@ -11,7 +11,7 @@ nav.primary-navigation {
     border-right: 1px solid $primary-navigation-link-border;
     color: $primary-navigation-link-text;
     text-decoration: none;
-    @include transition(all 0.2s ease-in-out);
+    transition: all 0.2s ease-in-out;
 
     @media(hover), (min-device-width: 960px) {
       &:hover {

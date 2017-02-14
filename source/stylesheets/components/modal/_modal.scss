@@ -26,7 +26,7 @@ html.modal-open {
     display: inline-block;
 
     // styling
-    @include transition(all 0.2s ease-in-out);
+    transition: all 0.2s ease-in-out;
     font-family: "Material Icons";
     font-size: 2.5em; /* 40px */
     -webkit-font-smoothing: antialiased;
@@ -58,7 +58,7 @@ html.modal-open {
 }
 
 .modal-content, .modal-overlay {
-  @include transition(all .15s linear);
+  transition: all .15s linear;
   opacity: 0;
 
   &.active {

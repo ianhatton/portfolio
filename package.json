@@ -51,7 +51,7 @@
     "chai": "3.5.0",
     "compression": "1.6.2",
     "del": "2.2.2",
-    "eslint": "^3.12.2",
+    "eslint": "^3.15.0",
     "eslint-config-google": "^0.7.1",
     "eslint-config-morsedigital": "1.1.0",
     "eslint-plugin-jasmine": "^2.2.0",
@@ -105,7 +105,8 @@
   "dependencies": {
     "@ianhatton/vanilla-modal": "^1.0.0",
     "@ianhatton/vanilla-tabbed-content": "^1.0.0",
-    "bourbon": "^4.2.7",
+    "babel-polyfill": "^6.23.0",
+    "bourbon": "^4.3.2",
     "breakpoint-sass": "^2.7.0",
     "lwip": "0.0.9",
     "sprity": "^1.0.8",

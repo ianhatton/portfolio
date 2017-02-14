@@ -34,7 +34,8 @@ header.section-header {
     }
 
     &:before {
-      @include linear-gradient(to right, $section-header-before-bg-1 0%, $section-header-before-bg-1 80%, $section-header-before-bg-1 81%, $section-header-before-bg-2);
+      background-color: $section-header-before-bg-1;
+      background-image: linear-gradient(to right, $section-header-before-bg-1 0%, $section-header-before-bg-1 80%, $section-header-before-bg-1 81%, $section-header-before-bg-2);
       bottom: -7px;
       left: 0;
       height: 7px;

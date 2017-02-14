@@ -7,7 +7,7 @@
 
 @include breakpoint($desktop-breakpoint) {
   .modal-content {
-    @include transform(translate(-50%, 0));
+    transform: translate(-50%, 0);
     left: 50%;
   }
 }

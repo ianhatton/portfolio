@@ -31,7 +31,7 @@ footer {
           padding: 75px;
 
           // styling
-          @include transition(all 0.2s ease-in-out);
+          transition: all 0.2s ease-in-out;
           background-color: $contact-button-bg;
           border-right: 7px solid $contact-button-border;
           border-left: 7px solid $contact-button-border;

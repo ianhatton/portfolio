@@ -1,21 +1,15 @@
-var ModalClass = require('@ianhatton/vanilla-modal')
+require('babel-polyfill');
+
+const ModalClass = require('@ianhatton/vanilla-modal')
   , TabbedContentClass = require('@ianhatton/vanilla-tabbed-content');
 
-var HeaderModule = require('./modules/header')
+const HeaderModule = require('./modules/header')
   , LastFmModule = require('./modules/lastfm')
   , SmoothScrollModule = require('./modules/smooth_scroll')
   , TopLinkModule = require('./modules/top_link');
 
-var header
-  , lastFm
-  , modalElements
-  , primaryNavSmoothScroll
-  , siteIntroSmoothScroll
-  , topLink
-  , topLinkSmoothScroll;
-
 // Header
-header = HeaderModule('header');
+const header = HeaderModule('header');
 
 if (header){
   header.init();
@@ -23,7 +17,7 @@ if (header){
 // End Header
 
 // LastFm
-lastFm = LastFmModule('last-fm');
+const lastFm = LastFmModule('last-fm');
 
 if (lastFm){
   lastFm.init();
@@ -31,7 +25,7 @@ if (lastFm){
 // End LastFm
 
 // Modals
-modalElements = document.querySelectorAll('.modal');
+const modalElements = document.querySelectorAll('.modal');
 
 if (modalElements.length > 0){
   Array.from(modalElements).map((element)=>{
@@ -43,9 +37,9 @@ if (modalElements.length > 0){
 // End Modals
 
 // Smooth Scroll
-primaryNavSmoothScroll = SmoothScrollModule('primary-navigation');
-siteIntroSmoothScroll = SmoothScrollModule('site-introduction');
-topLinkSmoothScroll = SmoothScrollModule('top-link');
+const primaryNavSmoothScroll = SmoothScrollModule('primary-navigation');
+const siteIntroSmoothScroll = SmoothScrollModule('site-introduction');
+const topLinkSmoothScroll = SmoothScrollModule('top-link');
 
 if (primaryNavSmoothScroll){
   primaryNavSmoothScroll.init();
@@ -75,7 +69,7 @@ if (tabbedContentElements.length > 0){
 // End Tabbed Content
 
 // Top link
-topLink = TopLinkModule('top-link');
+const topLink = TopLinkModule('top-link');
 
 if (topLink){
   topLink.init();
