@@ -7,15 +7,20 @@ title: Ian Hatton | Front-end Web Developer | Home
   .tabbed-stuff
     = link_to "Toggle 1", "#", "data-aparecium-toggles"=>"stuff1"
     = link_to "Toggle 2", "#", "data-aparecium-toggles"=>"stuff2"
-    .bum{ "data-aparecium-toggled-by"=>"stuff1" }
+    = link_to "Toggle 3", "#", "data-aparecium-toggles"=>"stuff3"
+    .blah{ "data-aparecium-toggled-by"=>"stuff1" }
       %p Here is some content.
-    .another-bum{ "data-aparecium-toggled-by"=>"stuff1" }
+    .another-blah{ "data-aparecium-toggled-by"=>"stuff1" }
       %p Here is some more content.
-    .willy{ "data-aparecium-toggled-by"=>"stuff2" }
-      %p Mega willy content.
+    .blah-blah{ "data-aparecium-toggled-by"=>"stuff2" }
+      %p Here is some separate content.
+    .blah{ "data-aparecium-toggled-by"=>"stuff3" }
+      %p Blah blah blah.
+    .another-blah{ "data-aparecium-toggled-by"=>"stuff3" }
+      %p Blah.
 
 .wrap
-  %section.site-introduction#site-introduction
+  %section.site-introduction#site-introduction{ style: "visibility: hidden;"}
     %h1.bold-weight{ "data-mobile-font-size" => "delta" }
       Ian Hatton
       %span is a Front-end Web Developer working in London.

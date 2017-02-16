@@ -8,7 +8,7 @@ const HeaderModule = require('./modules/header')
   , SmoothScrollModule = require('./modules/smooth_scroll')
   , TopLinkModule = require('./modules/top_link');
 
-import Aparecium from './modules/aparecium';
+import Aparecium from './modules/aparecium/aparecium';
 
 // Header
 const header = HeaderModule('header');
@@ -78,8 +78,11 @@ if (topLink){
 }
 // End Top link
 
-// const hogwarts = Aparecium('beef');
-// hogwarts.init();
-
-const test = Aparecium(['stuff1', 'stuff2']);
-test.init();
+const test = Aparecium(
+  ['stuff1', 'stuff2', 'stuff3']
+  , {
+    defaultShow: 0
+    , hideOthersOnClick: true
+    , hideSelfOnClick: false
+  }
+);
