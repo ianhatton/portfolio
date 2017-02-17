@@ -1,47 +1,47 @@
 /* eslint-disable max-len, no-use-before-define */
 import _, {isElement} from 'lodash';
 
+const contentAttribute = 'data-aparecium-toggled-by';
+const toggleAttribute = 'data-aparecium-toggles';
+
 let config, content, toggles;
 
 const addToggleClickListener = ()=>{
-  toggles.forEach((item)=>{
-    item.addEventListener('click', toggleClickHandler.bind(null, item), false);
+  toggles.forEach((toggle)=>{
+    toggle.addEventListener('click', toggleClickHandler.bind(null, toggle), false);
   });
 };
 
-const getContent = (data)=>{
+const getContent = (selectors)=>{
   const content = {};
 
-  data.forEach((item)=>{
-    content[item] = Array.from(document.querySelectorAll(`[data-aparecium-toggled-by=${item}]`));
+  selectors.forEach((selector)=>{
+    content[selector] = Array.from(document.querySelectorAll(`[${contentAttribute}=${selector}]`));
   });
 
   return content;
 };
 
-const getInactiveContent = (activeToggle)=>{
-  const key = activeToggle.getAttribute('data-aparecium-toggles');
-  let inactiveContent = [];
+const getInactiveContent = (clickedToggle)=>{
+  const key = clickedToggle.getAttribute(toggleAttribute);
 
-  for (let c in content){
-    if (c !== key){
-      inactiveContent.push(content[c]);
-    }
-  }
-
-  inactiveContent = inactiveContent.reduce((prev, curr)=>{
-    return prev.concat(curr);
-  });
+  /* eslint-disable arrow-parens, arrow-spacing */
+  const inactiveContent = Object.keys(content)
+    .filter(c => c !== key)
+    .map(c => content[c])
+    .reduce((previous, current)=>{
+      return previous.concat(current);
+    });
+  /* eslint-enable */
 
   return inactiveContent;
 };
 
-const getInactiveToggles = (item)=>{
-  const activeAttribute = item.getAttribute('data-aparecium-toggles');
-  let attribute;
+const getInactiveToggles = (clickedToggle)=>{
+  const activeAttribute = clickedToggle.getAttribute(toggleAttribute);
 
   const inactiveToggles = toggles.filter((toggle)=>{
-    attribute = toggle.getAttribute('data-aparecium-toggles');
+    let attribute = toggle.getAttribute(toggleAttribute);
 
     return attribute !== activeAttribute;
   });
@@ -49,19 +49,19 @@ const getInactiveToggles = (item)=>{
   return inactiveToggles;
 };
 
-const getToggles = (data)=>{
-  const toggles = data.map((item)=>{
-    return document.querySelector(`[data-aparecium-toggles=${item}]`);
+const getToggles = (selectors)=>{
+  const toggles = selectors.map((selector)=>{
+    return document.querySelector(`[${toggleAttribute}=${selector}]`);
   });
 
   return toggles;
 };
 
 const initialiseContentAria = ()=>{
-  const activeToggle = toggles[config.defaultShow];
+  const clickedToggle = toggles[config.defaultShow];
 
-  setActiveContentAria(activeToggle);
-  setInactiveContentAria(activeToggle);
+  setActiveContentAria(clickedToggle);
+  setInactiveContentAria(clickedToggle);
 };
 
 const initialiseToggleAria = ()=>{
@@ -70,10 +70,8 @@ const initialiseToggleAria = ()=>{
 };
 
 const initialiseToggleAriaControls = ()=>{
-  let key;
-
   toggles.forEach((toggle)=>{
-    key = toggle.getAttribute('data-aparecium-toggles');
+    let key = toggle.getAttribute(toggleAttribute);
 
     const idList = content[key].map((item, i)=>{
       return `${key}-${++i}`;
@@ -86,18 +84,17 @@ const initialiseToggleAriaControls = ()=>{
 };
 
 const initialiseToggleAriaSelected = ()=>{
-  const activeToggle = toggles[config.defaultShow];
+  const clickedToggle = toggles[config.defaultShow];
 
-  setActiveToggleAriaSelected(activeToggle);
-  setInactiveToggleAriaSelected(activeToggle);
+  setActiveToggleAriaSelected(clickedToggle);
+  setInactiveToggleAriaSelected(clickedToggle);
 };
 
-const setActiveContentAria = (activeToggle)=>{
-  let attribute;
-  const key = activeToggle.getAttribute('data-aparecium-toggles');
+const setActiveContentAria = (clickedToggle)=>{
+  const key = clickedToggle.getAttribute(toggleAttribute);
 
   content[key].forEach((item)=>{
-    attribute = item.getAttribute('aria-hidden');
+    let attribute = item.getAttribute('aria-hidden');
 
     if (_.isNull(attribute)){
       item.setAttribute('aria-hidden', 'false');
@@ -109,12 +106,12 @@ const setActiveContentAria = (activeToggle)=>{
   });
 };
 
-const setActiveToggleAriaSelected = (toggle)=>{
+const setActiveToggleAriaSelected = (clickedToggle)=>{
   if (config.hideSelfOnClick){
-    const currentValue = toggle.getAttribute('aria-selected');
-    toggle.setAttribute('aria-selected', currentValue === 'true' ? 'false' : 'true');
+    const currentValue = clickedToggle.getAttribute('aria-selected');
+    clickedToggle.setAttribute('aria-selected', currentValue === 'true' ? 'false' : 'true');
   } else {
-    toggle.setAttribute('aria-selected', 'true');
+    clickedToggle.setAttribute('aria-selected', 'true');
   }
 };
 
@@ -124,37 +121,37 @@ const setContentIds = (key, idList)=>{
   });
 };
 
-const setInactiveContentAria = (activeToggle)=>{
-  const inactiveContent = getInactiveContent(activeToggle);
+const setInactiveContentAria = (clickedToggle)=>{
+  const inactiveContent = getInactiveContent(clickedToggle);
 
   inactiveContent.forEach((inactiveC)=>{
     inactiveC.setAttribute('aria-hidden', 'true');
   });
 };
 
-const setInactiveToggleAriaSelected = (activeToggle)=>{
-  const inactiveToggles = getInactiveToggles(activeToggle);
+const setInactiveToggleAriaSelected = (clickedToggle)=>{
+  const inactiveToggles = getInactiveToggles(clickedToggle);
 
   inactiveToggles.forEach((inactiveToggle)=>{
     inactiveToggle.setAttribute('aria-selected', 'false');
   });
 };
 
-const toggleClickHandler = (activeToggle, e)=>{
+const toggleClickHandler = (clickedToggle, e)=>{
   e.preventDefault();
 
-  setActiveContentAria(activeToggle);
-  setActiveToggleAriaSelected(activeToggle);
+  setActiveContentAria(clickedToggle);
+  setActiveToggleAriaSelected(clickedToggle);
 
   if (config.hideOthersOnClick){
-    setInactiveContentAria(activeToggle);
-    setInactiveToggleAriaSelected(activeToggle);
+    setInactiveContentAria(clickedToggle);
+    setInactiveToggleAriaSelected(clickedToggle);
   }
 };
 
-export default function(data, options = {}){
-  toggles = getToggles(data);
-  content = getContent(data);
+export default function(selectors, options = {}){
+  toggles = getToggles(selectors);
+  content = getContent(selectors);
 
   if (toggles.length === 0 || content.length === 0) return;
 
