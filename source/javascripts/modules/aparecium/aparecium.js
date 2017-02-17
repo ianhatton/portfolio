@@ -17,6 +17,10 @@ const getContent = (selectors)=>{
 
   selectors.forEach((selector)=>{
     content[selector] = Array.from(document.querySelectorAll(`[${contentAttribute}=${selector}]`));
+
+    if (content[selector].length === 0){
+      delete content[selector];
+    }
   });
 
   return content;
@@ -26,12 +30,15 @@ const getInactiveContent = (clickedToggle)=>{
   const key = clickedToggle.getAttribute(toggleAttribute);
 
   /* eslint-disable arrow-parens, arrow-spacing */
-  const inactiveContent = Object.keys(content)
-    .filter(c => c !== key)
-    .map(c => content[c])
-    .reduce((previous, current)=>{
-      return previous.concat(current);
-    });
+  let inactiveContent = Object.keys(content).filter(c => c !== key);
+
+  if (inactiveContent.length > 0){
+    inactiveContent = inactiveContent
+      .map(c => content[c])
+      .reduce((previous, current)=>{
+        return previous.concat(current);
+      });
+  }
   /* eslint-enable */
 
   return inactiveContent;
@@ -50,18 +57,28 @@ const getInactiveToggles = (clickedToggle)=>{
 };
 
 const getToggles = (selectors)=>{
-  const toggles = selectors.map((selector)=>{
-    return document.querySelector(`[${toggleAttribute}=${selector}]`);
-  });
+  const toggles = selectors
+    .map((selector)=>{
+      return document.querySelector(`[${toggleAttribute}=${selector}]`);
+    })
+    .filter((selector)=>{
+      return !_.isNull(selector);
+    });
 
   return toggles;
 };
 
 const initialiseContentAria = ()=>{
-  const clickedToggle = toggles[config.defaultShow];
+  const clickedToggle = initialiseDefaultToggle();
 
   setActiveContentAria(clickedToggle);
   setInactiveContentAria(clickedToggle);
+};
+
+const initialiseDefaultToggle = ()=>{
+  const defaultToggle = _.isElement(toggles[config.defaultShow]) ? toggles[config.defaultShow] : toggles[0];
+
+  return defaultToggle;
 };
 
 const initialiseToggleAria = ()=>{
@@ -84,7 +101,7 @@ const initialiseToggleAriaControls = ()=>{
 };
 
 const initialiseToggleAriaSelected = ()=>{
-  const clickedToggle = toggles[config.defaultShow];
+  const clickedToggle = initialiseDefaultToggle();
 
   setActiveToggleAriaSelected(clickedToggle);
   setInactiveToggleAriaSelected(clickedToggle);
@@ -153,12 +170,12 @@ export default function(selectors, options = {}){
   toggles = getToggles(selectors);
   content = getContent(selectors);
 
-  if (toggles.length === 0 || content.length === 0) return;
+  if (toggles.length === 0 || _.isEmpty(content)) return;
 
   config = _.defaults(options, {
     defaultShow: 0
-    , hideOthersOnClick: false
-    , hideSelfOnClick: true
+    , hideOthersOnClick: true
+    , hideSelfOnClick: false
   });
 
   addToggleClickListener();

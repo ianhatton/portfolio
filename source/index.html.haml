@@ -6,18 +6,18 @@ title: Ian Hatton | Front-end Web Developer | Home
 .wrap
   .tabbed-stuff
     = link_to "Toggle 1", "#", "data-aparecium-toggles"=>"stuff1"
-    = link_to "Toggle 2", "#", "data-aparecium-toggles"=>"stuff2"
-    = link_to "Toggle 3", "#", "data-aparecium-toggles"=>"stuff3"
+    -# = link_to "Toggle 2", "#", "data-aparecium-toggles"=>"stuff2"
+    -# = link_to "Toggle 3", "#", "data-aparecium-toggles"=>"stuff3"
     .blah{ "data-aparecium-toggled-by"=>"stuff1" }
       %p Here is some content.
-    .another-blah{ "data-aparecium-toggled-by"=>"stuff1" }
-      %p Here is some more content.
-    .blah-blah{ "data-aparecium-toggled-by"=>"stuff2" }
-      %p Here is some separate content.
-    .blah{ "data-aparecium-toggled-by"=>"stuff3" }
-      %p Blah blah blah.
-    .another-blah{ "data-aparecium-toggled-by"=>"stuff3" }
-      %p Blah.
+    -# .another-blah{ "data-aparecium-toggled-by"=>"stuff1" }
+    -#   %p Here is some more content.
+    -# .blah-blah{ "data-aparecium-toggled-by"=>"stuff2" }
+    -#   %p Here is some separate content.
+    -# .blah{ "data-aparecium-toggled-by"=>"stuff3" }
+    -#   %p Blah blah blah.
+    -# .another-blah{ "data-aparecium-toggled-by"=>"stuff3" }
+    -#   %p Blah.
 
 .wrap
   %section.site-introduction#site-introduction{ style: "visibility: hidden;"}

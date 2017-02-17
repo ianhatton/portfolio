@@ -78,11 +78,11 @@ if (topLink){
 }
 // End Top link
 
-const test = Aparecium(
+Aparecium(
   ['stuff1', 'stuff2', 'stuff3']
   , {
     defaultShow: 0
     , hideOthersOnClick: true
-    , hideSelfOnClick: false
+    , hideSelfOnClick: true
   }
 );
