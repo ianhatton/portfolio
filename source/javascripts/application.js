@@ -78,11 +78,22 @@ if (topLink){
 }
 // End Top link
 
-Aparecium(
-  ['stuff1', 'stuff2', 'stuff3']
-  , {
+let one = Aparecium('dump');
+
+if (one){
+  one.init({
+    defaultShow: 0
+    , hideOthersOnClick: false
+    , hideSelfOnClick: true
+  });
+}
+
+let two = Aparecium('tabbed-stuff');
+
+if (two){
+  two.init({
     defaultShow: 0
     , hideOthersOnClick: true
-    , hideSelfOnClick: true
-  }
-);
+    , hideSelfOnClick: false
+  });
+}

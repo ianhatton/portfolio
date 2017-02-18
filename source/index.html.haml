@@ -4,20 +4,30 @@ title: Ian Hatton | Front-end Web Developer | Home
 ---
 
 .wrap
-  .tabbed-stuff
-    = link_to "Toggle 1", "#", "data-aparecium-toggles"=>"stuff1"
-    -# = link_to "Toggle 2", "#", "data-aparecium-toggles"=>"stuff2"
-    -# = link_to "Toggle 3", "#", "data-aparecium-toggles"=>"stuff3"
+  #tabbed-stuff
+    = link_to "Toggle 1", "#", "data-aparecium"=>"stuff1"
+    = link_to "Toggle 2", "#", "data-aparecium"=>"stuff2"
+    = link_to "Toggle 3", "#", "data-aparecium"=>"stuff3"
     .blah{ "data-aparecium-toggled-by"=>"stuff1" }
       %p Here is some content.
-    -# .another-blah{ "data-aparecium-toggled-by"=>"stuff1" }
-    -#   %p Here is some more content.
-    -# .blah-blah{ "data-aparecium-toggled-by"=>"stuff2" }
-    -#   %p Here is some separate content.
-    -# .blah{ "data-aparecium-toggled-by"=>"stuff3" }
-    -#   %p Blah blah blah.
-    -# .another-blah{ "data-aparecium-toggled-by"=>"stuff3" }
-    -#   %p Blah.
+    .another-blah{ "data-aparecium-toggled-by"=>"stuff1" }
+      %p Here is some more content.
+    .blah-blah{ "data-aparecium-toggled-by"=>"stuff2" }
+      %p Here is some separate content.
+    .blah{ "data-aparecium-toggled-by"=>"stuff3" }
+      %p Blah blah blah.
+    .another-blah{ "data-aparecium-toggled-by"=>"stuff3" }
+      %p Blah.
+
+  #dump
+    = link_to "Toggle 1", "#", "data-aparecium"=>"test1"
+    = link_to "Toggle 2", "#", "data-aparecium"=>"test2"
+    .dumpy{ "data-aparecium-toggled-by"=>"test1" }
+      %p Here is some content.
+    .dumpoo{ "data-aparecium-toggled-by"=>"test2" }
+      %p Here is other.
+    .dumpooaa{ "data-aparecium-toggled-by"=>"test2" }
+      %p Meat.
 
 .wrap
   %section.site-introduction#site-introduction{ style: "visibility: hidden;"}

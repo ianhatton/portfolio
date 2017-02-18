@@ -2,39 +2,35 @@
 import _, {isElement} from 'lodash';
 
 const contentAttribute = 'data-aparecium-toggled-by';
-const toggleAttribute = 'data-aparecium-toggles';
+const toggleAttribute = 'data-aparecium';
 
-let config, content, toggles;
-
-const addToggleClickListener = ()=>{
-  toggles.forEach((toggle)=>{
-    toggle.addEventListener('click', toggleClickHandler.bind(null, toggle), false);
+const addToggleClickListener = (data)=>{
+  data.toggles.forEach((toggle)=>{
+    toggle.addEventListener('click', toggleClickHandler.bind(null, toggle, data), false);
   });
 };
 
-const getContent = (selectors)=>{
+const getContent = (element, toggles)=>{
   const content = {};
 
-  selectors.forEach((selector)=>{
-    content[selector] = Array.from(document.querySelectorAll(`[${contentAttribute}=${selector}]`));
+  toggles.forEach((toggle)=>{
+    let key = toggle.getAttribute(toggleAttribute);
 
-    if (content[selector].length === 0){
-      delete content[selector];
-    }
+    content[key] = Array.from(element.querySelectorAll(`[${contentAttribute}='${key}']`));
   });
 
   return content;
 };
 
-const getInactiveContent = (clickedToggle)=>{
+const getInactiveContent = (clickedToggle, data)=>{
   const key = clickedToggle.getAttribute(toggleAttribute);
 
   /* eslint-disable arrow-parens, arrow-spacing */
-  let inactiveContent = Object.keys(content).filter(c => c !== key);
+  let inactiveContent = Object.keys(data.content).filter(c => c !== key);
 
   if (inactiveContent.length > 0){
     inactiveContent = inactiveContent
-      .map(c => content[c])
+      .map(c => data.content[c])
       .reduce((previous, current)=>{
         return previous.concat(current);
       });
@@ -44,10 +40,10 @@ const getInactiveContent = (clickedToggle)=>{
   return inactiveContent;
 };
 
-const getInactiveToggles = (clickedToggle)=>{
+const getInactiveToggles = (clickedToggle, data)=>{
   const activeAttribute = clickedToggle.getAttribute(toggleAttribute);
 
-  const inactiveToggles = toggles.filter((toggle)=>{
+  const inactiveToggles = data.toggles.filter((toggle)=>{
     let attribute = toggle.getAttribute(toggleAttribute);
 
     return attribute !== activeAttribute;
@@ -56,66 +52,77 @@ const getInactiveToggles = (clickedToggle)=>{
   return inactiveToggles;
 };
 
-const getToggles = (selectors)=>{
-  const toggles = selectors
-    .map((selector)=>{
-      return document.querySelector(`[${toggleAttribute}=${selector}]`);
-    })
-    .filter((selector)=>{
-      return !_.isNull(selector);
-    });
+const getToggles = (element)=>{
+  let toggles;
+
+  toggles = Array.from(element.querySelectorAll((`[${toggleAttribute}]`)));
+
+  toggles = toggles.filter((toggle)=>{
+    let key = toggle.getAttribute(toggleAttribute);
+
+    return element.querySelectorAll(`[${contentAttribute}='${key}']`).length > 0;
+  });
 
   return toggles;
 };
 
-const initialiseContentAria = ()=>{
-  const clickedToggle = initialiseDefaultToggle();
+const initialiseContentAria = (data)=>{
+  const clickedToggle = initialiseDefaultToggle(data);
 
-  setActiveContentAria(clickedToggle);
-  setInactiveContentAria(clickedToggle);
+  setActiveContentAria(clickedToggle, data);
+  setInactiveContentAria(clickedToggle, data);
 };
 
-const initialiseDefaultToggle = ()=>{
-  const defaultToggle = _.isElement(toggles[config.defaultShow]) ? toggles[config.defaultShow] : toggles[0];
+const initialiseData = (config, content, element, toggles)=>{
+  return {
+    config
+    , content
+    , element
+    , toggles
+  };
+};
+
+const initialiseDefaultToggle = (data)=>{
+  const defaultToggle = _.isElement(data.toggles[data.config.defaultShow]) ? data.toggles[data.config.defaultShow] : data.toggles[0];
 
   return defaultToggle;
 };
 
-const initialiseToggleAria = ()=>{
-  initialiseToggleAriaControls();
-  initialiseToggleAriaSelected();
+const initialiseToggleAria = (data)=>{
+  initialiseToggleAriaControls(data);
+  initialiseToggleAriaSelected(data);
 };
 
-const initialiseToggleAriaControls = ()=>{
-  toggles.forEach((toggle)=>{
+const initialiseToggleAriaControls = (data)=>{
+  data.toggles.forEach((toggle)=>{
     let key = toggle.getAttribute(toggleAttribute);
 
-    const idList = content[key].map((item, i)=>{
+    const idList = data.content[key].map((item, i)=>{
       return `${key}-${++i}`;
     });
 
     toggle.setAttribute('aria-controls', idList.join(' '));
 
-    setContentIds(key, idList);
+    setContentIds(key, idList, data);
   });
 };
 
-const initialiseToggleAriaSelected = ()=>{
-  const clickedToggle = initialiseDefaultToggle();
+const initialiseToggleAriaSelected = (data)=>{
+  const clickedToggle = initialiseDefaultToggle(data);
 
-  setActiveToggleAriaSelected(clickedToggle);
-  setInactiveToggleAriaSelected(clickedToggle);
+  setActiveToggleAriaSelected(clickedToggle, data);
+  setInactiveToggleAriaSelected(clickedToggle, data);
 };
 
-const setActiveContentAria = (clickedToggle)=>{
+const setActiveContentAria = (clickedToggle, data)=>{
   const key = clickedToggle.getAttribute(toggleAttribute);
 
-  content[key].forEach((item)=>{
+  data.content[key].forEach((item)=>{
     let attribute = item.getAttribute('aria-hidden');
 
     if (_.isNull(attribute)){
       item.setAttribute('aria-hidden', 'false');
-    } else if (config.hideSelfOnClick){
+    } else if (data.config.hideSelfOnClick){
       item.setAttribute('aria-hidden', attribute === 'true' ? 'false' : 'true');
     } else {
       item.setAttribute('aria-hidden', 'false');
@@ -123,8 +130,8 @@ const setActiveContentAria = (clickedToggle)=>{
   });
 };
 
-const setActiveToggleAriaSelected = (clickedToggle)=>{
-  if (config.hideSelfOnClick){
+const setActiveToggleAriaSelected = (clickedToggle, data)=>{
+  if (data.config.hideSelfOnClick){
     const currentValue = clickedToggle.getAttribute('aria-selected');
     clickedToggle.setAttribute('aria-selected', currentValue === 'true' ? 'false' : 'true');
   } else {
@@ -132,54 +139,64 @@ const setActiveToggleAriaSelected = (clickedToggle)=>{
   }
 };
 
-const setContentIds = (key, idList)=>{
-  content[key].forEach((item, i)=>{
+const setContentIds = (key, idList, data)=>{
+  data.content[key].forEach((item, i)=>{
     item.id += idList[i];
   });
 };
 
-const setInactiveContentAria = (clickedToggle)=>{
-  const inactiveContent = getInactiveContent(clickedToggle);
+const setInactiveContentAria = (clickedToggle, data)=>{
+  const inactiveContent = getInactiveContent(clickedToggle, data);
 
   inactiveContent.forEach((inactiveC)=>{
     inactiveC.setAttribute('aria-hidden', 'true');
   });
 };
 
-const setInactiveToggleAriaSelected = (clickedToggle)=>{
-  const inactiveToggles = getInactiveToggles(clickedToggle);
+const setInactiveToggleAriaSelected = (clickedToggle, data)=>{
+  const inactiveToggles = getInactiveToggles(clickedToggle, data);
 
   inactiveToggles.forEach((inactiveToggle)=>{
     inactiveToggle.setAttribute('aria-selected', 'false');
   });
 };
 
-const toggleClickHandler = (clickedToggle, e)=>{
+const toggleClickHandler = (clickedToggle, data, e)=>{
   e.preventDefault();
 
-  setActiveContentAria(clickedToggle);
-  setActiveToggleAriaSelected(clickedToggle);
+  setActiveContentAria(clickedToggle, data);
+  setActiveToggleAriaSelected(clickedToggle, data);
 
-  if (config.hideOthersOnClick){
-    setInactiveContentAria(clickedToggle);
-    setInactiveToggleAriaSelected(clickedToggle);
+  if (data.config.hideOthersOnClick){
+    setInactiveContentAria(clickedToggle, data);
+    setInactiveToggleAriaSelected(clickedToggle, data);
   }
 };
 
-export default function(selectors, options = {}){
-  toggles = getToggles(selectors);
-  content = getContent(selectors);
+export default function(id){
+  let config, content, data, toggles, object;
 
-  if (toggles.length === 0 || _.isEmpty(content)) return;
+  const element = document.getElementById(id);
 
-  config = _.defaults(options, {
-    defaultShow: 0
-    , hideOthersOnClick: true
-    , hideSelfOnClick: false
-  });
+  if (!_.isElement(element)) return;
 
-  addToggleClickListener();
-  initialiseToggleAria();
-  initialiseContentAria();
+  object = {
+    init: (options = {})=>{
+      config = _.defaults(options, {
+        defaultShow: 0
+        , hideOthersOnClick: true
+        , hideSelfOnClick: false
+      });
+      toggles = getToggles(element);
+      content = getContent(element, toggles);
+      data = initialiseData(config, content, element, toggles);
+
+      addToggleClickListener(data);
+      initialiseToggleAria(data);
+      initialiseContentAria(data);
+    }
+  };
+
+  return object;
 }
 /* eslint-enable */
