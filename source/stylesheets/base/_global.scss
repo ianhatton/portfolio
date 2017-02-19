@@ -1,17 +1,3 @@
-[data-aparecium]{
-  &[aria-selected="true"] {
-    border: 1px solid red;
-  }
-}
-
-[data-aparecium-toggled-by]{
-  display: none;
-
-  &[aria-hidden="false"] {
-    display: block;
-  }
-}
-
 body {
   background-color: $body-bg;
   font-family: "Lato", sans-serif;

@@ -45,7 +45,7 @@ body {
             }
           }
 
-          .tabbed-content-nav {
+          .skills-navigation {
             span {
               &.desktop {
                 display: none;
@@ -183,12 +183,12 @@ body {
         }
 
         &.skills {
-          .tabbed-content {
+          .skills-body {
             margin-left: -7px;
             margin-right: -7px;
           }
 
-          .tabbed-content-nav {
+          .skills-navigation {
             a {
               &.javascript {
                 span {

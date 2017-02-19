@@ -1,14 +1,13 @@
 require('babel-polyfill');
 
-const ModalClass = require('@ianhatton/vanilla-modal')
-  , TabbedContentClass = require('@ianhatton/vanilla-tabbed-content');
+const ModalClass = require('@ianhatton/vanilla-modal');
 
 const HeaderModule = require('./modules/header')
   , LastFmModule = require('./modules/lastfm')
   , SmoothScrollModule = require('./modules/smooth_scroll')
   , TopLinkModule = require('./modules/top_link');
 
-import Aparecium from './modules/aparecium/aparecium';
+import Aparecium from './modules/aparecium';
 
 // Header
 const header = HeaderModule('header');
@@ -38,6 +37,17 @@ if (modalElements.length > 0){
 }
 // End Modals
 
+// End Skills
+const skills = Aparecium('skills');
+
+if (skills){
+  skills.init({
+    hideOthersOnClick: true
+    , hideSelfOnClick: false
+  });
+}
+// End Skills
+
 // Smooth Scroll
 const primaryNavSmoothScroll = SmoothScrollModule('primary-navigation');
 const siteIntroSmoothScroll = SmoothScrollModule('site-introduction');
@@ -56,20 +66,6 @@ if (topLinkSmoothScroll){
 }
 // End Smooth Scroll
 
-// Tabbed Content
-var tabbedContentElements = document.querySelectorAll('.tabbed-content');
-
-if (tabbedContentElements.length > 0){
-  Array.from(tabbedContentElements).map((element)=>{
-    return new TabbedContentClass({
-      element: element
-      , bodyContainerClass: 'tabbed-content-body'
-      , navContainerClass: 'tabbed-content-nav'
-    });
-  });
-}
-// End Tabbed Content
-
 // Top link
 const topLink = TopLinkModule('top-link');
 
@@ -77,23 +73,3 @@ if (topLink){
   topLink.init();
 }
 // End Top link
-
-let one = Aparecium('dump');
-
-if (one){
-  one.init({
-    defaultShow: 0
-    , hideOthersOnClick: false
-    , hideSelfOnClick: true
-  });
-}
-
-let two = Aparecium('tabbed-stuff');
-
-if (two){
-  two.init({
-    defaultShow: 0
-    , hideOthersOnClick: true
-    , hideSelfOnClick: false
-  });
-}

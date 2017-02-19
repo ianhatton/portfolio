@@ -1,7 +1,7 @@
 /* eslint-disable max-len, no-use-before-define */
 import _, {isElement} from 'lodash';
 
-const contentAttribute = 'data-aparecium-toggled-by';
+const contentAttribute = 'data-aparecium-target';
 const toggleAttribute = 'data-aparecium';
 
 const addToggleClickListener = (data)=>{
@@ -14,7 +14,7 @@ const getContent = (element, toggles)=>{
   const content = {};
 
   toggles.forEach((toggle)=>{
-    let key = toggle.getAttribute(toggleAttribute);
+    const key = toggle.getAttribute(toggleAttribute);
 
     content[key] = Array.from(element.querySelectorAll(`[${contentAttribute}='${key}']`));
   });
@@ -44,7 +44,7 @@ const getInactiveToggles = (clickedToggle, data)=>{
   const activeAttribute = clickedToggle.getAttribute(toggleAttribute);
 
   const inactiveToggles = data.toggles.filter((toggle)=>{
-    let attribute = toggle.getAttribute(toggleAttribute);
+    const attribute = toggle.getAttribute(toggleAttribute);
 
     return attribute !== activeAttribute;
   });
@@ -53,12 +53,10 @@ const getInactiveToggles = (clickedToggle, data)=>{
 };
 
 const getToggles = (element)=>{
-  let toggles;
-
-  toggles = Array.from(element.querySelectorAll((`[${toggleAttribute}]`)));
+  let toggles = Array.from(element.querySelectorAll((`[${toggleAttribute}]`)));
 
   toggles = toggles.filter((toggle)=>{
-    let key = toggle.getAttribute(toggleAttribute);
+    const key = toggle.getAttribute(toggleAttribute);
 
     return element.querySelectorAll(`[${contentAttribute}='${key}']`).length > 0;
   });
@@ -71,15 +69,6 @@ const initialiseContentAria = (data)=>{
 
   setActiveContentAria(clickedToggle, data);
   setInactiveContentAria(clickedToggle, data);
-};
-
-const initialiseData = (config, content, element, toggles)=>{
-  return {
-    config
-    , content
-    , element
-    , toggles
-  };
 };
 
 const initialiseDefaultToggle = (data)=>{
@@ -95,7 +84,7 @@ const initialiseToggleAria = (data)=>{
 
 const initialiseToggleAriaControls = (data)=>{
   data.toggles.forEach((toggle)=>{
-    let key = toggle.getAttribute(toggleAttribute);
+    const key = toggle.getAttribute(toggleAttribute);
 
     const idList = data.content[key].map((item, i)=>{
       return `${key}-${++i}`;
@@ -118,14 +107,12 @@ const setActiveContentAria = (clickedToggle, data)=>{
   const key = clickedToggle.getAttribute(toggleAttribute);
 
   data.content[key].forEach((item)=>{
-    let attribute = item.getAttribute('aria-hidden');
+    const attribute = item.getAttribute('aria-hidden');
 
-    if (_.isNull(attribute)){
+    if (_.isNull(attribute) || !data.config.hideSelfOnClick){
       item.setAttribute('aria-hidden', 'false');
-    } else if (data.config.hideSelfOnClick){
-      item.setAttribute('aria-hidden', attribute === 'true' ? 'false' : 'true');
     } else {
-      item.setAttribute('aria-hidden', 'false');
+      item.setAttribute('aria-hidden', attribute === 'true' ? 'false' : 'true');
     }
   });
 };
@@ -133,6 +120,7 @@ const setActiveContentAria = (clickedToggle, data)=>{
 const setActiveToggleAriaSelected = (clickedToggle, data)=>{
   if (data.config.hideSelfOnClick){
     const currentValue = clickedToggle.getAttribute('aria-selected');
+
     clickedToggle.setAttribute('aria-selected', currentValue === 'true' ? 'false' : 'true');
   } else {
     clickedToggle.setAttribute('aria-selected', 'true');
@@ -143,6 +131,15 @@ const setContentIds = (key, idList, data)=>{
   data.content[key].forEach((item, i)=>{
     item.id += idList[i];
   });
+};
+
+const setData = (config, content, element, toggles)=>{
+  return {
+    config
+    , content
+    , element
+    , toggles
+  };
 };
 
 const setInactiveContentAria = (clickedToggle, data)=>{
@@ -174,13 +171,13 @@ const toggleClickHandler = (clickedToggle, data, e)=>{
 };
 
 export default function(id){
-  let config, content, data, toggles, object;
+  let config, content, data, toggles;
 
   const element = document.getElementById(id);
 
   if (!_.isElement(element)) return;
 
-  object = {
+  return {
     init: (options = {})=>{
       config = _.defaults(options, {
         defaultShow: 0
@@ -189,14 +186,12 @@ export default function(id){
       });
       toggles = getToggles(element);
       content = getContent(element, toggles);
-      data = initialiseData(config, content, element, toggles);
+      data = setData(config, content, element, toggles);
 
       addToggleClickListener(data);
       initialiseToggleAria(data);
       initialiseContentAria(data);
     }
   };
-
-  return object;
 }
 /* eslint-enable */

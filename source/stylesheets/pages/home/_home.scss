@@ -141,6 +141,7 @@ body {
         }
 
         article {
+          display: none;
           position: relative;
           z-index: 1;
 
@@ -153,6 +154,10 @@ body {
 
             // styling
             border-bottom: 50px solid $skill-before-border;
+          }
+
+          &[aria-hidden="false"] {
+            display: block;
           }
 
           &.css {
@@ -310,13 +315,25 @@ body {
           }
         }
 
-        .tabbed-content-nav {
+        .skills-body, .skills-navigation {
+          @include clearfix;
+        }
+
+        .skills-navigation {
           a {
             @media (hover), (min-device-width: 960px) {
               transition: margin-top 0.2s ease-in-out, padding 0.2s ease-in-out;
             }
 
-            color: $skills-tabbed-content-nav-link-text;
+            // layout
+            display: block;
+            padding: 10px;
+            position: relative;
+
+            // styling
+            color: $skills-navigation-link-text;
+            transition: background-color 0.2s ease-in-out;
+            text-decoration: none;
 
             &:hover {
               margin-top: -10px;
@@ -324,26 +341,38 @@ body {
               padding-top: 15px;
             }
 
-            &.active {
+            &[aria-selected="true"] {
               margin-top: -20px;
               padding: 20px;
             }
 
             &.css {
-              background-color: $skills-tabbed-content-nav-css-bg;
+              background-color: $skills-navigation-css-bg;
             }
 
             &.html {
-              background-color: $skills-tabbed-content-nav-html-bg;
+              background-color: $skills-navigation-html-bg;
             }
 
             &.javascript {
-              background-color: $skills-tabbed-content-nav-javascript-bg;
-              text-shadow: 2px 2px 2px $skills-tabbed-content-nav-javascript-text-shadow;
+              background-color: $skills-navigation-javascript-bg;
+              text-shadow: 2px 2px 2px $skills-navigation-javascript-text-shadow;
             }
 
             &.other {
-              background-color: $skills-tabbed-content-nav-other-bg;
+              background-color: $skills-navigation-other-bg;
+            }
+          }
+
+          li {
+            float: left;
+
+            // styling
+            font-size: 1.25em; /* 20px */
+            font-weight: 300;
+
+            &.last {
+              border-right: 0 none;
             }
           }
         }

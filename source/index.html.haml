@@ -4,33 +4,7 @@ title: Ian Hatton | Front-end Web Developer | Home
 ---
 
 .wrap
-  #tabbed-stuff
-    = link_to "Toggle 1", "#", "data-aparecium"=>"stuff1"
-    = link_to "Toggle 2", "#", "data-aparecium"=>"stuff2"
-    = link_to "Toggle 3", "#", "data-aparecium"=>"stuff3"
-    .blah{ "data-aparecium-toggled-by"=>"stuff1" }
-      %p Here is some content.
-    .another-blah{ "data-aparecium-toggled-by"=>"stuff1" }
-      %p Here is some more content.
-    .blah-blah{ "data-aparecium-toggled-by"=>"stuff2" }
-      %p Here is some separate content.
-    .blah{ "data-aparecium-toggled-by"=>"stuff3" }
-      %p Blah blah blah.
-    .another-blah{ "data-aparecium-toggled-by"=>"stuff3" }
-      %p Blah.
-
-  #dump
-    = link_to "Toggle 1", "#", "data-aparecium"=>"test1"
-    = link_to "Toggle 2", "#", "data-aparecium"=>"test2"
-    .dumpy{ "data-aparecium-toggled-by"=>"test1" }
-      %p Here is some content.
-    .dumpoo{ "data-aparecium-toggled-by"=>"test2" }
-      %p Here is other.
-    .dumpooaa{ "data-aparecium-toggled-by"=>"test2" }
-      %p Meat.
-
-.wrap
-  %section.site-introduction#site-introduction{ style: "visibility: hidden;"}
+  %section.site-introduction#site-introduction
     %h1.bold-weight{ "data-mobile-font-size" => "delta" }
       Ian Hatton
       %span is a Front-end Web Developer working in London.
@@ -96,135 +70,134 @@ title: Ian Hatton | Front-end Web Developer | Home
           %span.extra-bold-weight Skills
         %p.zeta I'm a creative, forward-thinking Front-end Web Developer with over 4 years' professional experience. I use clean, modular stylesheets, semantic markup and JavaScript to turn beautiful designs into functional, intuitive builds.
         %p.zeta Click through the tabs below to read a little about my core skill sets and approach to web development.
-  .tabbed-content
-    .wrap
-      %ul.tabbed-content-nav{ role: "tablist" }
-        %li{ role: "presentation" }
-          = link_to "CSS", "#", role: "tab", class: "css"
-        %li{ role: "presentation" }
-          = link_to "HTML", "#", role: "tab", class: "html"
-        %li{ role: "presentation" }
-          = link_to content_tag(:span, "JS", class: "mobile") + content_tag(:span, "JavaScript", class: "desktop"), "#", role: "tab", class: "javascript"
-        %li{ role: "presentation" }
-          = link_to content_tag(:span, "Bits", class: "mobile") + content_tag(:span, " and bobs", class: "desktop"), "#", role: "tab", class: "other"
-    .tabbed-content-body.clearfix
-      %article.css.tabbed-content-tab
-        .wrap
-          .padding
-            %h1.gamma.extra-bold-weight CSS
-            .column-one
-              %p.zeta{ "data-mobile-font-size" => "epsilon" } The art of presenting beautiful content for the web is something that still excites me to this day.
-              %p{ "data-mobile-font-size" => "zeta" } In my opinion CSS always makes the biggest initial impact on user experience, and it's for this reason that I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they're being viewed on.
-              %p{ "data-mobile-font-size" => "zeta" } What's going on "under the hood" is just as important as what's presented in the browser, which is why I'm meticulous when it comes to organising my work and being as modular as possible. Spaghetti is good, but CSS spaghetti tastes bad.
-              %p{ "data-mobile-font-size" => "zeta" } I have built great relationships with the designers I have worked with in the past and I'm always happy to provide guidance and constructive criticism where it's due in order to deliver a stunning* final product.
-              %p.eta{ "data-mobile-font-size" => "zeta" } *exact level of stunningness dependent on design.
-            .column-two
-              %h2.zeta.bold-weight.accent{ "data-mobile-font-size" => "epsilon" } I have a knowledge of
-              %ul
-                %li{ "data-mobile-font-size" => "zeta" } CSS
-                %li{ "data-mobile-font-size" => "zeta" } CSS3
-                %li{ "data-mobile-font-size" => "zeta" } Sass
-                %li{ "data-mobile-font-size" => "zeta" } Less
-                %li{ "data-mobile-font-size" => "zeta" } PostCSS
-                %li{ "data-mobile-font-size" => "zeta" } Modular CSS
-              %ul
-                %li{ "data-mobile-font-size" => "zeta" } Responsive web design
-                %li{ "data-mobile-font-size" => "zeta" } Susy
-                %li{ "data-mobile-font-size" => "zeta" } Bourbon
-                %li{ "data-mobile-font-size" => "zeta" } Compass
-                %li{ "data-mobile-font-size" => "zeta" } Bootstrap
-                %li{ "data-mobile-font-size" => "zeta" } Font Awesome
-      %article.html.tabbed-content-tab
-        .wrap
-          .padding
-            %h1.gamma.extra-bold-weight HTML
-            .column-one
-              %blockquote
-                %p.zeta{ "data-mobile-font-size" => "epsilon" }
-                  &ldquo;We build too many walls and not enough
-                  %del bridges
-                  websites.&rdquo;
-                %cite.zeta{ "data-mobile-font-size" => "epsilon" }
-                  &mdash;
-                  %del Isaac Newton
-                  Ian Hatton
-              %p{ "data-mobile-font-size" => "zeta" } Believe it or not, the HTML behind your website is just as important as what's presented to the user in the browser. I build using meaningful, descriptive markup, not only to benefit search engine optimisation but also to provide assistive technologies with vital information for their users.
-              %p{ "data-mobile-font-size" => "zeta" } I have been lucky enough to work on a wide range of HTML5-based websites across sectors including finance, fitness, food, film and fashion. That's a lot of Fs.
-              %p{ "data-mobile-font-size" => "zeta" } I've also worked on a large number of table-based HTML email campaigns, both responsive and non-responsive and, with the aid of copious amounts of tea, crying and swearing, have always ensured that they are cross-client compatible down to pixel precision (hello Outlook).
-            .column-two
-              %h2.zeta.bold-weight.accent{ "data-mobile-font-size" => "epsilon" } I have a knowledge of
-              %ul
-                %li{ "data-mobile-font-size" => "zeta" } HTML
-                %li{ "data-mobile-font-size" => "zeta" } HTML5
-                %li{ "data-mobile-font-size" => "zeta" } HAML
-              %ul
-                %li{ "data-mobile-font-size" => "zeta" } ERB
-                %li{ "data-mobile-font-size" => "zeta" } Table-based emails
-                %li{ "data-mobile-font-size" => "zeta" } Microdata
-      %article.javascript.tabbed-content-tab
-        .wrap
-          .padding
-            %h1.gamma.extra-bold-weight JavaScript
-            .column-one
-              %p.zeta{ "data-mobile-font-size" => "epsilon" } JavaScript is, without doubt, the most challenging and, at times, frustrating part of my job. Having said that, I also find it the most rewarding.
-              %p{ "data-mobile-font-size" => "zeta" } For me, it's an area of constant learning and improvement, and I've found that the way I write my code has changed greatly over the years. There's nothing like that moment where the penny drops and something turns from a fuzzy understanding into solid knowledge.
-              %p{ "data-mobile-font-size" => "zeta" } I have contributed to a number of projects, each utilising different setups, so I have been exposed to several of the front-running libraries. With the current state of the JavaScript ecosystem and the "flavour of the month" scenario that seems so prevalent, I'm of the opinion that there's no better time to hone my vanilla JavaScript skills, and so it's in this area that I am focusing my efforts.
-              %p{ "data-mobile-font-size" => "zeta" }
-                I have written a number of
-                = link_to "vanilla JavaScript modules", "https://www.npmjs.com/~ianhatton", class: "external-link", target: "_blank", rel: "noopener noreferrer"
-                which are in use across several of my recent projects, and I'm looking forward to expanding my knowledge with each new project I work on.
-            .column-two
-              %h2.zeta.bold-weight.accent{ "data-mobile-font-size" => "epsilon" } I have a knowledge of
-              %ul
-                %li{ "data-mobile-font-size" => "zeta" } JavaScript
-                %li{ "data-mobile-font-size" => "zeta" } ES6
-                %li{ "data-mobile-font-size" => "zeta" } jQuery
-                %li{ "data-mobile-font-size" => "zeta" } CoffeeScript
-                %li{ "data-mobile-font-size" => "zeta" } React
-                %li{ "data-mobile-font-size" => "zeta" } AngularJS 1
-              %ul
-                %li{ "data-mobile-font-size" => "zeta" } Lodash
-                %li{ "data-mobile-font-size" => "zeta" } Bower
-                %li{ "data-mobile-font-size" => "zeta" } NPM
-                %li{ "data-mobile-font-size" => "zeta" } Gulp
-                %li{ "data-mobile-font-size" => "zeta" } Jasmine
-                %li{ "data-mobile-font-size" => "zeta" } ESLint
-      %article.other.tabbed-content-tab
-        .wrap
-          .padding
-            %h1.gamma.extra-bold-weight Bits and bobs
-            .column-one
-              %p.zeta{ "data-mobile-font-size" => "epsilon" } Web development fundamentals, platforms and anything else that didn't quite fit into the other categories.
-              %p{ "data-mobile-font-size" => "zeta" } Working in digital agencies has exposed me to a myriad of real-world requirements for web development projects, including usability, accessibility and performance.
-              %p{ "data-mobile-font-size" => "zeta" } The majority of my work has been built on top of Ruby on Rails, which has provided my understanding of MVC architecture and bespoke CMSs, but I've also had experience with WordPress, Tumblr and Shopify, where I've either created themes from scratch or modified existing ones to meet the client's specification.
-              %p{ "data-mobile-font-size" => "zeta" }
-                Over the years, I've factored in browser support all the way down to
-                = succeed "," do
-                  = link_to "IE6", "http://www.saveie6.com", class: "external-link", target: "_blank", rel: "noopener noreferrer"
-                so I'm well-versed to the joys of cross-browser testing, compatibility issues and workarounds.
-              %p
-                I also
-                %span.bold-weight rocked
-                GeoCities back in the day, but we don't talk about that, do we?
-            .column-two
-              %h2.zeta.bold-weight.accent{ "data-mobile-font-size" => "epsilon" } I have a knowledge of
-              %ul
-                %li{ "data-mobile-font-size" => "zeta" } Usability
-                %li{ "data-mobile-font-size" => "zeta" } Accessibility
-                %li{ "data-mobile-font-size" => "zeta" } WAI-ARIA
-                %li{ "data-mobile-font-size" => "zeta" } Cross-browser testing
-                %li{ "data-mobile-font-size" => "zeta" } Progressive enhancement
-                %li{ "data-mobile-font-size" => "zeta" } Ruby on Rails (views and controllers)
-                %li{ "data-mobile-font-size" => "zeta" } GitHub
-              %ul
-                %li{ "data-mobile-font-size" => "zeta" } Adobe Creative Suite
-                %li{ "data-mobile-font-size" => "zeta" } WordPress
-                %li{ "data-mobile-font-size" => "zeta" } Shopify
-                %li{ "data-mobile-font-size" => "zeta" } Tumblr
-                %li{ "data-mobile-font-size" => "zeta" } Mailchimp
-                %li{ "data-mobile-font-size" => "zeta" } dotMailer
-                %li{ "data-mobile-font-size" => "zeta" } Maxemail
-                %li{ "data-mobile-font-size" => "zeta" } Middleman
+  .wrap
+    %ul.skills-navigation{ role: "tablist" }
+      %li{ role: "presentation" }
+        = link_to "CSS", "#", role: "tab", class: "css", "data-aparecium"=>"skills-css"
+      %li{ role: "presentation" }
+        = link_to "HTML", "#", role: "tab", class: "html", "data-aparecium"=>"skills-html"
+      %li{ role: "presentation" }
+        = link_to content_tag(:span, "JS", class: "mobile") + content_tag(:span, "JavaScript", class: "desktop"), "#", role: "tab", class: "javascript", "data-aparecium"=>"skills-javascript"
+      %li{ role: "presentation" }
+        = link_to content_tag(:span, "Bits", class: "mobile") + content_tag(:span, " and bobs", class: "desktop"), "#", role: "tab", class: "other", "data-aparecium"=>"skills-other"
+  .skills-body
+    %article.css{ "data-aparecium-target"=>"skills-css" }
+      .wrap
+        .padding
+          %h1.gamma.extra-bold-weight CSS
+          .column-one
+            %p.zeta{ "data-mobile-font-size" => "epsilon" } The art of presenting beautiful content for the web is something that still excites me to this day.
+            %p{ "data-mobile-font-size" => "zeta" } In my opinion CSS always makes the biggest initial impact on user experience, and it's for this reason that I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they're being viewed on.
+            %p{ "data-mobile-font-size" => "zeta" } What's going on "under the hood" is just as important as what's presented in the browser, which is why I'm meticulous when it comes to organising my work and being as modular as possible. Spaghetti is good, but CSS spaghetti tastes bad.
+            %p{ "data-mobile-font-size" => "zeta" } I have built great relationships with the designers I have worked with in the past and I'm always happy to provide guidance and constructive criticism where it's due in order to deliver a stunning* final product.
+            %p.eta{ "data-mobile-font-size" => "zeta" } *exact level of stunningness dependent on design.
+          .column-two
+            %h2.zeta.bold-weight.accent{ "data-mobile-font-size" => "epsilon" } I have a knowledge of
+            %ul
+              %li{ "data-mobile-font-size" => "zeta" } CSS
+              %li{ "data-mobile-font-size" => "zeta" } CSS3
+              %li{ "data-mobile-font-size" => "zeta" } Sass
+              %li{ "data-mobile-font-size" => "zeta" } Less
+              %li{ "data-mobile-font-size" => "zeta" } PostCSS
+              %li{ "data-mobile-font-size" => "zeta" } Modular CSS
+            %ul
+              %li{ "data-mobile-font-size" => "zeta" } Responsive web design
+              %li{ "data-mobile-font-size" => "zeta" } Susy
+              %li{ "data-mobile-font-size" => "zeta" } Bourbon
+              %li{ "data-mobile-font-size" => "zeta" } Compass
+              %li{ "data-mobile-font-size" => "zeta" } Bootstrap
+              %li{ "data-mobile-font-size" => "zeta" } Font Awesome
+    %article.html{ "data-aparecium-target"=>"skills-html" }
+      .wrap
+        .padding
+          %h1.gamma.extra-bold-weight HTML
+          .column-one
+            %blockquote
+              %p.zeta{ "data-mobile-font-size" => "epsilon" }
+                &ldquo;We build too many walls and not enough
+                %del bridges
+                websites.&rdquo;
+              %cite.zeta{ "data-mobile-font-size" => "epsilon" }
+                &mdash;
+                %del Isaac Newton
+                Ian Hatton
+            %p{ "data-mobile-font-size" => "zeta" } Believe it or not, the HTML behind your website is just as important as what's presented to the user in the browser. I build using meaningful, descriptive markup, not only to benefit search engine optimisation but also to provide assistive technologies with vital information for their users.
+            %p{ "data-mobile-font-size" => "zeta" } I have been lucky enough to work on a wide range of HTML5-based websites across sectors including finance, fitness, food, film and fashion. That's a lot of Fs.
+            %p{ "data-mobile-font-size" => "zeta" } I've also worked on a large number of table-based HTML email campaigns, both responsive and non-responsive and, with the aid of copious amounts of tea, crying and swearing, have always ensured that they are cross-client compatible down to pixel precision (hello Outlook).
+          .column-two
+            %h2.zeta.bold-weight.accent{ "data-mobile-font-size" => "epsilon" } I have a knowledge of
+            %ul
+              %li{ "data-mobile-font-size" => "zeta" } HTML
+              %li{ "data-mobile-font-size" => "zeta" } HTML5
+              %li{ "data-mobile-font-size" => "zeta" } HAML
+            %ul
+              %li{ "data-mobile-font-size" => "zeta" } ERB
+              %li{ "data-mobile-font-size" => "zeta" } Table-based emails
+              %li{ "data-mobile-font-size" => "zeta" } Microdata
+    %article.javascript{ "data-aparecium-target"=>"skills-javascript" }
+      .wrap
+        .padding
+          %h1.gamma.extra-bold-weight JavaScript
+          .column-one
+            %p.zeta{ "data-mobile-font-size" => "epsilon" } JavaScript is, without doubt, the most challenging and, at times, frustrating part of my job. Having said that, I also find it the most rewarding.
+            %p{ "data-mobile-font-size" => "zeta" } For me, it's an area of constant learning and improvement, and I've found that the way I write my code has changed greatly over the years. There's nothing like that moment where the penny drops and something turns from a fuzzy understanding into solid knowledge.
+            %p{ "data-mobile-font-size" => "zeta" } I have contributed to a number of projects, each utilising different setups, so I have been exposed to several of the front-running libraries. With the current state of the JavaScript ecosystem and the "flavour of the month" scenario that seems so prevalent, I'm of the opinion that there's no better time to hone my vanilla JavaScript skills, and so it's in this area that I am focusing my efforts.
+            %p{ "data-mobile-font-size" => "zeta" }
+              I have written a number of
+              = link_to "vanilla JavaScript modules", "https://www.npmjs.com/~ianhatton", class: "external-link", target: "_blank", rel: "noopener noreferrer"
+              which are in use across several of my recent projects, and I'm looking forward to expanding my knowledge with each new project I work on.
+          .column-two
+            %h2.zeta.bold-weight.accent{ "data-mobile-font-size" => "epsilon" } I have a knowledge of
+            %ul
+              %li{ "data-mobile-font-size" => "zeta" } JavaScript
+              %li{ "data-mobile-font-size" => "zeta" } ES6
+              %li{ "data-mobile-font-size" => "zeta" } jQuery
+              %li{ "data-mobile-font-size" => "zeta" } CoffeeScript
+              %li{ "data-mobile-font-size" => "zeta" } React
+              %li{ "data-mobile-font-size" => "zeta" } AngularJS 1
+            %ul
+              %li{ "data-mobile-font-size" => "zeta" } Lodash
+              %li{ "data-mobile-font-size" => "zeta" } Bower
+              %li{ "data-mobile-font-size" => "zeta" } NPM
+              %li{ "data-mobile-font-size" => "zeta" } Gulp
+              %li{ "data-mobile-font-size" => "zeta" } Jasmine
+              %li{ "data-mobile-font-size" => "zeta" } ESLint
+    %article.other{ "data-aparecium-target"=>"skills-other" }
+      .wrap
+        .padding
+          %h1.gamma.extra-bold-weight Bits and bobs
+          .column-one
+            %p.zeta{ "data-mobile-font-size" => "epsilon" } Web development fundamentals, platforms and anything else that didn't quite fit into the other categories.
+            %p{ "data-mobile-font-size" => "zeta" } Working in digital agencies has exposed me to a myriad of real-world requirements for web development projects, including usability, accessibility and performance.
+            %p{ "data-mobile-font-size" => "zeta" } The majority of my work has been built on top of Ruby on Rails, which has provided my understanding of MVC architecture and bespoke CMSs, but I've also had experience with WordPress, Tumblr and Shopify, where I've either created themes from scratch or modified existing ones to meet the client's specification.
+            %p{ "data-mobile-font-size" => "zeta" }
+              Over the years, I've factored in browser support all the way down to
+              = succeed "," do
+                = link_to "IE6", "http://www.saveie6.com", class: "external-link", target: "_blank", rel: "noopener noreferrer"
+              so I'm well-versed to the joys of cross-browser testing, compatibility issues and workarounds.
+            %p
+              I also
+              %span.bold-weight rocked
+              GeoCities back in the day, but we don't talk about that, do we?
+          .column-two
+            %h2.zeta.bold-weight.accent{ "data-mobile-font-size" => "epsilon" } I have a knowledge of
+            %ul
+              %li{ "data-mobile-font-size" => "zeta" } Usability
+              %li{ "data-mobile-font-size" => "zeta" } Accessibility
+              %li{ "data-mobile-font-size" => "zeta" } WAI-ARIA
+              %li{ "data-mobile-font-size" => "zeta" } Cross-browser testing
+              %li{ "data-mobile-font-size" => "zeta" } Progressive enhancement
+              %li{ "data-mobile-font-size" => "zeta" } Ruby on Rails (views and controllers)
+              %li{ "data-mobile-font-size" => "zeta" } GitHub
+            %ul
+              %li{ "data-mobile-font-size" => "zeta" } Adobe Creative Suite
+              %li{ "data-mobile-font-size" => "zeta" } WordPress
+              %li{ "data-mobile-font-size" => "zeta" } Shopify
+              %li{ "data-mobile-font-size" => "zeta" } Tumblr
+              %li{ "data-mobile-font-size" => "zeta" } Mailchimp
+              %li{ "data-mobile-font-size" => "zeta" } dotMailer
+              %li{ "data-mobile-font-size" => "zeta" } Maxemail
+              %li{ "data-mobile-font-size" => "zeta" } Middleman
   %footer.section-footer
     = link_to content_tag(:span, "View my CV"), "/cv", class: "button button-primary delta"
 
