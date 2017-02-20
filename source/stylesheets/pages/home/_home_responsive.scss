@@ -7,8 +7,12 @@ body {
         }
 
         &.goodreads {
-          img {
-            max-width: 50%;
+          li {
+            @include span(2 of 4);
+
+            &:last-child {
+              @include last;
+            }
           }
         }
 
@@ -16,13 +20,13 @@ body {
           margin-bottom: 40px;
 
           li {
-            @include span(2 of 4)
+            @include span(1.33333333333333 of 4);
 
-            &:last-child {
+            &:last-child, &:nth-child(4n) {
               display: none;
             }
 
-            &:nth-child(2n+2) {
+            &:nth-child(3n) {
               @include last;
             }
           }
@@ -124,19 +128,18 @@ body {
         }
 
         &.goodreads {
-          @include span(2 of 10 last);
+          @include span(3 of 10 last);
+
+          li {
+            @include span(1.5 of 3);
+          }
         }
 
         &.last-fm {
           @include span(7 of 10);
-          @include suffix(1 of 10);
 
           li {
-            @include span(1.4 of 7)
-
-            &:last-child {
-              @include last;
-            }
+            @include span(1.4 of 7);
           }
         }
 
@@ -176,6 +179,14 @@ body {
       section {
         &.about, &.skills, &.work {
           padding-top: 69px; /* For smooth scroll to anchor top */
+        }
+
+        &.goodreads, &.last-fm {
+          li {
+            &:last-child {
+              @include last;
+            }
+          }
         }
 
         &.site-introduction {
@@ -258,8 +269,8 @@ body {
         &.goodreads {
           @include span(4 of 12 last);
 
-          img {
-            max-width: 50%;
+          li {
+            @include span(2 of 4);
           }
         }
 
@@ -267,11 +278,7 @@ body {
           @include span(7 of 12);
 
           li {
-            @include span(1.4 of 7)
-
-            &:last-child {
-              @include last;
-            }
+            @include span(1.4 of 7);
           }
         }
 
