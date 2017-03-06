@@ -159,8 +159,8 @@ const setInactiveTargetAria = (toggle, data)=>{
 const setInactiveToggleAriaSelected = (toggle, data)=>{
   const inactiveToggles = getInactiveToggles(toggle, data);
 
-  inactiveToggles.forEach((inactive)=>{
-    inactive.setAttribute('aria-selected', 'false');
+  inactiveToggles.forEach((inactiveToggle)=>{
+    inactiveToggle.setAttribute('aria-selected', 'false');
   });
 };
 
