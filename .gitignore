@@ -34,3 +34,7 @@ node_modules
 
 # Node environment variables
 .env
+
+# Visual Studio Code
+.history
+.vscode
