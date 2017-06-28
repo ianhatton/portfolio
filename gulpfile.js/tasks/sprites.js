@@ -2,10 +2,14 @@ var config      = require('../config')
 if(!config.tasks.sprites) return
 
 var browserSync = require('browser-sync')
+var buffer      = require('vinyl-buffer')
+var csso        = require('gulp-csso')
 var gulp        = require('gulp')
 var gulpif      = require('gulp-if')
-var sprity      = require('sprity')
+var imagemin    = require('gulp-imagemin')
+var merge       = require('merge-stream')
 var path        = require('path')
+var spritesmith = require('gulp.spritesmith')
 
 var spritesTask = function() {
 
@@ -18,12 +22,21 @@ var spritesTask = function() {
     split: true
   }
 
-  return sprity.src({
-    src: settings.src,
-    style: settings.cssFile,
-    processor: settings.processor,
-    split: settings.split
-  })
+  var spriteData = gulp.src(settings.src).pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite.css'
+  }));
+
+  var imgStream = spriteData.img
+    .pipe(buffer())
+    .pipe(imagemin())
+    .pipe(gulp.dest(settings.imgDest));
+
+  var cssStream = spriteData.css
+    .pipe(csso())
+    .pipe(gulp.dest(settings.cssFile));
+
+  return merge(imgStream, cssStream)
   .pipe(gulpif('*.png', gulp.dest(settings.imgDest), gulp.dest(settings.cssDest)))
   .pipe(browserSync.stream())
 }
