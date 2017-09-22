@@ -16,15 +16,13 @@ var spritesTask = function() {
   var settings = {
     src: path.join(config.root.src, config.tasks.sprites.src, '/**/*.{png,jpg}'),
     cssDest: path.join(config.root.src, config.tasks.sprites.cssDest),
-    cssFile: './sprites.css',
-    imgDest: path.join(config.root.dest, config.tasks.sprites.imgDest),
-    processor: 'sass',
-    split: true
+    imgDest: path.join(config.root.dest, config.tasks.sprites.imgDest)
   }
 
   var spriteData = gulp.src(settings.src).pipe(spritesmith({
-    imgName: 'sprite.png',
-    cssName: 'sprite.css'
+    imgName: 'sprites.png',
+    imgPath: '../images/sprites.png',
+    cssName: '_sprites.scss'
   }));
 
   var imgStream = spriteData.img
@@ -33,8 +31,8 @@ var spritesTask = function() {
     .pipe(gulp.dest(settings.imgDest));
 
   var cssStream = spriteData.css
-    .pipe(csso())
-    .pipe(gulp.dest(settings.cssFile));
+    // .pipe(csso())
+    .pipe(gulp.dest(settings.cssDest));
 
   return merge(imgStream, cssStream)
   .pipe(gulpif('*.png', gulp.dest(settings.imgDest), gulp.dest(settings.cssDest)))
