@@ -90,7 +90,7 @@
     "karma-nyan-reporter": "0.2.5",
     "karma-sinon-chai": "1.2.4",
     "karma-webpack": "2.0.2",
-    "lodash": "4.17.4",
+    "lodash": "4.17.13",
     "lolex": "1.5.2",
     "merge-stream": "^1.0.1",
     "mocha": "3.2.0",
