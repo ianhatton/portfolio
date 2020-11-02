@@ -274,7 +274,7 @@ const Home: FC<{}> = (): ReactElement => {
                     </>
                   )}
 
-                  {skill.name !== "JavaScript" && (
+                  {(skill.name !== "Bits and bobs" && skill.name !== "JavaScript") && (
                     <>{skill.name}</>
                   )}
                 </a>
