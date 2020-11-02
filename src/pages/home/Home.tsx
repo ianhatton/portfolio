@@ -260,7 +260,16 @@ const Home: FC<{}> = (): ReactElement => {
                     clickSkill(skill.name);
                   }}
                 >
-                  {skill.name}
+                  {skill.name === "JavaScript" && (
+                    <>
+                      <span className="desktop">{skill.name}</span>
+                      <span className="mobile">JS</span>
+                    </>
+                  )}
+
+                  {skill.name !== "JavaScript" && (
+                    <>{skill.name}</>
+                  )}
                 </a>
               </li>
             );
