@@ -10,10 +10,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = (): ReactElement => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route component={Home} exact path="/" />
-        <Route component={CV} exact path="/cv/" />
+        <Route component={CV} exact path="/cv" />
       </Switch>
     </Router>
   );
