@@ -6,6 +6,7 @@ import SiteHeader from "../../components/siteHeader/SiteHeader";
 
 // Vendor
 import { withRouter } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 const CV: FC<{}> = (): ReactElement => {
@@ -22,9 +23,9 @@ const CV: FC<{}> = (): ReactElement => {
       <SiteHeader />
       <main role="main">
         <div className="wrap">
-          <a href="/#skills" className="button button-primary">
+          <Link to="/#skills" className="button button-primary">
             <span>&lsaquo; Back to Skills</span>
-          </a>
+          </Link>
           <article className="cv">
             <header>
               <h1 className="bold-weight" data-mobile-font-size="delta">

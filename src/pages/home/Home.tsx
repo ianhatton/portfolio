@@ -25,7 +25,7 @@ import skills from "../../data/skills.json";
 // Vendor
 import ReactHtmlParser from "react-html-parser";
 import Modal from "react-modal";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import * as Scroll from "react-scroll";
 
 Modal.setAppElement("#root");
@@ -354,9 +354,9 @@ const Home: FC<{}> = (): ReactElement => {
           {renderSkillsNavigation()}
           {renderSkillsBody()}
           <footer className="section-footer">
-            <a href="/cv" className="button button-primary delta">
+            <Link to="/cv" className="button button-primary delta">
               <span>View my CV</span>
-            </a>
+            </Link>
           </footer>
         </section>
         <section className="work panel" id="work">
