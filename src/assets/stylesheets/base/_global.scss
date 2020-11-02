@@ -1,0 +1,29 @@
+body {
+  background-color: $body-bg;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+[role=main] {
+  margin-top: 100px;
+}
+
+::-moz-selection {
+  background-color: $selection-bg;
+  color: $selection-text;
+}
+
+::selection {
+  background-color: $selection-bg;
+  color: $selection-text; 
+}
+
+.panel {
+  margin: 40px 0;
+}

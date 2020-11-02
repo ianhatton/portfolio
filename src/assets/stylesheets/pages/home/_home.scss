@@ -1,0 +1,443 @@
+body {
+  &.home {
+    section {
+      &.about {
+        header.section-header {
+          h1 {
+            &:after {
+              content: "\E90D";
+            }
+          }
+        }
+      }
+
+      &.about, &.work {
+        header.section-header {
+          h1 {
+            &:after {
+              position: relative;
+              top: 5px;
+            }
+          }
+        }
+      }
+
+      &.bio {
+        @include span(full);
+        margin-bottom: 40px;
+
+        img {
+          width: 50%;
+          height: auto;
+          float: left;
+          margin: 0 25px 25px 0;
+          border-radius: 50%;
+        }
+
+        @supports (shape-outside: circle()) {
+          img {
+            shape-outside: circle();
+            margin: 0 100px 25px 0;
+          }
+        }
+      }
+
+      &.gallery {
+        @include span(full);
+
+        li {
+          display: inline-block;
+          margin-right: -4px;
+          vertical-align: middle;
+
+          .modal-toggle {
+            padding: 20px;
+          }
+        }
+
+        ul {
+          text-align: center;
+        }
+      }
+
+      &.site-introduction {
+        a {
+          @media (hover), (min-device-width: 960px) {
+            transition: all 0.2s ease-in-out;
+
+            &:after, &:before {
+              transition: all 0.2s ease-in-out;
+            }
+
+            &:hover {
+              background-color: $button-bg-hover;
+              box-shadow: 0 0 0 13px $button-bg-hover;
+              color: $button-text-hover;
+
+              &:after {
+                border-bottom: 0 none;
+              }
+
+              &:before {
+                opacity: 1;
+                top: -13px;
+                bottom: -13px;
+                right: -14px;
+              }
+            }
+          }
+
+          // layout
+          display: inline-block;
+          padding-bottom: 3px;
+          position: relative;
+
+          // styling
+          color: $site-introduction-link-text;
+          cursor: pointer;
+          text-decoration: none;
+
+          &:after {
+            // layout
+            content: "";
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            // styling
+            border-bottom: 1px dotted $site-introduction-link-after-border;
+          }
+
+          &:before {
+            content: "";
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 7px;
+            width: 7px;
+            background-color: #ff9898;
+          }
+        }
+
+        h1 {
+          margin-bottom: 75px;
+          
+          span {
+            color: $secondary-heading-text;
+          }
+        }
+
+        p {
+          margin-bottom: 40px;
+        }
+      }
+
+      &.skills {
+        .anchor {
+          position: absolute;
+          top: 0;
+        }
+
+        article {
+          display: none;
+          position: relative;
+          z-index: 1;
+
+          &:before {
+            // layout
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+
+            // styling
+            border-bottom: 50px solid $skill-before-border;
+          }
+
+          &[aria-hidden="false"] {
+            display: block;
+          }
+
+          &.css {
+            background-color: $skill-css-bg-1;
+            background-image: linear-gradient(-36deg, $skill-css-bg-1 0%, $skill-css-bg-2 69%, $skill-css-bg-3 69%);
+
+            &:before {
+              border-right: 100vw solid $skill-css-bg-1;
+            }
+
+            h1 {
+              color: $skill-css-h1-text;
+              -webkit-text-fill-color: $skill-css-h1-fill;
+              -webkit-text-stroke: 2px $skill-css-h1-stroke;
+            }
+
+            h2 {
+              color: $skill-css-h2-text;
+
+              &.accent {
+                &:before {
+                  background-color: $skill-css-h2-text;
+                }
+              }
+            }
+
+            li, p {
+              color: $skill-css-text;
+            }
+          }
+
+          &.html {
+            background-color: $skill-html-bg-1;
+            background-image: linear-gradient(-36deg, $skill-html-bg-1 0%, $skill-html-bg-2 69%, $skill-html-bg-3 69%);
+
+            &:before {
+              border-right: 100vw solid $skill-html-bg-1;
+            }
+
+            blockquote {
+              p {
+                margin-bottom: 0;
+              }
+            }
+
+            cite {
+              display: inline-block;
+              margin-bottom: 10px;
+            }
+
+            cite, li, p {
+              color: $skill-html-text;
+            }
+
+            h1 {
+              color: $skill-html-h1-text;
+              -webkit-text-fill-color: $skill-html-h1-fill;
+              -webkit-text-stroke: 2px $skill-html-h1-stroke;
+            }
+
+            h2 {
+              color: $skill-html-h2-text;
+
+              &.accent {
+                &:before {
+                  background-color: $skill-html-h2-text;
+                }
+              }
+            }
+          }
+
+          &.javascript {
+            background-color: $skill-javascript-bg-1;
+            background-image: linear-gradient(-36deg, $skill-javascript-bg-1 0%, $skill-javascript-bg-2 69%, $skill-javascript-bg-3 69%);
+
+            &:before {
+              border-right: 100vw solid $skill-javascript-bg-1;
+            }
+
+            a {
+              &.external-link {
+                color: $skill-javascript-external-link-text;
+              }
+            }
+
+            h1 {
+              color: $skill-javascript-h1-text;
+              -webkit-text-fill-color: $skill-javascript-h1-fill;
+              -webkit-text-stroke: 2px $skill-javascript-h1-stroke;
+            }
+
+            h2 {
+              color: $skill-javascript-h2-text;
+
+              &.accent {
+                &:before {
+                  background-color: $skill-javascript-h2-text;
+                }
+              }
+            }
+
+            li, p {
+              color: $skill-javascript-text;
+            }
+          }
+
+          &.other {
+            background-color: $skill-other-bg-1;
+            background-image: linear-gradient(-36deg, $skill-other-bg-1 0%, $skill-other-bg-2 69%, $skill-other-bg-3 69%);
+
+            &:before {
+              border-right: 100vw solid $skill-other-bg-1;
+            }
+
+            a {
+              &.external-link {
+                color: $skill-other-external-link-text;
+              }
+            }
+
+            h1 {
+              color: $skill-other-h1-text;
+              -webkit-text-fill-color: $skill-other-h1-fill;
+              -webkit-text-stroke: 2px $skill-other-h1-stroke;
+            }
+
+            h2 {
+              color: $skill-other-h2-text;
+
+              &.accent {
+                &:before {
+                  background-color: $skill-other-h2-text;
+                }
+              }
+            }
+
+            li, p {
+              color: $skill-other-text;
+            }
+          }
+
+          h1 {
+            position: relative;
+            right: -2px;
+          }
+        }
+
+        header.section-header {
+          margin-bottom: 60px;
+
+          h1 {
+            &:after {
+              content: "\E869";
+            }
+          }
+        }
+
+        .skills-body, .skills-navigation {
+          @include clearfix;
+        }
+
+        .skills-navigation {
+          a {
+            @media (hover), (min-device-width: 960px) {
+              transition: margin-top 0.2s ease-in-out, padding 0.2s ease-in-out;
+            }
+
+            // layout
+            display: block;
+            padding: 10px;
+            position: relative;
+
+            // styling
+            color: $skills-navigation-link-text;
+            transition: background-color 0.2s ease-in-out;
+            text-decoration: none;
+
+            &:hover {
+              margin-top: -10px;
+              padding-bottom: 15px;
+              padding-top: 15px;
+            }
+
+            &[aria-selected="true"] {
+              margin-top: -20px;
+              padding: 20px;
+            }
+
+            &.css {
+              background-color: $skills-navigation-css-bg;
+            }
+
+            &.html {
+              background-color: $skills-navigation-html-bg;
+            }
+
+            &.javascript {
+              background-color: $skills-navigation-javascript-bg;
+              text-shadow: 2px 2px 2px $skills-navigation-javascript-text-shadow;
+            }
+
+            &.other {
+              background-color: $skills-navigation-other-bg;
+            }
+          }
+
+          li {
+            float: left;
+
+            // styling
+            font-size: 1.25em; /* 20px */
+            font-weight: 300;
+
+            &.last {
+              border-right: 0 none;
+            }
+          }
+        }
+      }
+
+      &.skills, &.work {
+        .section-footer {
+          clear: both;
+
+          .button {
+            display: block;
+            padding: 75px 30px;
+            text-align: right;
+
+            &:hover {
+              padding-right: 20px;
+            }
+          }
+        }
+      }
+
+      &.work {
+        a {
+          &.external-link {
+            color: $work-external-link-text;
+          }
+        }
+
+        article {
+          margin-bottom: 40px;
+
+          h1 {
+            margin-bottom: 0;
+          }
+
+          header {
+            margin-bottom: 20px;
+          }
+
+          img {
+            margin-bottom: 20px;
+          }
+        }
+
+        header.section-header {
+          h1 {
+            &:after {
+              content: "\E912";
+            }
+          }
+        }
+      }
+    }
+
+    ul {
+      &.clients {
+        @include span(full);
+
+        li {
+          display: inline-block;
+          margin-right: -4px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

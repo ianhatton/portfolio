@@ -1,0 +1,368 @@
+body {
+  &.home {
+    @include breakpoint($mobile-breakpoint) {
+      section {
+        &.about, &.goodreads, &.last-fm, &.site-introduction, &.skills, &.tldr, &.work {
+          @include span(full);
+        }
+
+        &.goodreads {
+          li {
+            @include span(2 of 4);
+
+            &:last-child {
+              @include last;
+            }
+          }
+        }
+
+        &.last-fm {
+          margin-bottom: 40px;
+
+          li {
+            @include span(1.33333333333333 of 4);
+
+            &:last-child, &:nth-child(4n) {
+              display: none;
+            }
+
+            &:nth-child(3n) {
+              @include last;
+            }
+          }
+        }
+
+        &.skills {
+          article {
+            .column-one, .column-two {
+              @include span(full);
+            }
+
+            .column-two {
+              ul {
+                @include span(full);
+              }
+            }
+
+            .padding {
+              padding: 20px 0;
+            }
+          }
+
+          .skills-navigation {
+            span {
+              &.desktop {
+                display: none;
+              }
+            }
+
+            li {
+              width: 25%;
+            }
+          }
+        }
+
+        &.skills, &.work {
+          .section-footer {
+            width: auto;
+          }
+        }
+      }
+
+      ul {
+        &.clients {
+          li {
+            width: percentage(1/3);
+
+            .padding {
+              @include padding(50px 25%);
+            }
+          }
+        }
+      }
+    }
+
+    @include breakpoint($mobile-and-tablet-breakpoint) {
+      section {
+        &.skills {
+          article {
+            .column-one {
+              margin-bottom: 40px;
+            }
+          }
+        }
+
+        &.work {
+          article {
+            padding-bottom: 20px;
+
+            // styling
+            border-bottom: 1px dashed $work-article-border;
+
+            &:last-child {
+              border-bottom: 0 none;
+            }
+          }
+        }
+      }
+    }
+
+    @include breakpoint($tablet-breakpoint) {
+      section {
+        &.about, &.site-introduction, &.skills, &.tldr, &.work {
+          @include span(10 of 10 last);
+        }
+
+        &.gallery {
+          header {
+            @include span(10 of 10 last);
+          }
+
+          li {
+            width: percentage(1/5);
+          }
+
+          ul {
+            @include span(10 of 10 last);
+          } 
+        }
+
+        &.goodreads {
+          @include span(3 of 10 last);
+
+          li {
+            @include span(1.5 of 3);
+          }
+        }
+
+        &.last-fm {
+          @include span(7 of 10);
+
+          li {
+            @include span(1.4 of 7);
+          }
+        }
+
+        &.skills {
+          article {
+            .column-one, .column-two {
+              @include span(10 of 10 last);
+            }
+
+            .column-two {
+              ul {
+                @include span(5 of 10);
+
+                &:last-child {
+                  @include last;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      ul {
+        &.clients {
+          li {
+            width: percentage(1/4);
+
+            .padding {
+              @include padding(50px);
+            }
+          }
+        }
+      }
+    }
+
+    @include breakpoint($tablet-and-desktop-breakpoint) {
+      section {
+        &.about, &.skills, &.work {
+          padding-top: 69px; /* For smooth scroll to anchor top */
+        }
+
+        &.goodreads, &.last-fm {
+          li {
+            &:last-child {
+              @include last;
+            }
+          }
+        }
+
+        &.site-introduction {
+          margin: 100px 0;
+        }
+
+        &.skills {
+          .skills-body {
+            margin-left: -7px;
+            margin-right: -7px;
+          }
+
+          .skills-navigation {
+            a {
+              &.javascript {
+                span {
+                  &.mobile {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.skills, &.work {
+          .section-footer {
+            float: right;
+            margin-right: -7px;
+            margin-left: -7px;
+            width: 50%;
+          }
+        }
+      }
+    }
+
+    @include breakpoint($desktop-breakpoint) {
+      section {
+        &.about, &.site-introduction, &.skills, &.tldr, &.work {
+          @include span(12 of 12 last);
+        }
+
+        &.about, &.skills, &.tldr, &.work {
+          .section-header {
+            @include span(6 of 12);
+          }
+        }
+
+        &.bio {
+          .column-one {
+            @include span(7 of 12);
+            @include prefix(2.5 of 12);
+          }
+        }
+
+        &.gallery {
+          header {
+            @include span(4.7 of 12);
+          }
+
+          ul {
+            &.primary {
+              @include span(7.3 of 12 last);
+
+              li {
+                width: percentage(1/3);
+              }
+            }
+
+            &.secondary {
+              @include span(12 of 12 last);
+
+              li {
+                width: percentage(1/5);
+              }
+            }
+          } 
+        }
+
+        &.goodreads {
+          @include span(4 of 12 last);
+
+          li {
+            @include span(2 of 4);
+          }
+        }
+
+        &.last-fm {
+          @include span(7 of 12);
+
+          li {
+            @include span(1.4 of 7);
+          }
+        }
+
+        &.site-introduction {
+          p {
+            @include span(8 of 12 last);
+            @include prefix(2 of 12);
+            @include suffix(2 of 12);
+          }
+        }
+
+        &.skills {
+          article {
+            .column-one {
+              @include span(6 of 12);
+              @include suffix(1 of 12);
+            }
+
+            .column-two {
+              @include span(5 of 12 last);
+
+              ul {
+                @include span(2.5 of 5);
+
+                &:last-child {
+                  @include last;
+                }
+              }
+            }
+          }
+        }
+
+        &.work {
+          article {
+            &.featured {
+              @include span(6 of 12);
+
+              .column-one, .column-two {
+                @include span(6 of 6 last);
+              }
+            }
+
+            &.regular {
+              // layout
+              @include span(5 of 12 last);
+              @include pre(1 of 12 last);
+              margin-bottom: 40px;
+              padding-bottom: 20px;
+
+              // styling
+              border-bottom: 1px dashed $work-article-border;
+
+              &:last-child {
+                // layout
+                margin-bottom: 0;
+                padding-bottom: 0;
+
+                // styling
+                border-bottom: 0 none;
+              }
+
+              .column-one {
+                @include span(2 of 5);
+              }
+
+              .column-two {
+                @include span(3 of 5 last);
+              }
+            }
+          }
+        }
+      }
+
+      ul {
+        &.clients {
+          li {
+            width: percentage(1/6);
+
+            .padding {
+              @include padding(50px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+body.cv {
+  [role="main"] {
+    > .wrap {
+      position: relative;
+    }
+  }
+
+  article.cv {
+    @include span(full);
+
+    footer {
+      a {
+        color: $cv-footer-link-text;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    footer, .education, .experience, .introduction, .objective {
+      margin-bottom: 60px;
+    }
+
+    header {
+      h2 {
+        color: $secondary-heading-text;
+      }
+    }
+
+    .experience {
+      background-color: $section-header-bg;
+
+      a {
+        color: $white;
+      }
+
+      h1 {
+        &.accent {
+          &:before {
+            background-color: $white;
+          }
+        }
+      }
+
+      h1, h2, h3 {
+        color: $white;
+      }
+
+      li {
+        // layout
+        padding-bottom: 40px;
+
+        // styling
+        border-bottom: 1px dashed $white;
+
+        &:last-child {
+          // layout
+          margin-bottom: 0;
+          padding-bottom: 0;
+
+          // styling
+          border-bottom: 0 none;
+        }
+      }
+
+      p {
+        color: $white;
+      }
+
+      ul {
+        color: $white;
+      }
+
+      .accomplishments {
+        p {
+          margin-left: 25px;
+          position: relative;
+
+          &:before {
+            // layout
+            display: inline-block;
+            position: absolute;
+            left: -25px;
+      
+            // styling
+            content: "\E8D0";
+            font-family: "Material Icons";
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+          }
+        }
+      }
+    }
+
+    .experience, .skills {
+      li {
+        margin-bottom: 40px;
+      }
+    }
+
+    .skills {
+      margin-bottom: 50px;
+    }
+  }
+
+  .button {
+    position: absolute;
+    left: 15px;
+  }
+}

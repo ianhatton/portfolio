@@ -1,0 +1,224 @@
+[
+  {
+    "className": "css",
+    "descriptions": [
+      {
+        "body": "CSS always makes the biggest initial impact on user experience, and it&rsquo;s for this reason that I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they&rsquo;re being viewed on."
+      },
+      {
+        "body": "What&rsquo;s going on &ldquo;under the hood&rdquo; is just as important as what&rsquo;s presented in the browser, which is why I&rsquo;m meticulous when it comes to organising my work and being as modular as possible."
+      },
+      {
+        "body": "I have built great relationships with the designers I have worked with in the past and I&rsquo;m always happy to provide guidance and constructive criticism when necessary in order to deliver a stunning* final product."
+      },
+      {
+        "body": "*exact level of stunningness dependent on design.",
+        "className": "eta"
+      }
+    ],
+    "introduction": "The art of presenting beautiful content for the web is something that still excites me to this day.",
+    "knowledgeItemsOne": [
+      {
+        "name": "CSS"
+      },
+      {
+        "name": "Sass"
+      },
+      {
+        "name": "Less"
+      },
+      {
+        "name": "PostCSS"
+      },
+      {
+        "name": "Modular CSS"
+      }
+    ],
+    "knowledgeItemsTwo": [
+      {
+        "name": "Susy"
+      },
+      {
+        "name": "Bourbon"
+      },
+      {
+        "name": "Compass"
+      },
+      {
+        "name": "Bootstrap"
+      },
+      {
+        "name": "FontAwesome"
+      }
+    ],
+    "name": "CSS"
+  },
+  {
+    "className": "html",
+    "descriptions": [
+      {
+        "body": "The HTML behind your website is just as important as what&rsquo;s presented in the browser. I build using meaningful, descriptive markup, not only to benefit search engine optimisation but also to provide assistive technologies with vital information for their users."
+      },
+      {
+        "body": "I have been lucky enough to work on a wide range of projects across sectors including finance, fitness, food, film and fashion. That&rsquo;s a lot of Fs."
+      },
+      {
+        "body": "I&rsquo;ve also worked on a large number of table-based HTML email campaigns, both responsive and non-responsive and, with the aid of copious amounts of tea, crying and swearing, have always ensured that they are cross-client compatible with pixel precision (hello Outlook)."
+      }
+    ],
+    "introduction": "<p class=\"zeta\" data-mobile-font-size=\"epsilon\"> &ldquo;We build too many walls and not enough <del>bridges</del> websites.&rdquo;</p><cite class=\"zeta\" data-mobile-font-size=\"epsilon\"> &mdash; <del>Isaac Newton</del> Ian Hatton</cite>",
+    "knowledgeItemsOne": [
+      {
+        "name": "HTML"
+      },
+      {
+        "name": "HTML5"
+      },
+      {
+        "name": "HAML"
+      }
+    ],
+    "knowledgeItemsTwo": [
+      {
+        "name": "ERB"
+      },
+      {
+        "name": "Table-based emails"
+      },
+      {
+        "name": "Microdata"
+      }
+    ],
+    "name": "HTML"
+  },
+  {
+    "className": "javascript",
+    "descriptions": [
+      {
+        "body": "Over the years, I've worked on a range of different projects, each using slightly different development stacks, which has broadened my knowledge and introduced me to a number of frameworks and technologies along the way. I'm currently a React developer, but am equally happy using anything else in my toolkit."
+      },
+      {
+        "body": "I have also written a number of <a href=\"https://www.npmjs.com/~ianhatton\" class=\"external-link\" target=\"_blank\" rel=\"noopener noreferrer\"> vanilla JavaScript modules</a> which are in use across several of the projects I&rsquo;ve completed."
+      }
+    ],
+    "introduction": "I'm in my element whether I'm writing vanilla JavaScript or applying that foundational knowledge to frameworks such as React, Angular and anything beyond.",
+    "knowledgeItemsOne": [
+      {
+        "name": "JavaScript"
+      },
+      {
+        "name": "TypeScript"
+      },
+      {
+        "name": "Angular"
+      },
+      {
+        "name": "AngularJS"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "Redux"
+      },
+      {
+        "name": "jQuery"
+      },
+      {
+        "name": "GSAP"
+      }
+    ],
+    "knowledgeItemsTwo": [
+      {
+        "name": "Lodash"
+      },
+      {
+        "name": "Bower"
+      },
+      {
+        "name": "NPM"
+      },
+      {
+        "name": "Gulp"
+      },
+      {
+        "name": "Jasmine"
+      },
+      {
+        "name": "ESLint"
+      },
+      {
+        "name": "Cypress"
+      },
+      {
+        "name": "Jest"
+      }
+    ],
+    "name": "JavaScript"
+  },
+  {
+    "className": "other",
+    "descriptions": [
+      {
+        "body": "Working in digital agencies has exposed me to a myriad of real-world requirements for web applications, including usability, accessibility and performance."
+      },
+      {
+        "body": "The majority of my work has been built on top of Ruby on Rails, which has provided my understanding of MVC architecture and bespoke CMSs, but I&rsquo;ve also had experience with WordPress, Tumblr and Shopify, where I&rsquo;ve either created themes from scratch or modified existing ones to meet the client&rsquo;s specification."
+      },
+      {
+        "body": "Over the years, I&rsquo;ve factored in browser support all the way down to <a href=\"http://www.saveie6.com\" class=\"external-link\" target=\"_blank\" rel=\"noopener noreferrer\">IE6</a>, so I&rsquo;m well-versed to the joys of cross-browser testing, compatibility issues and workarounds."
+      },
+      {
+        "body": "I also <span class=\"bold-weight\">rocked </span> GeoCities back in the day, but we don&rsquo;t talk about that, do we?"
+      }
+    ],
+    "introduction": "Development fundamentals, platforms and anything else that didn&rsquo;t quite fit into the other categories.",
+    "knowledgeItemsOne": [
+      {
+        "name": "Usability"
+      },
+      {
+        "name": "Accessibility"
+      },
+      {
+        "name": "WAI-ARIA"
+      },
+      {
+        "name": "Cross-browser testing"
+      },
+      {
+        "name": "Progressive enhancement"
+      },
+      {
+        "name": "Ruby on Rails"
+      },
+      {
+        "name": "GitHub"
+      }
+    ],
+    "knowledgeItemsTwo": [
+      {
+        "name": "Adobe Creative Suite"
+      },
+      {
+        "name": "WordPress"
+      },
+      {
+        "name": "Shopify"
+      },
+      {
+        "name": "Tumblr"
+      },
+      {
+        "name": "Mailchimp"
+      },
+      {
+        "name": "dotMailer"
+      },
+      {
+        "name": "Middleman"
+      }
+    ],
+    "name": "Bits and bobs"
+  }
+]

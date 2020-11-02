@@ -1,0 +1,32 @@
+footer[role=contentinfo] {
+  @include breakpoint($mobile-breakpoint) {
+    .padding {
+      padding: 75px 0;
+    }
+  }
+  
+  @include breakpoint($mobile-and-tablet-breakpoint) {
+    section {
+      &.social {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  @include breakpoint($tablet-and-desktop-breakpoint) {
+    margin-left: -7px;
+    margin-right: -7px;
+  }
+
+  @include breakpoint($desktop-breakpoint) {
+    section {
+      &.social {
+        float: left;
+      }
+    }
+
+    small {
+      @include span(7 of 12 last);
+    }
+  }
+}

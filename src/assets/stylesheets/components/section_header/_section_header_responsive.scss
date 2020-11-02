@@ -1,0 +1,44 @@
+header.section-header {
+  @include breakpoint($mobile-breakpoint) {
+    @include bleed-x(10px);
+  }
+
+  @include breakpoint($mobile-and-tablet-breakpoint) {
+    border-bottom: 7px solid $section-header-border;
+  }
+
+  @include breakpoint($tablet-breakpoint) {
+    @include bleed-x(17px);
+  }
+
+  @include breakpoint($desktop-breakpoint) {
+    margin-left: -1000px;
+    padding-left: 1000px;
+    position: relative;
+
+    &:after {
+      // layout
+      top: 0;
+      bottom: 0;
+      width: 350px;
+
+      // styling
+      background: url("../../../images/components/section_header/bg.png") 0 0 repeat-y;
+      background-size: 100% auto;
+    }
+
+    &:after, &:before {
+      content: "";
+      position: absolute;
+      right: -350px;
+    }
+
+    &:before {
+      background-color: $section-header-before-bg-1;
+      background-image: linear-gradient(to right, $section-header-before-bg-1 0%, $section-header-before-bg-1 80%, $section-header-before-bg-1 81%, $section-header-before-bg-2);
+      bottom: -7px;
+      left: 0;
+      height: 7px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@include breakpoint($mobile-and-tablet-breakpoint) {
+  .modal-content {
+    left: 5%;
+    width: 90%;
+  }
+}
+
+@include breakpoint($desktop-breakpoint) {
+  .modal-content {
+    transform: translate(-50%, 0);
+    left: 50%;
+  }
+}

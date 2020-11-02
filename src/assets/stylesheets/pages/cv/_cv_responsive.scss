@@ -1,0 +1,85 @@
+body.cv {
+  @include breakpoint($mobile-breakpoint) {
+    .button {
+      top: -80px;
+    }
+
+    .experience {
+      @include bleed-x(10px);
+    }
+  }
+
+  @include breakpoint($mobile-and-tablet-breakpoint) {
+    .experience {
+      .padding {
+        padding: 20px 0;
+      }
+    }
+  }
+
+  @include breakpoint($tablet-breakpoint) {
+    .experience {
+      @include bleed-x(20px);
+    }
+  }
+
+  @include breakpoint($tablet-and-desktop-breakpoint) {
+    article.cv {
+      margin: 100px 0;
+    }
+    
+    .button {
+      top: 20px;
+    }
+  }
+
+  @include breakpoint($desktop-breakpoint) {
+    article.cv {
+      footer {
+        @include span(8 of 8 last);
+      }
+
+      header {
+        @include span(4 of 12);
+      }
+
+      .body {
+        @include span(8 of 12 last);
+      }
+
+      .education {
+        @include span(2.5 of 8 last);
+      }
+
+      .experience {
+        @include bleed-x(0 1000px);
+        @include span(5.5 of 8);
+
+        .padding {
+          padding: 30px;
+        }
+      }
+
+      .introduction {
+        @include span(8 of 8 last);
+      }
+
+      .objective {
+        @include span(5 of 8);
+      }
+
+      .skills {
+        @include span(5.5 of 8);
+        clear: left;
+
+        ul {
+          @include span(2.75 of 5.5);
+
+          &:last-child {
+            @include last;
+          }
+        }
+      }
+    }
+  }
+}

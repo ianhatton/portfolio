@@ -1,0 +1,132 @@
+footer {
+  &[role=contentinfo] {
+    // layout
+    clear: both;
+    position: relative;
+
+    // styling
+    background-color: $footer-bg;
+
+    &:after {
+      // layout
+      content: "";
+      height: 7px;
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      right: 0;
+
+      // styling
+      background-image: repeating-linear-gradient(to right, $footer-after-bg-1 0px, $footer-after-bg-1 150px, $footer-after-bg-2 150px, $footer-after-bg-2 300px, $footer-after-bg-3 300px, $footer-after-bg-3 450px, $footer-after-bg-4 450px, $footer-after-bg-4 600px);
+    }
+
+    section {
+      &.contact {
+        @include span(full);
+        text-align: center;
+
+        a {
+          // layout
+          display: block;
+          padding: 75px;
+
+          // styling
+          transition: all 0.2s ease-in-out;
+          background-color: $contact-button-bg;
+          border-right: 7px solid $contact-button-border;
+          border-left: 7px solid $contact-button-border;
+          color: $contact-button-text;
+          text-decoration: none;
+
+          &:after {
+            // layout
+            content: "\E0E1";
+            display: inline-block;
+            margin-left: 5px;
+            position: relative;
+            top: 5px;
+
+            // styling
+            font-family: "Material Icons";
+            -webkit-font-smoothing: antialiased;
+          }
+
+          &:hover {
+            background-color: $contact-button-bg-hover;
+            border-right: 7px solid $contact-button-border-hover;
+            border-left: 7px solid $contact-button-border-hover;
+          }
+        }
+      }
+      
+      &.social {
+        a {
+          // layout
+          overflow: visible !important;
+          text-align: right;
+
+          // styling
+          color: $footer-social-link-text;
+
+          &:after {
+            margin-right: -15px;
+          }
+
+          &.github {
+            background: url("../../../images/components//footer/github.png") 0 0 no-repeat;
+            height: 64px;
+            width: 64px;
+          }
+
+          &.linkedin {
+            background: url("../../../images/components//footer/linkedin.png") 0 0 no-repeat;
+            height: 59px;
+            width: 71px;
+          }
+
+          &.npm {
+            background: url("../../../images/components//footer/npm.png") 0 0 no-repeat;
+            height: 31px;
+            width: 79px;
+          }
+        }
+
+        h1 {
+          color: $footer-social-h1-text;
+
+          &.accent {
+            &:before {
+              background-color: $footer-social-h1-text;
+            }
+          }
+        }
+
+        li {
+          display: inline-block;
+          margin-right: 40px;
+          vertical-align: middle;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    small {
+      color: $footer-small-text;
+
+      a {
+        color: $footer-small-link-text;
+      }
+    }
+
+    .padding {
+      padding: 75px 20px;
+    }
+
+    .wrap {
+      clear: both;
+    }
+  }
+}

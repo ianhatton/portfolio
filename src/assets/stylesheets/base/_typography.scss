@@ -1,0 +1,128 @@
+$base-font-size: 1em; /* 16px */
+$base-line-height: 24; /* 24px based on 16px body font size */
+
+a {
+  &.external-link {
+    // layout
+    display: inline-block;
+
+    &:after {
+      // layout
+      content: "\E89E";
+      display: inline-block;
+
+      // styling
+      transition: all 0.2s ease-in-out;
+      font-family: "Material Icons";
+      -webkit-font-smoothing: antialiased;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+h1, .alpha {
+  font-size: 3.75em; /* 60px */
+  line-height: (72 / 60) + em;
+}
+
+h2, .beta {
+  font-size: 3.125em; /* 50px */
+  line-height: (60 / 50) + em;
+}
+
+h3, .gamma {
+  font-size: 2.5em; /* 40px */
+  line-height: (48 / 40) + em;
+}
+
+h4, .delta {
+  font-size: 1.875em; /* 30px */
+  line-height: (36 / 30) + em;
+}
+
+h5, .epsilon {
+  font-size: 24px; /* 24px */
+  line-height: (30 / 24) + em;
+}
+
+h6, .zeta {
+  font-size: 1.188em; /* 19px */
+  line-height: (24 / 19) + em;
+}
+
+.eta {
+  font-size: 0.938em; /* 16px */
+  line-height: (24 / 16) + em;
+}
+
+.theta {
+  font-size: 0.875em; /* 14px */
+  line-height: (24 / 14) + em;
+}
+
+.iota {
+  font-size: 0.75em; /* 12px */
+  line-height: (24 / 12) + em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  // layout
+  margin-bottom: 10px;
+
+  // styling
+  color: $primary-heading-text;
+
+  &.accent {
+    margin-top: 10px;
+    position: relative;
+
+    &:before {
+      // layout
+      content: "";
+      height: 3px;
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 40px;
+
+      // styling
+      background-color: $primary-heading-text;
+    }
+  }
+}
+
+dd, dt, li, p {
+  font-size: 1em; /* 16px */
+  line-height: ($base-line-height / 16) + em;
+}
+
+p {
+  // layout
+  margin-bottom: 10px;
+
+  // styling
+  color: $primary-text;
+}
+
+strong, .bold-weight {
+  font-weight: 700 !important;
+}
+
+.extra-bold-weight {
+  font-weight: 900 !important;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.light-weight {
+  font-weight: 300 !important;
+}
+
+.up-c {
+  text-transform: uppercase;
+}

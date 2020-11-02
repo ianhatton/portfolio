@@ -1,0 +1,80 @@
+html.modal-open {
+  overflow: hidden;
+
+  body {
+    overflow: hidden;
+  }
+
+  .modal-overlay {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.modal-close {
+  // layout
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  // styling
+  color: $modal-close-text;
+  cursor: pointer;
+
+  &:after {
+    // layout
+    content: "\E5CD";
+    display: inline-block;
+
+    // styling
+    transition: all 0.2s ease-in-out;
+    font-family: "Material Icons";
+    font-size: 2.5em; /* 40px */
+    -webkit-font-smoothing: antialiased;
+  }
+
+  span {
+    @include hidden;
+  }
+}
+
+.modal-content {
+  // layout
+  position: absolute;
+  top: 40px;
+  z-index: 3;
+
+  // styling
+  background-color: $modal-bg;
+  cursor: default;
+  outline: none;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .padding {
+    padding: 40px;
+  }
+}
+
+.modal-overlay {
+  // layout
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+
+  // styling
+  background-color: $modal-overlay-bg;
+}
+
+.modal-overlay, .modal-toggle {
+  cursor: pointer;
+}
+
+.modal-source {
+  display: none;
+}

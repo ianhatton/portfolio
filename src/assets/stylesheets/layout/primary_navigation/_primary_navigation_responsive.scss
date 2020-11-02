@@ -1,0 +1,67 @@
+nav.primary-navigation {
+  @include breakpoint($mobile-breakpoint) {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    ul {
+      // layout
+      height: 70px;
+      width: 100%;
+
+      // styling
+      border-top: 1px solid $primary-navigation-border;
+    }
+  }
+
+  @include breakpoint($tablet-breakpoint) {
+    ul {
+      width: 50%;
+    }
+  }
+
+  @include breakpoint($tablet-and-desktop-breakpoint) {
+    header.subtle & {
+      a {
+        border-right: 1px solid $primary-navigation-link-border-subtle;
+        color: $primary-navigation-link-text-subtle;
+
+        &:after {
+          // layout
+          content: "";
+          height: 7px;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          z-index: 1;
+
+          // styling
+          transition: all 0.2s ease-in-out;
+          background-color: $primary-navigation-link-after-bg-subtle;
+        }
+
+        &:hover {
+          background-color: $primary-navigation-link-bg-hover-subtle;
+          color: $primary-navigation-link-text-hover-subtle;
+
+          &:after {
+            background-color: $primary-navigation-link-hover-after-bg-subtle;
+          }
+        }
+      }
+    } 
+
+    ul {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }  
+  }
+
+  @include breakpoint($desktop-breakpoint) {
+    ul {
+      width: 30%;
+    }
+  }
+}

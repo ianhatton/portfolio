@@ -1,0 +1,71 @@
+header[role=banner] {
+  background-color: $header-bg;
+
+  &:after {
+    content: "";
+    height: 7px;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    right: 0;
+  }
+
+  h1 {
+    margin-bottom: 0;
+
+    &:before {
+      // layout
+      content: "";
+      display: block;
+      height: 48px;
+      margin-right: 10px;
+      width: 48px;
+
+      // styling
+      transition: all 0.2s ease-in-out;
+      background: url("../../../images/layout/header/logo.png") 0 0 no-repeat;
+    }
+
+    a {
+      color: $header-link-text;
+      text-decoration: none;
+    }
+  }
+
+  .top-link {
+    // layout
+    height: 0;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+
+    // styling
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: $header-top-link-bg;
+
+    @media(hover), (min-device-width: 960px) {
+      &:hover {
+        background-color: $header-top-link-bg-hover;
+      }
+    }
+
+    a {
+      // layout
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      // styling
+      color: $header-top-link-text;
+      text-decoration: none;
+
+      span {
+        @include hidden;
+      }
+    }
+  }
+}

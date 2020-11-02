@@ -1,0 +1,127 @@
+header[role=banner] {
+  @include breakpoint($mobile-breakpoint) {
+    position: relative;
+
+    &:after {
+      background-image: repeating-linear-gradient(to right, $header-after-bg-1 0, $header-after-bg-1 10%, $header-after-bg-2 10%, $header-after-bg-2 20%, $header-after-bg-3 20%, $header-after-bg-3 30%, $header-after-bg-4 30%, $header-after-bg-4 40%);
+    }
+
+    h1 {
+      text-align: center;
+
+      &:before {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      span {
+        display: inline-block;
+      }
+    }
+
+    span {
+      &.job-title {
+        &:before {
+          content: "\2014";
+          display: inline-block;
+          margin-right: 3px;
+        }
+      }
+    }
+
+    .top-link {
+      position: fixed;
+      top: 0;
+    }
+  }
+
+  @include breakpoint($mobile-and-tablet-breakpoint) {
+    .top-link {
+      &.visible {
+        height: 36px;
+      }
+
+
+      a {
+        top: 7px;
+      }
+    }
+  }
+
+  @include breakpoint($tablet-and-desktop-breakpoint) {
+    // layout
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    // styling
+    transition: all 0.2s ease-in-out;
+
+    &:after {
+      background-image: repeating-linear-gradient(to right, $header-after-bg-1 0px, $header-after-bg-1 150px, $header-after-bg-2 150px, $header-after-bg-2 300px, $header-after-bg-3 300px, $header-after-bg-3 450px, $header-after-bg-4 450px, $header-after-bg-4 600px);
+    }
+
+    &.subtle {
+      background-color: $header-bg-subtle;
+
+      &:after {
+        bottom: -7px;
+        background-color: $header-subtle-bg-after;
+        background-image: none;
+      }
+
+      h1 {          
+        &:before {
+          height: 0;
+          width: 0;
+        }
+
+        a {
+          color: $header-link-text-subtle;
+        }
+      }
+
+      span {
+        &.job-title {
+          display: none;
+        }
+      }
+    }
+
+    h1 {
+      float: left;
+
+      &:before {
+        float: left;
+      }
+
+      a {
+        float: left;
+      }
+
+      span {
+        display: block;
+      }
+    }
+
+    .top-link {
+      position: absolute;
+      top: 100%;
+    }
+  }
+
+  @include breakpoint($desktop-breakpoint) {
+    .top-link {
+      &.visible {
+        height: 24px;
+      }
+
+      a {
+        top: 0;
+      }
+    }
+  }
+}

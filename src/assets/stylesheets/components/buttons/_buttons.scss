@@ -1,0 +1,47 @@
+.button {
+  transition: all 0.2s ease-in-out;
+  border-right: 5px solid $button-border-right;
+  color: $button-text;
+  text-decoration: none;
+
+  &:hover {
+    // styling
+    background-color: $button-bg-hover;
+    border-right: 7px solid $button-border-right-hover;
+    color: $button-text-hover;
+
+    span {
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+
+  span {
+    position: relative;
+
+    &:after {
+      // layout
+      content: "";
+      height: 1px;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+
+      // styling
+      transition: all 0.2s ease-in-out;
+      border-bottom: 1px dotted $button-border-bottom;
+      opacity: 1;
+    }
+  }
+}
+
+.button-primary {
+  display: inline-block;
+  padding: 20px 20px 20px 0;
+
+  &:hover {
+    padding-left: 20px;
+  }
+}

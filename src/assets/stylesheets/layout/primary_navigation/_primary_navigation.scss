@@ -1,0 +1,41 @@
+nav.primary-navigation {
+  a {
+    // layout
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+
+    // styling
+    border-right: 1px solid $primary-navigation-link-border;
+    color: $primary-navigation-link-text;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    @media(hover), (min-device-width: 960px) {
+      &:hover {
+        background-color: $primary-navigation-link-bg-hover;
+        color: $primary-navigation-link-text-hover;
+      }
+    }
+  }
+
+  li {
+    flex: 1;
+    // Safari fix
+    height: 100%;
+    // End Safari fix
+    
+    &:last-child {
+      a {
+        border-right: 0 none;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+  }
+}

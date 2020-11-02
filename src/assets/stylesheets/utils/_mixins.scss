@@ -1,0 +1,46 @@
+@mixin center() {
+  text-align: center;
+}
+
+.center {
+  @include center;
+}
+
+@mixin clearfix() {
+  *zoom: 1;
+  
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+@mixin hidden() {
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+}
+
+.hidden {
+  @include hidden;
+}
+
+@mixin padding($padding: 20px) {
+  padding: $padding;
+}
+
+.padding {
+  @include clearfix;
+  @include padding;
+}

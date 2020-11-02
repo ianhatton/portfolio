@@ -1,0 +1,16 @@
+@include breakpoint($mobile-breakpoint) {
+
+}
+
+@include breakpoint($tablet-and-desktop-breakpoint) {
+  html {
+    // layout
+    margin-top: -7px;
+    overflow-x: hidden;
+    overflow-y: visible;
+    padding: 0 7px;
+
+    // styling
+    background-image: repeating-linear-gradient(to bottom, $html-bg-1 0px, $html-bg-1 150px, $html-bg-2 150px, $html-bg-2 300px, $html-bg-3 300px, $html-bg-3 450px, $html-bg-4 450px, $html-bg-4 600px);
+  }
+}
