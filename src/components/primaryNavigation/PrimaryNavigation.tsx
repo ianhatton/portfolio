@@ -10,8 +10,10 @@ const createLink = (name: string, pathname: string): ReactElement => {
   const displayName = `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
 
   if (pathname === "/") {
+    console.log("<Scroll.Link> to:", name);
     return <Scroll.Link to={name} smooth={true} duration={500}>{displayName}</Scroll.Link>
   } else {
+    console.log("<Link> to:", `/#${name}`);
     return <Link to={`/#${name}`}>{displayName}</Link>
   }
 };

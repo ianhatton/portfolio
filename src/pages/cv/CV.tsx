@@ -2,6 +2,7 @@
 import React, { FC, ReactElement, useEffect } from "react";
 
 // Components
+import SiteFooter from "../../components/siteFooter/SiteFooter";
 import SiteHeader from "../../components/siteHeader/SiteHeader";
 
 // Vendor
@@ -439,6 +440,7 @@ const CV: FC<{}> = (): ReactElement => {
           </article>
         </div>
       </main>
+      <SiteFooter />
     </>
   );
 };
