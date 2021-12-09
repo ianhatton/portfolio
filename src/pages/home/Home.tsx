@@ -153,9 +153,10 @@ const Home: FC<{}> = (): ReactElement => {
           .map((t: any) => {
             return (
               <li key={t.url}>
-                <img src={t.image[2]["#text"]} />
+                <img src={t.image[2]["#text"]} alt={t.name} />
                 <h2 className="theta">
-                  <span className="bold-weight">{t.artist["#text"]}</span> -{" "}
+                  <span className="bold-weight">{t.artist["#text"]}</span>
+                  <br />
                   {t.name}
                 </h2>
               </li>
@@ -521,10 +522,11 @@ const Home: FC<{}> = (): ReactElement => {
                 </p>
                 <p>
                   When I&rsquo;m not coding or thinking about the web, I&rsquo;m
-                  likely to be found in the garden doing my best to channel my
-                  inner Monty Don, in the kitchen making large vats of roasted
-                  curry powder or tinkering with open tunings and blues & folk
-                  fingerpicking on my parlour guitar.
+                  likely to be found in the kitchen making large vats of roasted
+                  curry powder, in the garden doing my best to channel my inner
+                  Monty Don, engrossed in a computer game or tinkering with open
+                  tunings and blues &amp; folk fingerpicking on my parlour
+                  guitar.
                 </p>
                 <p>
                   I&rsquo;m also a big fan of sitting down. And sleeping.
@@ -543,14 +545,14 @@ const Home: FC<{}> = (): ReactElement => {
               <ul>
                 <li>
                   <img
-                    src="https://images.gr-assets.com/books/1390426249l/23807.jpg"
-                    alt="The Silence of the Lambs"
+                    src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1333576361l/12926063.jpg"
+                    alt="Skagboys"
                   />
                 </li>
                 <li>
                   <img
-                    src="https://images.gr-assets.com/books/1309510797l/437149.jpg"
-                    alt="American Psycho"
+                    src="https://images.gr-assets.com/books/1390426249l/23807.jpg"
+                    alt="The Silence of the Lambs"
                   />
                 </li>
               </ul>

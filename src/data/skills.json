@@ -3,10 +3,10 @@
     "className": "css",
     "descriptions": [
       {
-        "body": "CSS always makes the biggest initial impact on user experience, and it&rsquo;s for this reason that I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they&rsquo;re being viewed on."
+        "body": "CSS always makes the biggest initial impact on user experience, so I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they&rsquo;re being viewed on."
       },
       {
-        "body": "What&rsquo;s going on &ldquo;under the hood&rdquo; is just as important as what&rsquo;s presented in the browser, which is why I&rsquo;m meticulous when it comes to organising my work and being as modular as possible."
+        "body": "What&rsquo;s going on under the hood is just as important as what&rsquo;s presented in the browser, which is why I&rsquo;m meticulous when it comes to organising my work and being as modular as possible."
       },
       {
         "body": "I have built great relationships with the designers I have worked with in the past and I&rsquo;m always happy to provide guidance and constructive criticism when necessary in order to deliver a stunning* final product."
@@ -95,13 +95,13 @@
     "className": "javascript",
     "descriptions": [
       {
-        "body": "Over the years, I've worked on a range of different projects, each using slightly different development stacks, which has broadened my knowledge and introduced me to a number of frameworks and technologies along the way. I'm currently a React developer, but am equally happy using anything else in my toolkit."
+        "body": "Over the years, I've worked on a range of different projects, each using slightly different development stacks, which has broadened my knowledge and introduced me to a number of technologies along the way. I'm currently a React developer, but am equally happy using anything else in my toolkit."
       },
       {
         "body": "I have also written a number of <a href=\"https://www.npmjs.com/~ianhatton\" class=\"external-link\" target=\"_blank\" rel=\"noopener noreferrer\"> vanilla JavaScript modules</a> which are in use across several of the projects I&rsquo;ve completed."
       }
     ],
-    "introduction": "I'm in my element whether I'm writing vanilla JavaScript or applying that foundational knowledge to frameworks such as React, Angular and anything beyond.",
+    "introduction": "I'm in my element whether I'm writing vanilla JavaScript or applying that foundational knowledge to libraries and frameworks such as React, Angular and anything beyond.",
     "knowledgeItemsOne": [
       {
         "name": "JavaScript"
@@ -110,48 +110,54 @@
         "name": "TypeScript"
       },
       {
-        "name": "Angular"
-      },
-      {
-        "name": "AngularJS"
-      },
-      {
         "name": "React"
       },
       {
         "name": "Redux"
       },
       {
+        "name": "Angular"
+      },
+      {
+        "name": "AngularJS"
+      },
+      {
         "name": "jQuery"
       },
       {
         "name": "GSAP"
+      },
+      {
+        "name": "Lodash"
       }
     ],
     "knowledgeItemsTwo": [
       {
-        "name": "Lodash"
+        "name": "NPM"
       },
       {
         "name": "Bower"
       },
       {
-        "name": "NPM"
-      },
-      {
         "name": "Gulp"
       },
       {
-        "name": "Jasmine"
+        "name": "React Testing Library"
       },
       {
-        "name": "ESLint"
+        "name": "Enzyme"
+      },
+      {
+        "name": "Jasmine"
       },
       {
         "name": "Cypress"
       },
       {
         "name": "Jest"
+      },
+      {
+        "name": "ESLint"
       }
     ],
     "name": "JavaScript"

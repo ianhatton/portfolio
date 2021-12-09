@@ -39,27 +39,31 @@ const CV: FC<{}> = (): ReactElement => {
             <div className="body">
               <section className="introduction">
                 <p className="epsilon" data-mobile-font-size="zeta">
-                  A creative, forward-thinking Front-end Developer with over{" "}
-                  {new Date().getFullYear() - 2011} years&rsquo; experience. My
-                  strengths range from a thorough understanding of JavaScript,
-                  React, Angular, CSS and HTML to a firm grasp of web standards,
-                  typography and graphic design principles.
+                  A conscientious, forward-thinking Front-end Developer with
+                  over {new Date().getFullYear() - 2011} years&rsquo;
+                  experience.
                 </p>
                 <p className="epsilon" data-mobile-font-size="zeta">
-                  I am in my element whether I am creating solutions to complex
-                  technical issues, building bespoke designs, tailoring content
-                  management systems or working with clients to ensure that
-                  their ideas are realised to their full potential.
+                  My strengths range from a thorough understanding of
+                  JavaScript, TypeScript, React, Angular, CSS and HTML to a firm
+                  grasp of web standards, typography and graphic design
+                  principles.
+                </p>
+                <p className="epsilon" data-mobile-font-size="zeta">
+                  I&rsquo;m in my element whether I&rsquo;m creating solutions
+                  to complex technical issues, building bespoke designs, writing
+                  tests or working with UX teams to ensure that their visions
+                  are realised to their full potential.
                 </p>
               </section>
               <section className="objective">
                 <h1 className="delta bold-weight accent">Objective</h1>
                 <p className="zeta">
-                  To put my skills into practice for a driven company and to add
-                  value across a range of projects. I seek to work in an
-                  environment which will inspire and encourage me to grow as a
-                  developer, whilst sharing knowledge and learning alongside my
-                  peers.
+                  To apply my skills and knowledge as a Senior Front-end
+                  Developer for a driven company and to add value across a range
+                  of projects, instilling good practices and improving the
+                  knowledge and understanding of junior team members along the
+                  way.
                 </p>
               </section>
               <section className="experience">
@@ -80,7 +84,7 @@ const CV: FC<{}> = (): ReactElement => {
                         Having spent many years working for marketing and
                         digital agencies, I felt that I needed a new stimulus,
                         and joined Cambridge Assessment as a member of their
-                        Agile team.
+                        Agile development team.
                       </p>
                       <div className="accomplishments">
                         <h3
@@ -90,26 +94,34 @@ const CV: FC<{}> = (): ReactElement => {
                           Key accomplishments:
                         </h3>
                         <p data-mobile-font-size="zeta">
-                          Developed the Checkpoint application, putting
-                          standards garnered from CPSQ into practice amongst new
-                          team members
+                          Led the development of the Content Banking UI
+                          application, from making technical decisions, working
+                          closely with UX and developing the UI through to
+                          writing and maintaining the test suite using React
+                          Testing Library and Jest
                         </p>
                         <p data-mobile-font-size="zeta">
-                          Selected to join the Customer &amp; Technology team
-                          and developed the CPSQ application, including the
-                          creation of an Auth0 single sign-on service, a React
-                          front-end for multiple connected services and a test
-                          suite involving Cypress, Jest and Enzyme
+                          Selected to join the newly-formed Customer &amp;
+                          Technology team and developed the UI for CPSQ
+                          application, including the creation of an Auth0 single
+                          sign-on service, React front-ends for multiple
+                          connected services and a test suite involving Cypress,
+                          Jest and Enzyme
                         </p>
                         <p data-mobile-font-size="zeta">
-                          Ported the existing Xopus-based XML editor for
-                          CCMS&rsquo; Authoring component over to Froala
+                          Developed and maintained the UI for the Transcription
+                          Processing application, using barcode scanning and
+                          video streaming via a Raspberry Pi for image capturing
                         </p>
                         <p data-mobile-font-size="zeta">
-                          Joined the BTS team and developed the new CCMS
-                          application, converting the legacy application&rsquo;s
-                          functionality into a fresh, reimagined Angular-based
-                          implementation
+                          Ported the Xopus-based XML editor for CCMS&rsquo;
+                          Authoring component over to Froala
+                        </p>
+                        <p data-mobile-font-size="zeta">
+                          Joined the BTS team and developed the UI for the new
+                          CCMS application, converting the legacy
+                          product&rsquo;s existing functionality into a fresh,
+                          reimagined Angular-based implementation
                         </p>
                       </div>
                     </li>
@@ -267,7 +279,7 @@ const CV: FC<{}> = (): ReactElement => {
                           >
                             Sony Pictures UK
                           </a>{" "}
-                          and
+                          and{" "}
                           <a
                             href="http://tabascobrunch.tumblr.com"
                             className="external-link"
@@ -389,27 +401,26 @@ const CV: FC<{}> = (): ReactElement => {
                 <h1 className="delta bold-weight accent">Skills</h1>
                 <ul data-mobile-font-size="zeta">
                   <li>
-                    Excellent knowledge of CSS, semantic HTML and associated
-                    preprocessors/templating systems
+                    Broad knowledge of JavaScript, TypeScript, React, Angular,
+                    CSS and semantic HTML
                   </li>
                   <li>
-                    Proficient in vanilla JavaScript, TypeScript, Angular and
-                    jQuery, with a working knowledge of AngularJS and React
+                    Experience with Enzyme, React Testing Library, Jest,
+                    Jasmine, Cucumber, SonarQube and Azure pipelines
                   </li>
                   <li>
-                    A firm understanding of layouts, typography and graphic
-                    design principles in application to front-end development
+                    A firm understanding of typography and graphic design
+                    principles in application to front-end development
                   </li>
+                </ul>
+                <ul data-mobile-font-size="zeta">
                   <li>
                     Awareness of usability, accessibility, cross-browser testing
                     and responsive design issues
                   </li>
-                </ul>
-                <ul data-mobile-font-size="zeta">
                   <li>Experience with Ruby on Rails</li>
                   <li>Experience with Laravel</li>
                   <li>Experience with MySQL and other relational databases</li>
-                  <li>Knowledge of Cucumber and Jasmine testing</li>
                   <li>Knowledge of Adobe Photoshop</li>
                 </ul>
               </section>
