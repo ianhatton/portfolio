@@ -10,9 +10,13 @@ const createLink = (name: string, pathname: string): ReactElement => {
   const displayName = `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
 
   if (pathname === "/") {
-    return <Scroll.Link to={name} smooth={true} duration={500}>{displayName}</Scroll.Link>
+    return (
+      <Scroll.Link to={name} smooth={true} duration={500}>
+        {displayName}
+      </Scroll.Link>
+    );
   } else {
-    return <Link to={`/#${name}`}>{displayName}</Link>
+    return <Link to={`/#${name}`}>{displayName}</Link>;
   }
 };
 
@@ -27,15 +31,9 @@ const PrimaryNavigation: FC<{}> = (): ReactElement => {
       role="navigation"
     >
       <ul>
-        <li className="bold-weight">
-          {createLink("skills", pathname)}
-        </li>
-        <li className="bold-weight">
-          {createLink("work", pathname)}
-        </li>
-        <li className="bold-weight">
-          {createLink("about", pathname)}
-        </li>
+        <li className="bold-weight">{createLink("skills", pathname)}</li>
+        <li className="bold-weight">{createLink("work", pathname)}</li>
+        <li className="bold-weight">{createLink("about", pathname)}</li>
       </ul>
     </nav>
   );

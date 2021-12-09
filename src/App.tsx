@@ -6,7 +6,12 @@ import CV from "./pages/cv/CV";
 import Home from "./pages/home/Home";
 
 // Vendor
-import { HashRouter as Router, Route, Switch, useLocation } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Route,
+  Switch,
+  useLocation
+} from "react-router-dom";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -16,7 +21,7 @@ const ScrollToTop = () => {
   }, [pathname]);
 
   return null;
-}
+};
 
 const App = (): ReactElement => {
   return (
