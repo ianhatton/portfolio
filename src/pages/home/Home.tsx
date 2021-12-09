@@ -340,10 +340,10 @@ const Home: FC<{}> = (): ReactElement => {
                   <span className="extra-bold-weight">Skills</span>
                 </h1>
                 <p className="zeta">
-                  I&rsquo;m a creative, forward-thinking Front-end Developer
-                  with over {new Date().getFullYear() - 2011} years&rsquo;
-                  experience. I turn beautiful designs into functional,
-                  intuitive builds.
+                  I&rsquo;m a conscientious, forward-thinking Front-end
+                  Developer with over {new Date().getFullYear() - 2011}{" "}
+                  years&rsquo; experience. I turn beautiful designs into
+                  functional, intuitive builds.
                 </p>
                 <p className="zeta">
                   Click through the tabs below to read a little about my core
