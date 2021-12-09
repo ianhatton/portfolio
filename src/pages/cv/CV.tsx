@@ -102,7 +102,7 @@ const CV: FC<{}> = (): ReactElement => {
                         </p>
                         <p data-mobile-font-size="zeta">
                           Selected to join the newly-formed Customer &amp;
-                          Technology team and developed the UI for CPSQ
+                          Technology team and developed the UI for the CPSQ
                           application, including the creation of an Auth0 single
                           sign-on service, React front-ends for multiple
                           connected services and a test suite involving Cypress,
