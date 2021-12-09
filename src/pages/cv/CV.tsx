@@ -96,8 +96,8 @@ const CV: FC<{}> = (): ReactElement => {
                         <p data-mobile-font-size="zeta">
                           Led the development of the Content Banking UI
                           application, from making technical decisions, working
-                          closely with UX and developing the UI through to
-                          writing and maintaining the test suite using React
+                          closely with the UX team and developing the UI through
+                          to writing and maintaining the test suite using React
                           Testing Library and Jest
                         </p>
                         <p data-mobile-font-size="zeta">
