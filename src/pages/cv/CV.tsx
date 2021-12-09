@@ -82,9 +82,9 @@ const CV: FC<{}> = (): ReactElement => {
                       </p>
                       <p data-mobile-font-size="zeta">
                         Having spent many years working for marketing and
-                        digital agencies, I felt that I needed a new stimulus,
-                        and joined Cambridge Assessment as a member of their
-                        Agile development team.
+                        digital agencies, seeking a change of environment, I
+                        joined Cambridge Assessment as a member of their Agile
+                        development team.
                       </p>
                       <div className="accomplishments">
                         <h3
