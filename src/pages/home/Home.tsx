@@ -514,24 +514,20 @@ const Home: FC<{}> = (): ReactElement => {
             <section className="bio">
               <div className="column-one">
                 <img src={aboutMe} alt="Ian Hatton" className="curve" />
-                <p>
-                  I live in beautiful Letchworth&mdash;the world&rsquo;s first
-                  Garden City&reg;&mdash;with my loving family and two{" "}
-                  <del>annoying </del>
-                  adorable cats.
-                </p>
-                <p>
-                  When I&rsquo;m not coding or thinking about the web, I&rsquo;m
-                  likely to be found in the kitchen making large vats of roasted
-                  curry powder, in the garden doing my best to channel my inner
-                  Monty Don, engrossed in a computer game or tinkering with open
-                  tunings and blues &amp; folk fingerpicking on my parlour
-                  guitar.
-                </p>
-                <p>
-                  I&rsquo;m also a big fan of sitting down. And sleeping.
-                  Sleeping is the best.
-                </p>
+                <div>
+                  <p>
+                    When I&rsquo;m not coding or thinking about the web,
+                    I&rsquo;m likely to be found in the kitchen making large
+                    vats of roasted curry powder, in the garden doing my best to
+                    channel my inner Monty Don, engrossed in a computer game or
+                    tinkering with open tunings and blues &amp; folk
+                    fingerpicking on my parlour guitar.
+                  </p>
+                  <p>
+                    I&rsquo;m also a big fan of sitting down. And sleeping.
+                    Sleeping is the best.
+                  </p>
+                </div>
               </div>
             </section>
             <section className="last-fm" id="last-fm">

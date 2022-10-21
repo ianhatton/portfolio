@@ -5,11 +5,6 @@ import React, { FC, ReactElement } from "react";
 const SiteFooter: FC<{}> = (): ReactElement => {
   return (
     <footer role="contentinfo">
-      <section className="contact">
-        <a href="mailto:contact@ian-hatton.com" className="delta">
-          Get in touch
-        </a>
-      </section>
       <div className="wrap">
         <div className="padding">
           <section className="social">
