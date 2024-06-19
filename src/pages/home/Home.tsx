@@ -541,14 +541,14 @@ const Home: FC<{}> = (): ReactElement => {
               <ul>
                 <li>
                   <img
-                    src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1333576361l/12926063.jpg"
-                    alt="Skagboys"
+                    src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1620172619i/472343.jpg"
+                    alt="Duma Key"
                   />
                 </li>
                 <li>
                   <img
-                    src="https://images.gr-assets.com/books/1390426249l/23807.jpg"
-                    alt="The Silence of the Lambs"
+                    src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1372043968i/17674987.jpg"
+                    alt="Eminent Hipsters"
                   />
                 </li>
               </ul>

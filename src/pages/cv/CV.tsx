@@ -59,10 +59,9 @@ const CV: FC<{}> = (): ReactElement => {
               <section className="objective">
                 <h1 className="delta bold-weight accent">Objective</h1>
                 <p className="zeta">
-                  To apply my skills and knowledge as a Senior Front-end
-                  Developer for a driven company and to add value across a range
-                  of projects, instilling good practices and improving the
-                  knowledge and understanding of junior team members along the
+                  To leverage my technical skills and experience in order to
+                  contribute to the success of a driven organisation, instilling
+                  good practices and mentoring junior team members along the
                   way.
                 </p>
               </section>
@@ -72,13 +71,65 @@ const CV: FC<{}> = (): ReactElement => {
                   <ul>
                     <li>
                       <h2 className="zeta">
+                        <span className="bold-weight">ieso / </span>
+                        Senior Front-end Software Engineer
+                      </h2>
+                      <p data-mobile-font-size="zeta">
+                        February 2022 &ndash; present
+                      </p>
+                      <p data-mobile-font-size="zeta">
+                        I joined ieso and their mission to transform mental
+                        healthcare in the UK and US through their digital
+                        platforms.
+                      </p>
+                      <div className="accomplishments">
+                        <h3
+                          className="eta bold-weight"
+                          data-mobile-font-size="zeta"
+                        >
+                          Key accomplishments:
+                        </h3>
+                        <p data-mobile-font-size="zeta">
+                          Upgraded several UIs to Vite and React 18, bringing
+                          both them and their shared packages into a Turborepo
+                          monorepo
+                        </p>
+                        <p data-mobile-font-size="zeta">
+                          Led the development of a new accessibility-focused UI
+                          component library built on top Radix UI primitives and
+                          in-house design tokens
+                        </p>
+                        <p data-mobile-font-size="zeta">
+                          Developed a rapid prototype for a user study using
+                          Next.js, Azure Functions and Cosmos DB
+                        </p>
+                        <p data-mobile-font-size="zeta">
+                          Led the development of the Backoffice and Registration
+                          UIs for the DP2 medical device - a mobile application
+                          containing a six week program aimed at alleviating
+                          symptoms of anxiety through AI-powered therapy
+                        </p>
+                        <p data-mobile-font-size="zeta">
+                          Aligned the technologies used in a number of legacy
+                          applications, converting their JavaScript to
+                          fully-typed TypeScript and upgrading them from Redux
+                          to Redux Toolkit
+                        </p>
+                        <p data-mobile-font-size="zeta">
+                          Collaboratively developed the How Are Things? UI - an
+                          online mood and symptom-checker
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <h2 className="zeta">
                         <span className="bold-weight">
                           Cambridge Assessment /{" "}
                         </span>
                         Web UI Developer
                       </h2>
                       <p data-mobile-font-size="zeta">
-                        March 2018 &ndash; present
+                        March 2018 &ndash; February 2022
                       </p>
                       <p data-mobile-font-size="zeta">
                         Having spent many years working for marketing and
@@ -94,11 +145,11 @@ const CV: FC<{}> = (): ReactElement => {
                           Key accomplishments:
                         </h3>
                         <p data-mobile-font-size="zeta">
-                          Led the development of the Content Banking UI
-                          application, from making technical decisions, working
-                          closely with the UX team and developing the UI through
-                          to writing and maintaining the test suite using React
-                          Testing Library and Jest
+                          Led the development of the Content Banking UI, from
+                          making technical decisions, working closely with the
+                          UX team and developing the UI through to writing and
+                          maintaining the test suite using React Testing Library
+                          and Jest
                         </p>
                         <p data-mobile-font-size="zeta">
                           Selected to join the newly-formed Customer &amp;
@@ -166,8 +217,8 @@ const CV: FC<{}> = (): ReactElement => {
                           integration
                         </p>
                         <p data-mobile-font-size="zeta">
-                          Built and maintained the admin application for
-                          LIZH&rsquo;s Genie Facebook Messenger chatbot
+                          Built and maintained the admin UI for LIZH&rsquo;s
+                          Genie Facebook Messenger chatbot
                         </p>
                         <p data-mobile-font-size="zeta">
                           Maintained various assessment tools for Vitality

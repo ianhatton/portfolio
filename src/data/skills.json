@@ -57,7 +57,7 @@
     "className": "html",
     "descriptions": [
       {
-        "body": "The HTML behind your website is just as important as what&rsquo;s presented in the browser. I build using meaningful, descriptive markup, not only to benefit search engine optimisation but also to provide assistive technologies with vital information for their users."
+        "body": "The HTML behind your website is just as important as what&rsquo;s presented to the user. I build using meaningful, descriptive markup, not only to benefit search engine optimisation but also to provide assistive technologies with vital information for their users."
       },
       {
         "body": "I have been lucky enough to work on a wide range of projects across sectors including finance, fitness, food, film and fashion. That&rsquo;s a lot of Fs."
@@ -113,6 +113,12 @@
         "name": "React"
       },
       {
+        "name": "React Query"
+      },
+      {
+        "name": "Next.js"
+      },
+      {
         "name": "Redux"
       },
       {
@@ -126,12 +132,12 @@
       },
       {
         "name": "GSAP"
-      },
-      {
-        "name": "Lodash"
       }
     ],
     "knowledgeItemsTwo": [
+      {
+        "name": "Lodash"
+      },
       {
         "name": "NPM"
       },
@@ -203,6 +209,12 @@
       }
     ],
     "knowledgeItemsTwo": [
+      {
+        "name": "Azure Functions"
+      },
+      {
+        "name": "Azure Pipelines"
+      },
       {
         "name": "Adobe Creative Suite"
       },
