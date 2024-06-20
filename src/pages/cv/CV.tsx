@@ -106,14 +106,14 @@ const CV: FC<{}> = (): ReactElement => {
                         <p data-mobile-font-size="zeta">
                           Led the development of the Backoffice and Registration
                           UIs for the DP2 medical device - a mobile application
-                          containing a six week program aimed at alleviating
+                          containing a six-week programme aimed at alleviating
                           symptoms of anxiety through AI-powered therapy
                         </p>
                         <p data-mobile-font-size="zeta">
                           Aligned the technologies used in a number of legacy
-                          applications, converting their JavaScript to
-                          fully-typed TypeScript and upgrading them from Redux
-                          to Redux Toolkit
+                          applications, converting their JavaScript to fully
+                          typed TypeScript and upgrading them from Redux to
+                          Redux Toolkit
                         </p>
                         <p data-mobile-font-size="zeta">
                           Collaboratively developed the How Are Things? UI - an

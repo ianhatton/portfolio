@@ -399,14 +399,14 @@ const Home: FC<{}> = (): ReactElement => {
                 </header>
                 <p data-mobile-font-size="zeta">
                   I&rsquo;ve worked with GLL on various projects over the course
-                  of my of my career. The previous iteration of their Better
-                  Leisure Leisure was the first project I cut my teeth on as a
-                  Junior at digital agency.
+                  of my career. The previous iteration of their Better Leisure
+                  website was the first project I cut my teeth on as a Junior at
+                  digital agency.
                 </p>
                 <p data-mobile-font-size="zeta">
-                  This was a major re-design of the previous site, freshening it
-                  up with responsive templates, adding new sections and keeping
-                  the core functionality of the previous build.
+                  This was a major re-design of the old site, freshening it up
+                  with responsive templates, adding new sections and keeping the
+                  core functionality of the previous build.
                 </p>
                 <p data-mobile-font-size="zeta">
                   I completed the vast majority of the front-end development of

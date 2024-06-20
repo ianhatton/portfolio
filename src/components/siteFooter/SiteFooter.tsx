@@ -68,7 +68,7 @@ const SiteFooter: FC<{}> = (): ReactElement => {
             </a>{" "}
             and{" "}
             <a
-              href="http://michaljakobsze.pl"
+              href="https://michaljakobsze.webflow.io"
               className="external-link"
               target="_blank"
               rel="noopener noreferrer"
