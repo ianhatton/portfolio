@@ -517,11 +517,11 @@ const Home: FC<{}> = (): ReactElement => {
                 <div>
                   <p>
                     When I&rsquo;m not coding or thinking about the web,
-                    I&rsquo;m likely to be found in the kitchen making large
-                    vats of roasted curry powder, in the garden doing my best to
-                    channel my inner Monty Don, engrossed in a computer game or
-                    tinkering with open tunings and blues &amp; folk
-                    fingerpicking on my parlour guitar.
+                    I&rsquo;m likely to be found in the kitchen roasting and
+                    grinding my own curry powder, in the garden doing my best to
+                    channel my inner Monty Don, engrossed in a turn-based
+                    computer game or tinkering with open tunings and blues &amp;
+                    folk fingerpicking on my parlour guitar.
                   </p>
                   <p>
                     I&rsquo;m also a big fan of sitting down. And sleeping.

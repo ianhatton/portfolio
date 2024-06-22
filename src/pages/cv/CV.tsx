@@ -45,9 +45,9 @@ const CV: FC<{}> = (): ReactElement => {
                 </p>
                 <p className="epsilon" data-mobile-font-size="zeta">
                   My strengths range from a thorough understanding of
-                  JavaScript, TypeScript, React, Angular, CSS and HTML to a firm
-                  grasp of web standards, typography and graphic design
-                  principles.
+                  JavaScript, TypeScript, React, Next.js, Angular, CSS and HTML
+                  to a firm grasp of web standards, typography and graphic
+                  design principles.
                 </p>
                 <p className="epsilon" data-mobile-font-size="zeta">
                   I&rsquo;m in my element whether I&rsquo;m creating solutions
@@ -452,27 +452,28 @@ const CV: FC<{}> = (): ReactElement => {
                 <h1 className="delta bold-weight accent">Skills</h1>
                 <ul data-mobile-font-size="zeta">
                   <li>
-                    Broad knowledge of JavaScript, TypeScript, React, Angular,
-                    CSS and semantic HTML
+                    Broad knowledge of JavaScript, TypeScript, React, Next.js,
+                    Angular, CSS and semantic HTML
                   </li>
                   <li>
                     Experience with Enzyme, React Testing Library, Jest,
-                    Jasmine, Cucumber, SonarQube and Azure pipelines
+                    Jasmine, Cucumber, SonarQube and Azure Pipelines
                   </li>
                   <li>
                     A firm understanding of typography and graphic design
                     principles in application to front-end development
                   </li>
-                </ul>
-                <ul data-mobile-font-size="zeta">
                   <li>
                     Awareness of usability, accessibility, cross-browser testing
                     and responsive design issues
                   </li>
+                </ul>
+                <ul data-mobile-font-size="zeta">
                   <li>Experience with Ruby on Rails</li>
                   <li>Experience with Laravel</li>
                   <li>Experience with MySQL and other relational databases</li>
                   <li>Knowledge of Adobe Photoshop</li>
+                  <li>Knowledge of Figma</li>
                 </ul>
               </section>
               <section className="education">
