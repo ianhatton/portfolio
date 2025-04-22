@@ -71,11 +71,45 @@ const CV: FC<{}> = (): ReactElement => {
                   <ul>
                     <li>
                       <h2 className="zeta">
+                        <span className="bold-weight">Manual / </span>
+                        Senior Front-end Engineer
+                      </h2>
+                      <p data-mobile-font-size="zeta">
+                        October 2024 &ndash; present
+                      </p>
+                      <p data-mobile-font-size="zeta">
+                        I joined Manual&rsquo;s tech team after being drawn to
+                        their vision of empowering men with the information they
+                        need to own their health and wellbeing.
+                      </p>
+                      <div className="accomplishments">
+                        <h3
+                          className="eta bold-weight"
+                          data-mobile-font-size="zeta"
+                        >
+                          Key accomplishments:
+                        </h3>
+                        <p data-mobile-font-size="zeta">
+                          Led the development of the Digital Instructions UI,
+                          providing users with an easy-to-follow, interactive
+                          guide to taking at-home tests
+                        </p>
+                        <p data-mobile-font-size="zeta">
+                          Contributed significantly to improving the existing
+                          design system, including porting a number of
+                          components and compositions over to TypeScript,
+                          removing dependency bloat and adding missing Storybook
+                          stories
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <h2 className="zeta">
                         <span className="bold-weight">ieso / </span>
                         Senior Front-end Software Engineer
                       </h2>
                       <p data-mobile-font-size="zeta">
-                        February 2022 &ndash; present
+                        February 2022 &ndash; October 2024
                       </p>
                       <p data-mobile-font-size="zeta">
                         I joined ieso and their mission to transform mental
