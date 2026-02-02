@@ -6,7 +6,7 @@
         "body": "I take great care in making sure that my responsive builds look fantastic and feel intuitive&mdash;no matter what platform they&rsquo;re being viewed on."
       },
       {
-        "body": "I have built great relationships with the designers I&rsquo;ve worked with in the past and I&rsquo;m always happy to provide guidance and constructive criticism where necessary in order to deliver a stunning* final product."
+        "body": "I&rsquo;ve built great relationships with the designers I&rsquo;ve worked with in the past and I&rsquo;m always happy to provide guidance and constructive criticism where necessary in order to deliver a stunning* final product."
       },
       {
         "body": "*exact level of stunningness dependent on design.",
@@ -66,7 +66,7 @@
         "body": "The HTML behind your website is just as important as what&rsquo;s presented to the user. I write meaningful, descriptive markup, not only to benefit search engine optimisation but also to provide assistive technologies with vital information for their users."
       },
       {
-        "body": "I have been lucky enough to work on a wide range of projects across sectors including finance, fitness, food, film and fashion. That&rsquo;s a lot of Fs."
+        "body": "I&rsquo;ve been lucky enough to work on a wide range of projects across sectors including finance, fitness, food, film and fashion. That&rsquo;s a lot of Fs."
       },
       {
         "body": "I&rsquo;ve also worked on a large number of table-based HTML email campaigns, both responsive and non-responsive and, with the aid of copious amounts of tea, crying and swearing, have always ensured that they are cross-client compatible with pixel precision (hello Outlook)."
@@ -104,7 +104,7 @@
         "body": "I've worked in many teams on a range of different tech stacks, which has broadened my knowledge and introduced me to a number of technologies along the way. I'm primarily a React developer, but am equally happy using anything else in my toolkit."
       },
       {
-        "body": "I have also written a number of <a href=\"https://www.npmjs.com/~ianhatton\" class=\"external-link\" target=\"_blank\" rel=\"noopener noreferrer\"> vanilla JavaScript modules</a> which are in use across several of the projects I&rsquo;ve completed."
+        "body": "I&rsquo;ve also written a number of <a href=\"https://www.npmjs.com/~ianhatton\" class=\"external-link\" target=\"_blank\" rel=\"noopener noreferrer\"> vanilla JavaScript modules</a> which are in use across several of the projects I&rsquo;ve completed."
       }
     ],
     "introduction": "I'm in my element whether I'm writing vanilla JavaScript or applying that foundational knowledge to libraries and frameworks such as React, Next.js, Angular and anything beyond.",
@@ -119,13 +119,19 @@
         "name": "React"
       },
       {
-        "name": "React Query"
+        "name": "TanStack Query"
       },
       {
         "name": "Next.js"
       },
       {
+        "name": "Next.js API development"
+      },
+      {
         "name": "Redux"
+      },
+      {
+        "name": "Zustand"
       },
       {
         "name": "Angular"
@@ -134,14 +140,16 @@
         "name": "AngularJS"
       },
       {
+        "name": "Rails Hotwire (including Stimulus and Turbo)"
+      }
+    ],
+    "knowledgeItemsTwo": [
+      {
         "name": "jQuery"
       },
       {
         "name": "GSAP"
-      }
-    ],
-    "knowledgeItemsTwo": [
-      
+      },
       {
         "name": "React Testing Library"
       },
@@ -179,7 +187,7 @@
         "body": "Working in digital agencies has exposed me to a myriad of real-world requirements for web applications, including usability, accessibility and performance."
       },
       {
-        "body": "I have an understanding of MVC architecture and bespoke CMSs, but I&rsquo;ve also had experience with the likes of WordPress, Tumblr and Shopify."
+        "body": "I&rsquo;ve an understanding of MVC architecture and bespoke CMSs, but I&rsquo;ve also had experience with the likes of WordPress, Tumblr and Shopify."
       },
       {
         "body": "Over the years, I&rsquo;ve factored in browser support all the way down to IE6, so I&rsquo;m well-versed to the joys of cross-browser testing, compatibility issues and workarounds."
@@ -200,6 +208,9 @@
         "name": "WAI-ARIA"
       },
       {
+        "name": "Lighthouse"
+      },
+      {
         "name": "Cross-browser testing"
       },
       {
@@ -209,10 +220,16 @@
         "name": "GitHub"
       },
       {
+        "name": "GitHub Actions"
+      },
+      {
         "name": "Azure Functions"
       },
       {
         "name": "Azure Pipelines"
+      },
+      {
+        "name": "AB Tasty"
       }
     ],
     "knowledgeItemsTwo": [
@@ -239,6 +256,15 @@
       },
       {
         "name": "Middleman"
+      },
+      {
+        "name": "Sanity"
+      },
+      {
+        "name": "Auth0"
+      },
+      {
+        "name": "Prisma (ORM)"
       }
     ],
     "name": "Bits and bobs"

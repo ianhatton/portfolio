@@ -44,10 +44,10 @@ const CV: FC<{}> = (): ReactElement => {
                   experience.
                 </p>
                 <p className="epsilon" data-mobile-font-size="zeta">
-                  My strengths range from a thorough understanding of
-                  JavaScript, TypeScript, React, Next.js, Angular, CSS and HTML
-                  to a firm grasp of web standards, typography and graphic
-                  design principles.
+                  My strengths range from proficiencies in JavaScript,
+                  TypeScript, React, Next.js, Angular, CSS and HTML to a deep
+                  knowledge of web standards, typography and graphic design
+                  principles.
                 </p>
                 <p className="epsilon" data-mobile-font-size="zeta">
                   I&rsquo;m in my element whether I&rsquo;m creating solutions
@@ -59,10 +59,9 @@ const CV: FC<{}> = (): ReactElement => {
               <section className="objective">
                 <h1 className="delta bold-weight accent">Objective</h1>
                 <p className="zeta">
-                  To leverage my technical skills and experience in order to
-                  contribute to the success of a driven organisation, instilling
-                  good practices and mentoring junior team members along the
-                  way.
+                  To bring my expertise to a collaborative team, focusing on
+                  delivering high-quality solutions and fostering an environment
+                  of continuous improvement and mentorship.
                 </p>
               </section>
               <section className="experience">
@@ -89,6 +88,11 @@ const CV: FC<{}> = (): ReactElement => {
                         >
                           Key accomplishments:
                         </h3>
+                        <p data-mobile-font-size="zeta">
+                          Led the development of an intuitive UI for Blood Test
+                          Booking, enhancing the user experience and simplifying
+                          the process of scheduling appointments.
+                        </p>
                         <p data-mobile-font-size="zeta">
                           Led the development of the Digital Instructions UI,
                           providing users with an easy-to-follow, interactive
@@ -486,28 +490,30 @@ const CV: FC<{}> = (): ReactElement => {
                 <h1 className="delta bold-weight accent">Skills</h1>
                 <ul data-mobile-font-size="zeta">
                   <li>
-                    Broad knowledge of JavaScript, TypeScript, React, Next.js,
-                    Angular, CSS and semantic HTML
+                    Core: JavaScript, TypeScript, React, Next.js, Next.js API
+                    development, Angular, CSS, semantic HTML
                   </li>
                   <li>
-                    Experience with Enzyme, React Testing Library, Jest,
-                    Jasmine, Cucumber, SonarQube and Azure Pipelines
+                    Additional: Redux, Zustand, Context API, React Testing
+                    Library, Jest, Jasmine, Cucumber, SonarQube
                   </li>
                   <li>
-                    A firm understanding of typography and graphic design
-                    principles in application to front-end development
+                    Design and User Experience: Typography and graphic design
+                    principles for front-end, Figma, mobile-first, responsive
+                    design
                   </li>
                   <li>
-                    Awareness of usability, accessibility, cross-browser testing
-                    and responsive design issues
+                    Tools and Practices: Usability, accessibility, cross-browser
+                    testing, Azure Pipelines, GitHub Actions
                   </li>
                 </ul>
                 <ul data-mobile-font-size="zeta">
-                  <li>Experience with Ruby on Rails</li>
-                  <li>Experience with Laravel</li>
+                  <li>Familiarity with Ruby on Rails, Laravel</li>
                   <li>Experience with MySQL and other relational databases</li>
-                  <li>Knowledge of Adobe Photoshop</li>
-                  <li>Knowledge of Figma</li>
+                  <li>
+                    For a comprehensive list, please visit{" "}
+                    <Link to="/#skills">my skills section</Link>
+                  </li>
                 </ul>
               </section>
               <section className="education">

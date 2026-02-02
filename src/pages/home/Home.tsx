@@ -209,7 +209,7 @@ const Home: FC<{}> = (): ReactElement => {
                       className="zeta bold-weight accent"
                       data-mobile-font-size="epsilon"
                     >
-                      I have a knowledge of
+                      At a glance
                     </h2>
                     <ul>
                       {skill.knowledgeItemsOne.map((knowledgeItem) => {
@@ -314,7 +314,7 @@ const Home: FC<{}> = (): ReactElement => {
               </Scroll.Link>
               , view some of his{" "}
               <Scroll.Link to="work" smooth={true} duration={500}>
-                latest work
+                work
               </Scroll.Link>
               , or read a little bit more{" "}
               <Scroll.Link to="about" smooth={true} duration={500}>
